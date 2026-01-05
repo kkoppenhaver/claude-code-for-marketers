@@ -86,6 +86,8 @@ const fullTitle = `${title} | ${siteTitle}`;
     </main>
     <footer>
       <p><span class="prompt">#</span> &copy; {new Date().getFullYear()} {siteTitle}</p>
+      <p class="attribution">Created and maintained by <a href="https://twitter.com/kkoppenhaver" target="_blank" rel="noopener noreferrer">Keanan Koppenhaver</a></p>
+      <p class="disclaimer">This project is not formally associated with Anthropic or Claude Code.</p>
     </footer>
     <script>
       const toggle = document.querySelector('.theme-toggle');
@@ -311,6 +313,16 @@ const fullTitle = `${title} | ${siteTitle}`;
   footer .prompt {
     color: var(--color-accent);
     margin-right: 0.5rem;
+  }
+
+  footer .attribution {
+    margin-top: 0.75rem;
+  }
+
+  footer .disclaimer {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    opacity: 0.8;
   }
 
   /* Typography */
