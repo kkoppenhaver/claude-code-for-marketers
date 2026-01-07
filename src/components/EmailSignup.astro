@@ -1,0 +1,172 @@
+---
+interface Props {
+  headline?: string;
+  description?: string;
+  tagId?: string;
+  buttonText?: string;
+}
+
+const {
+  headline = "Subscribe to the newsletter",
+  description = "Get notified when new tutorials and guides are published.",
+  tagId,
+  buttonText = "Subscribe",
+} = Astro.props;
+
+// Kit form ID - configure this in your environment or replace directly
+const FORM_ID = import.meta.env.PUBLIC_KIT_FORM_ID || "YOUR_FORM_ID";
+const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
+---
+
+<div class="signup-box">
+  <div class="signup-header">
+    <span class="prompt">&gt;</span>
+    <span class="headline">{headline}</span>
+    <span class="cursor"></span>
+  </div>
+  <p class="signup-description">{description}</p>
+  <form action={formAction} method="post" class="signup-form">
+    {tagId && <input type="hidden" name="tags[]" value={tagId} />}
+    <div class="input-group">
+      <label for="email-input" class="sr-only">Email address</label>
+      <input
+        type="email"
+        name="email_address"
+        id="email-input"
+        placeholder="you@example.com"
+        required
+        autocomplete="email"
+      />
+      <button type="submit">{buttonText}</button>
+    </div>
+  </form>
+  <p class="signup-note">No spam. Unsubscribe anytime.</p>
+</div>
+
+<style>
+  .signup-box {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .signup-header {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .prompt {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .headline {
+    color: var(--color-text);
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.1em;
+    background: var(--color-accent);
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .signup-description {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .signup-form {
+    margin-bottom: 0.75rem;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  input[type="email"] {
+    flex: 1;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text);
+    transition: border-color 0.2s ease;
+  }
+
+  input[type="email"]::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+  }
+
+  input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+
+  button[type="submit"] {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  button[type="submit"]:hover {
+    background: var(--color-accent-hover);
+  }
+
+  .signup-note {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 500px) {
+    .input-group {
+      flex-direction: column;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+    }
+  }
+</style>

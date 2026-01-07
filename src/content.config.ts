@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const blog = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -14,6 +14,7 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     categories: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    kitTagId: z.string().optional(), // Kit tag ID for post-specific lead magnets
   }),
 });
 
