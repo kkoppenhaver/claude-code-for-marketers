@@ -21,7 +21,6 @@ const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
   <div class="signup-header">
     <span class="prompt">&gt;</span>
     <span class="headline">{headline}</span>
-    <span class="cursor"></span>
   </div>
   <p class="signup-description">{description}</p>
   <form action={formAction} method="post" class="signup-form">
@@ -68,20 +67,6 @@ const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
 
   .headline {
     color: var(--color-text);
-  }
-
-  .cursor {
-    display: inline-block;
-    width: 8px;
-    height: 1.1em;
-    background: var(--color-accent);
-    animation: blink 1s step-end infinite;
-    margin-left: 2px;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
   }
 
   .signup-description {
