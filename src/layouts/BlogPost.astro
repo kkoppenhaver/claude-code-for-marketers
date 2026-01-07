@@ -1,13 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
+import EmailSignup from '../components/EmailSignup.astro';
 
 interface Props {
   post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate, updatedDate, author, image, imageAlt, tags, categories } = post.data;
+const { title, description, pubDate, updatedDate, author, image, imageAlt, tags, categories, kitTagId } = post.data;
 
 const formattedPubDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -70,6 +71,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     <div class="content">
       <slot />
     </div>
+    <EmailSignup tagId={kitTagId} />
     <footer class="post-footer">
       <a href="/blog" class="back-link-footer">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

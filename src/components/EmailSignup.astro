@@ -7,14 +7,13 @@ interface Props {
 }
 
 const {
-  headline = "Subscribe to the newsletter",
-  description = "Get notified when new tutorials and guides are published.",
+  headline = "Subscribe to CC4M",
+  description = "Learn Claude Code with our 7 day email course. Then, get notified when we publish new use cases and ways to stay ahead of the curve.",
   tagId,
   buttonText = "Subscribe",
 } = Astro.props;
 
-// Kit form ID - configure this in your environment or replace directly
-const FORM_ID = import.meta.env.PUBLIC_KIT_FORM_ID || "YOUR_FORM_ID";
+const FORM_ID = "8947118";
 const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
 ---
 
