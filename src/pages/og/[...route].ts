@@ -1,44 +1,27 @@
-import { OGImageRoute } from 'astro-og-canvas';
+import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
+import { generateOgImage } from '../../utils/ogImage';
 
-const posts = await getCollection('blog');
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { route: `${post.id}.png` },
+    props: {
+      title: post.data.title,
+      description: post.data.description,
+    },
+  }));
+};
 
-export const { getStaticPaths, GET } = await OGImageRoute({
-  param: 'route',
-  pages: Object.fromEntries(
-    posts.map((post) => [
-      post.id,
-      {
-        title: post.data.title,
-        description: post.data.description,
-      },
-    ])
-  ),
-  getImageOptions: (_path, page) => ({
-    title: page.title,
-    description: page.description,
-    bgGradient: [[28, 25, 23]], // Terminal dark background #1C1917
-    border: {
-      color: [218, 119, 86], // Terracotta accent
-      width: 20,
-      side: 'inline-start',
+export const GET: APIRoute = async ({ props }) => {
+  const { title, description } = props as { title: string; description: string };
+
+  const png = await generateOgImage({ title, description });
+
+  return new Response(png, {
+    headers: {
+      'Content-Type': 'image/png',
+      'Cache-Control': 'public, max-age=31536000, immutable',
     },
-    padding: 60,
-    font: {
-      title: {
-        color: [250, 250, 249], // Light text #FAFAF9
-        size: 64,
-        lineHeight: 1.2,
-        families: ['JetBrains Mono'],
-        weight: 'Bold',
-      },
-      description: {
-        color: [168, 162, 158], // Muted text #a8a29e
-        size: 32,
-        lineHeight: 1.4,
-        families: ['JetBrains Mono'],
-      },
-    },
-    fonts: ['./public/fonts/JetBrainsMono-Bold.ttf'],
-  }),
-});
+  });
+};
