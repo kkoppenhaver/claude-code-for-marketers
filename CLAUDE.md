@@ -298,6 +298,7 @@ Based on edits to the introduction section:
 - Blockquotes (>) for prompts and AI responses - clearly distinguish AI text from narrative
 - **Placeholder notes**: Use [screenshot TKTK] or similar to mark where visuals should go
 - **[TKTK: note]** format for reminders to self about fact-checking or adding details later
+- **No horizontal rules before headings**: Don't use `---` before h2 sections — the h2 styling already includes a top border, so adding `---` creates a double line
 
 ---
 
