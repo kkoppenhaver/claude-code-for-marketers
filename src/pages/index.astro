@@ -57,7 +57,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         {posts.map((post, index) => (
           <li style={`animation-delay: ${index * 0.1}s`}>
             <a href={`/blog/${post.id}`}>
-              <span class="post-number">{String(index + 1).padStart(2, '0')}</span>
               <div class="post-content">
                 <h3>{post.data.title}</h3>
                 <p class="description">{post.data.description}</p>

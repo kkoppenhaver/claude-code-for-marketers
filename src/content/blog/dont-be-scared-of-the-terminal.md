@@ -70,6 +70,6 @@ And then there's version control. Think of it like "track changes" in Microsoft 
 
 Yes, it's different from the apps you're used to. Yes, there's a learning curve. But you don't need to become a command-line expert to use Claude Code effectively. You just need to be willing to try.
 
-Ready to get going? In our next post, we'll actually jump into the terminal and install Claude Code to get just a taste of what it can do.
+Ready to get going? In [our next post](/blog/installing-claude-code), we'll actually jump into the terminal and install Claude Code to get just a taste of what it can do.
 
 And if you have any questions I can answer, shoot me an email at <a href="mailto:keanan@floorboardai.com">keanan@floorboardai.com</a>. I read and respond to every message and I'm here to help.

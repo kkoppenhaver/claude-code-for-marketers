@@ -6,6 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Claude Code for Marketers is an Astro-based blog teaching marketers how to use Claude Code. The site uses a terminal-inspired design with light/dark mode support.
 
+**Mission:** Establish claudecodeformarketers.com as the go-to resource for marketers learning to use Claude Code, proving that non-technical people can build powerful AI workflows.
+
+**Target audience:** Marketers with zero programming experience who want to use AI tools but feel intimidated by technical interfaces.
+
+**Author contact** (use these when suggesting readers reach out):
+- Twitter: https://twitter.com/kkoppenhaver
+- LinkedIn: https://linkedin.com/in/keanankoppenhaver
+- Email: keanan@floorboardai.com
+
 ## Commands
 
 ```bash
@@ -39,6 +48,54 @@ npm run preview  # Preview production build
 ## Deployment
 
 Static site deployed to Cloudflare Pages. Site URL configured in `astro.config.mjs`.
+
+## Email Integration
+
+- Email signups use Kit (formerly ConvertKit)
+- Form ID: `8947118`
+- Default tag ID: `14154457` (used on homepage and blog posts)
+- Blog posts can specify a custom `kitTagId` in frontmatter for post-specific tagging
+
+---
+
+# Content Strategy
+
+## Intro sequence (email course)
+
+The foundation of the site is a 7-post intro sequence that also serves as an email course:
+
+| # | Title | Status |
+|---|-------|--------|
+| 1 | Don't be scared of the terminal | published |
+| 2 | Installing/setting up Claude Code | in-progress |
+| 3 | Use case: Turn a tweet thread into a blog post | idea |
+| 4 | Ways to get even better at prompting | idea |
+| 5 | Use case: Deep research for a competitor page | idea |
+| 6 | What are skills? | idea |
+| 7 | What are subagents? | idea |
+
+## Content status key
+
+- `idea` — Concept captured, not yet briefed
+- `briefed` — Brief created, ready for drafting
+- `in-progress` — Currently being drafted
+- `review` — Draft complete, awaiting Keanan's review
+- `published` — Live on site
+- `promoted` — Has been actively promoted
+
+## Content types
+
+- **Intro sequence:** Foundation posts for beginners
+- **Use case deep dives:** Detailed walkthroughs of specific marketing tasks
+- **Quick wins/tutorials:** Short, actionable posts with immediate value
+- **Mindset/positioning:** Thought leadership on AI for non-technical people
+- **SEO pillar content:** Comprehensive guides for search traffic
+
+## Operating principles
+
+- **Bootstrap mindset:** Scrappy > polished. $0 paid advertising budget.
+- **All content reviewed by Keanan before publishing**
+- **Task balance:** ~40% creating, ~40% promoting, ~20% optimizing
 
 ---
 
@@ -240,7 +297,7 @@ Based on edits to the introduction section:
 - Short, scannable paragraphs
 - Blockquotes (>) for prompts and AI responses - clearly distinguish AI text from narrative
 - **Placeholder notes**: Use [screenshot TKTK] or similar to mark where visuals should go
-- **[droid: note]** format for reminders to self about fact-checking or adding details later
+- **[TKTK: note]** format for reminders to self about fact-checking or adding details later
 
 ---
 
