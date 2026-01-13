@@ -10,6 +10,9 @@ interface Props {
 const { post } = Astro.props;
 const { title, description, pubDate, updatedDate, author, image, imageAlt, tags, categories, kitTagId } = post.data;
 
+// Use custom image if provided, otherwise use generated OG image
+const ogImage = image || `/og/${post.id}.png`;
+
 const formattedPubDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'short',
@@ -26,8 +29,8 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 <BaseLayout
   title={title}
   description={description}
-  image={image}
-  imageAlt={imageAlt}
+  image={ogImage}
+  imageAlt={imageAlt || title}
   article={{
     publishedTime: pubDate,
     modifiedTime: updatedDate,
