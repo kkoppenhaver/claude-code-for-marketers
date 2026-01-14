@@ -23,6 +23,8 @@ npm run build    # Build to ./dist/
 npm run preview  # Preview production build
 ```
 
+**Note:** Always check for running background tasks before starting new servers. Use `/tasks` to see what's already running.
+
 ## Architecture
 
 ### Content System
@@ -160,6 +162,7 @@ Based on edits to the introduction section:
 - Passive voice when active is available
 - Redundant setup phrases that state the obvious ("This wasn't X—this was Y" → just say "This was Y")
 - Unnecessary framing before making a point (get to the point directly)
+- Em dashes — use appositives (commas) or parentheticals instead. Example: "all in a single interface" not "all—without leaving the terminal"
 
 ## Tool References
 - Use **ChatGPT** specifically (not "ChatGPT or Claude") since that's what was actually used in the examples
