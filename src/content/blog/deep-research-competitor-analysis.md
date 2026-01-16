@@ -68,6 +68,8 @@ Here's a habit I've picked up: I always ask Claude Code to save its work to a ma
 
 Look at that: an executive summary, a comparison table, detailed platform overviews. All in a clean markdown file that I can open anywhere.
 
+**Want to see the full output?** [Download the complete competitive report](/downloads/retool-workflows-vs-n8n-competitive-report.md) that Claude Code generated.
+
 ## Iterating on the report
 
 This is where Claude Code really shines. If the first draft isn't quite right, I can just ask for changes and Claude updates the file directly.
