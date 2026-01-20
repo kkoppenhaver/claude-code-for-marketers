@@ -36,7 +36,7 @@ npm run preview  # Preview production build
 ### Images
 - Store blog images in `src/assets/images/blog/`
 - Reference with relative paths in markdown: `![Alt text](../../assets/images/blog/filename.png)`
-- Astro automatically converts to WebP and compresses at build time
+- Images are automatically resized to 1600px max width and converted to WebP at build time
 - Do NOT use `public/` for blog images (no optimization) or absolute paths like `/images/...`
 
 ### Layout Hierarchy
