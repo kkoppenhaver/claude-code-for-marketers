@@ -27,27 +27,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
     <h1>Claude Code<br/><span class="highlight">for Marketers</span></h1>
     <p class="tagline">AI superpowers for marketers. No coding required.</p>
-    <div class="cta-group">
-      <a href="/blog" class="cta-primary">Start Learning</a>
-      <a href="#recent" class="cta-secondary">Latest Posts</a>
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="feature">
-      <span class="feature-icon">01</span>
-      <h3>No Coding Required</h3>
-      <p>Step-by-step guides written specifically for marketers with zero programming experience.</p>
-    </div>
-    <div class="feature">
-      <span class="feature-icon">02</span>
-      <h3>Real Marketing Tasks</h3>
-      <p>Automate reports, analyze campaigns, build landing pages, and streamline your workflow.</p>
-    </div>
-    <div class="feature">
-      <span class="feature-icon">03</span>
-      <h3>Practical Examples</h3>
-      <p>Copy-paste prompts and templates you can use immediately in your marketing work.</p>
+    <div class="hero-signup">
+      <EmailSignup tagId="14154457" />
     </div>
   </section>
 
@@ -93,8 +74,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 <style>
   .hero {
     text-align: center;
-    padding: 2rem 0 4rem;
-    margin-bottom: 3rem;
+    padding: 2rem 0 0;
+    margin-bottom: 2rem;
   }
 
   .terminal-window {
@@ -164,84 +145,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     line-height: 1.6;
   }
 
-  .cta-group {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .cta-primary,
-  .cta-secondary {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding: 0.875rem 1.75rem;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-  }
-
-  .cta-primary {
-    background: var(--color-accent);
-    color: var(--color-bg);
-  }
-
-  .cta-primary:hover {
-    background: var(--color-accent-hover);
-    color: var(--color-bg);
-    transform: translateY(-2px);
-  }
-
-  .cta-secondary {
-    background: transparent;
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
-  }
-
-  .cta-secondary:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-  }
-
-  /* Features Section */
-  .features {
-    display: grid;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-    padding: 2rem 0;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  @media (min-width: 600px) {
-    .features {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  .feature {
+  .hero-signup {
+    margin-top: 2rem;
     text-align: left;
-  }
-
-  .feature-icon {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    display: block;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.05em;
-  }
-
-  .feature h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .feature p {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
   }
 
   /* Recent Posts */
