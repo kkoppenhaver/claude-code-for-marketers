@@ -85,7 +85,7 @@ Run this in your terminal before starting Claude Code, and that's it! When you r
 
 Once Playwright is installed, you can ask Claude to do things like:
 
-> "Take a screenshot of this week's traffic from my Google Analytics dashboard."
+> "Use the Playwright MCP to find the most popular keywords for my site, claudecodeformarketers.com, in Google Search Console."
 
 Claude knows to use the browser tool for this. A Chrome window will pop up, and you'll see Claude navigating around.
 
