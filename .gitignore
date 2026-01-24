@@ -26,3 +26,6 @@ pnpm-debug.log*
 
 .playwright-mcp
 .claude/settings.local.json
+
+# internal drafts
+email-sequence/
