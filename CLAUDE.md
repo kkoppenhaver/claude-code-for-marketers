@@ -13,7 +13,7 @@ Claude Code for Marketers is an Astro-based blog teaching marketers how to use C
 **Author contact** (use these when suggesting readers reach out):
 - Twitter: https://twitter.com/kkoppenhaver
 - LinkedIn: https://linkedin.com/in/keanankoppenhaver
-- Email: keanan@floorboardai.com
+- Email: keanan@claudecodeformarketers.com
 
 ## Commands
 

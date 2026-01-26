@@ -105,4 +105,4 @@ These are small things that make a big difference once you know about them. The 
 
 There's always more to discover. In our next post, we'll look at how to use Obsidian to build up a more persistent knowledge base for Claude Code to work with.
 
-Which of these are you going to try first? I'd love to hear how it goes. Reach out on [Twitter](https://twitter.com/kkoppenhaver), [LinkedIn](https://linkedin.com/in/keanankoppenhaver), or send me an email at keanan@floorboardai.com.
+Which of these are you going to try first? I'd love to hear how it goes. Reach out on [Twitter](https://twitter.com/kkoppenhaver), [LinkedIn](https://linkedin.com/in/keanankoppenhaver), or send me an email at keanan@claudecodeformarketers.com.

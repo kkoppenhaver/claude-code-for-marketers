@@ -144,4 +144,4 @@ You don't have to build it yourself (though you can, and Claude will help!) Star
 
 Once you experience the difference, you'll start seeing skill opportunities everywhere.
 
-If you've got a workflow you think would make a good skill, I'd love to hear about it. Send me an email at <a href="mailto:keanan@floorboardai.com">keanan@floorboardai.com</a> and tell me what you're working on.
+If you've got a workflow you think would make a good skill, I'd love to hear about it. Send me an email at <a href="mailto:keanan@claudecodeformarketers.com">keanan@claudecodeformarketers.com</a> and tell me what you're working on.

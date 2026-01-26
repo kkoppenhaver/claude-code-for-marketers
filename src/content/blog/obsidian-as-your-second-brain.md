@@ -108,5 +108,5 @@ The combination of Obsidian and Claude Code has changed how I organize informati
 
 If you've been putting off organizing your notes and projects, this might be the push you need. Start small: create a vault, add a few notes, and see what Claude Code can do with them.
 
-Have questions about getting this set up? Reach out on [Twitter](https://twitter.com/kkoppenhaver) or email me at <a href="mailto:keanan@floorboardai.com">keanan@floorboardai.com</a>. I'd love to hear what you're building.
+Have questions about getting this set up? Reach out on [Twitter](https://twitter.com/kkoppenhaver) or email me at <a href="mailto:keanan@claudecodeformarketers.com">keanan@claudecodeformarketers.com</a>. I'd love to hear what you're building.
 

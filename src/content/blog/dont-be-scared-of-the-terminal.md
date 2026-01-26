@@ -72,4 +72,4 @@ Yes, it's different from the apps you're used to. Yes, there's a learning curve.
 
 Ready to get going? In [our next post](/blog/installing-claude-code), we'll actually jump into the terminal and install Claude Code to get just a taste of what it can do.
 
-And if you have any questions I can answer, shoot me an email at <a href="mailto:keanan@floorboardai.com">keanan@floorboardai.com</a>. I read and respond to every message and I'm here to help.
+And if you have any questions I can answer, shoot me an email at <a href="mailto:keanan@claudecodeformarketers.com">keanan@claudecodeformarketers.com</a>. I read and respond to every message and I'm here to help.
