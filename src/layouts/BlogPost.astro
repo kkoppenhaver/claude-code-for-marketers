@@ -2,6 +2,8 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import EmailSignup from '../components/EmailSignup.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -44,6 +46,13 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 >
   <article>
     <header class="post-header">
+      <Breadcrumbs 
+        crumbs={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: title }
+        ]}
+      />
       <a href="/blog" class="back-link">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -78,6 +87,11 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     <div class="content">
       <slot />
     </div>
+    <RelatedPosts 
+      currentPostId={post.id}
+      categories={categories}
+      tags={tags}
+    />
     <EmailSignup tagId={kitTagId} />
     <footer class="post-footer">
       <a href="/blog" class="back-link-footer">
