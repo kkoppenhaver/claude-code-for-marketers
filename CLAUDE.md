@@ -130,6 +130,7 @@ Based on edits to the introduction section:
 - **Use fragments for emphasis when appropriate**
 - **Use colons for transitions**: "But here's the thing: as with most AI tools..." - creates natural pauses and emphasis
 - **Parenthetical asides**: "(or prompts)" - add clarifying details without breaking flow
+- **Use a conjunction before the final item in a series**: Use "and" or "or" as appropriate. "crafting the perfect prompt, structuring your requests, and including context" not "crafting the perfect prompt, structuring your requests, including context"
 
 ## Word Choices & Phrasing
 - **"Reached into my AI toolbox"** vs. "turned to AI tools" - more colorful, active phrasing
@@ -176,6 +177,7 @@ Based on edits to the introduction section:
 - "Not X, just Y" framing ("These aren't advanced techniques — they're just things that aren't obvious" → just say what it IS: "These are things that aren't immediately obvious")
 - Unnecessary framing before making a point (get to the point directly)
 - Em dashes — use appositives (commas) or parentheticals instead. Example: "all in a single interface" not "all—without leaving the terminal"
+- "It's not just X. It's Y." sentence structure — this is a visible AI writing tell. Instead, reframe with a comparison or analogy. Example: "It's not just executing your instructions better. It's helping you figure out what the instructions should be." → "In this way, Claude Code's acting more like a human would: clarifying your instructions before executing them."
 
 ## Tool References
 - Use **ChatGPT** specifically (not "ChatGPT or Claude") since that's what was actually used in the examples
