@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="You're booked!"
+  description="Your consultation has been scheduled. Check your calendar for the invite."
+>
+  <div class="thanks-container">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+    </div>
+
+    <h1>You're booked!</h1>
+
+    <p class="message">
+      You should see a calendar invite show up shortly. Looking forward to chatting with you!
+    </p>
+
+    <p class="next-steps">
+      In the meantime, feel free to explore more posts on the blog.
+    </p>
+
+    <a href="/blog" class="blog-link">
+      Back to the blog
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+</BaseLayout>
+
+<style>
+  .thanks-container {
+    text-align: center;
+    padding: 3rem 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .icon {
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .message {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+  }
+
+  .next-steps {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .blog-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text);
+    transition: all 0.2s ease;
+  }
+
+  .blog-link:hover {
+    border-color: var(--color-accent);
+    background: var(--color-bg-secondary);
+    text-decoration: none;
+  }
+
+  .blog-link svg {
+    transition: all 0.2s ease;
+  }
+
+  .blog-link:hover svg {
+    transform: translateX(4px);
+  }
+</style>
