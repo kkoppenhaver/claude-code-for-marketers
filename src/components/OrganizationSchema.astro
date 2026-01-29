@@ -1,0 +1,20 @@
+---
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Claude Code for Marketers",
+  "description": "Learn how to use Claude Code as a marketer. Practical tutorials, tips, and workflows for non-technical professionals.",
+  "url": Astro.site?.toString(),
+  "logo": new URL("/images/cc4m-logo.png", Astro.site).toString(),
+  "founder": {
+    "@type": "Person",
+    "name": "Keanan Koppenhaver"
+  },
+  "sameAs": [
+    "https://twitter.com/KKoppenhaver",
+    "https://linkedin.com/in/keanankoppenhaver"
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />

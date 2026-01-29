@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentPostId: string;
+  categories?: string[];
+  tags?: string[];
+  limit?: number;
+}
+
+const { currentPostId, categories = [], tags = [], limit = 3 } = Astro.props;
+
+// Get all published posts except the current one
+const allPosts = (await getCollection('blog', ({ data, id }) => 
+  !data.draft && id !== currentPostId
+)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Score posts by relevance (matching categories/tags)
+const scoredPosts = allPosts.map(post => {
+  let score = 0;
+  
+  // Higher score for matching categories
+  const matchingCategories = post.data.categories?.filter(cat => 
+    categories.includes(cat)
+  ).length || 0;
+  score += matchingCategories * 3;
+  
+  // Lower score for matching tags
+  const matchingTags = post.data.tags?.filter(tag => 
+    tags.includes(tag)
+  ).length || 0;
+  score += matchingTags;
+  
+  return { post, score };
+});
+
+// Sort by score, then by date, then take the limit
+const relatedPosts = scoredPosts
+  .sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf();
+  })
+  .slice(0, limit)
+  .map(item => item.post);
+
+// Only show if we have related posts
+if (relatedPosts.length === 0) return null;
+---
+
+<aside class="related-posts">
+  <h3>Keep Learning</h3>
+  <ul>
+    {relatedPosts.map(post => (
+      <li>
+        <a href={`/blog/${post.id}`}>
+          <h4>{post.data.title}</h4>
+          <p>{post.data.description}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
+
+<style>
+  .related-posts {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--color-bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: var(--color-text);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  li {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+
+  a:hover {
+    transform: translateX(4px);
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .related-posts {
+      padding: 1.5rem;
+    }
+  }
+</style>

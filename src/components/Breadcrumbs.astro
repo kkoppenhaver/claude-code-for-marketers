@@ -1,0 +1,83 @@
+---
+interface Crumb {
+  name: string;
+  url?: string;
+}
+
+interface Props {
+  crumbs: Crumb[];
+}
+
+const { crumbs } = Astro.props;
+
+// Schema.org breadcrumb list
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": crumbs.map((crumb, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": crumb.name,
+    ...(crumb.url && { "item": new URL(crumb.url, Astro.site).toString() })
+  }))
+};
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <ol>
+    {crumbs.map((crumb, index) => (
+      <li>
+        {crumb.url && index < crumbs.length - 1 ? (
+          <a href={crumb.url}>{crumb.name}</a>
+        ) : (
+          <span>{crumb.name}</span>
+        )}
+        {index < crumbs.length - 1 && <span class="separator">/</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+<style>
+  .breadcrumbs {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+  }
+
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  span:not(.separator) {
+    color: var(--color-text);
+  }
+
+  .separator {
+    opacity: 0.4;
+  }
+</style>

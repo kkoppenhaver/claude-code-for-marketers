@@ -17,6 +17,41 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image, imageAlt, article } = Astro.props;
 
 const ogImage = image ? new URL(image, Astro.site).toString() : undefined;
+
+// Schema.org structured data
+const articleSchema = article ? {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "image": ogImage,
+  "datePublished": article.publishedTime?.toISOString(),
+  "dateModified": article.modifiedTime?.toISOString() || article.publishedTime?.toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": article.author || "Keanan Koppenhaver"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Claude Code for Marketers",
+    "logo": {
+      "@type": "ImageObject",
+      "url": new URL("/images/cc4m-logo.png", Astro.site).toString()
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalURL.toString()
+  }
+} : null;
+
+const websiteSchema = !article ? {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Claude Code for Marketers",
+  "description": "Learn to use Claude Code without touching code",
+  "url": Astro.site?.toString()
+} : null;
 ---
 
 <link rel="canonical" href={canonicalURL} />
@@ -52,3 +87,11 @@ const ogImage = image ? new URL(image, Astro.site).toString() : undefined;
 {article?.tags?.map((tag) => (
   <meta property="article:tag" content={tag} />
 ))}
+
+<!-- Schema.org structured data -->
+{articleSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+)}
+{websiteSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+)}
