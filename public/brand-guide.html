@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Guide | Claude Code for Marketers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #FAFAF8;
+    --color-bg-secondary: #F0EFEB;
+    --color-text: #1C1917;
+    --color-text-secondary: #57534E;
+    --color-accent: #DA7756;
+    --color-accent-hover: #C4684A;
+    --color-border: #E7E5E0;
+    --color-code-bg: #292524;
+    --color-code-text: #FAFAF9;
+    --max-width: 960px;
+    --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+    --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+
+  [data-theme="dark"] {
+    --color-bg: #0C0A09;
+    --color-bg-secondary: #1C1917;
+    --color-text: #FAFAF9;
+    --color-text-secondary: #A8A29E;
+    --color-accent: #F2A688;
+    --color-accent-hover: #DA7756;
+    --color-border: #292524;
+    --color-code-bg: #1C1917;
+    --color-code-text: #FAFAF9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* ── Navigation ── */
+  .brand-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+  }
+  .brand-nav .logo {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: -0.3px;
+  }
+  .brand-nav .logo .prompt {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  .brand-nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .brand-nav .nav-link {
+    font-family: var(--font-mono);
+    font-size: 13.6px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.27px;
+    transition: color 0.2s;
+  }
+  .brand-nav .nav-link:hover { color: var(--color-text); }
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .section {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .section:last-child { border-bottom: none; }
+
+  /* ── Section Headers ── */
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.56px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .section-desc {
+    color: var(--color-text-secondary);
+    font-size: 16.8px;
+    line-height: 1.8;
+    max-width: 640px;
+    margin-bottom: 40px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    text-align: center;
+    padding: 80px 24px 64px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .hero-terminal {
+    max-width: 320px;
+    margin: 0 auto 40px;
+    background: var(--color-code-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    border: 1px solid var(--color-border);
+  }
+  .terminal-titlebar {
+    padding: 10px 14px;
+    display: flex;
+    gap: 6px;
+    background: rgba(0,0,0,0.15);
+  }
+  .terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .dot-red { background: #FF5F56; }
+  .dot-yellow { background: #FFBD2E; }
+  .dot-green { background: #27CA40; }
+  .terminal-body {
+    padding: 16px 20px 20px;
+    font-family: var(--font-mono);
+    font-size: 13.6px;
+    color: var(--color-code-text);
+    line-height: 1.7;
+  }
+  .terminal-body .prompt-char {
+    color: var(--color-accent);
+    margin-right: 6px;
+  }
+  .terminal-body .output {
+    color: var(--color-text-secondary);
+    padding-left: 20px;
+  }
+  .hero h1 {
+    font-family: var(--font-mono);
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: -0.88px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .hero h1 .accent {
+    color: var(--color-accent);
+    display: block;
+    font-style: italic;
+  }
+  .hero .tagline {
+    color: var(--color-text-secondary);
+    font-size: 18px;
+  }
+
+  /* ── Process Banner ── */
+  .process-banner {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 48px auto;
+    max-width: 720px;
+  }
+  .process-banner img {
+    width: 100%;
+    display: block;
+  }
+  .process-banner .caption {
+    font-family: var(--font-mono);
+    font-size: 12.8px;
+    color: var(--color-text-secondary);
+    padding: 12px 16px;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* ── Color Palette ── */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .color-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .color-swatch {
+    height: 80px;
+    position: relative;
+  }
+  .color-info {
+    padding: 12px 14px;
+    background: var(--color-bg);
+  }
+  .color-name {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .color-value {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-text-secondary);
+  }
+  .color-var {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-accent);
+    margin-top: 2px;
+  }
+
+  .theme-pair {
+    margin-bottom: 48px;
+  }
+  .theme-pair h3 {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+  .theme-pair h3 .hash {
+    color: var(--color-accent);
+    margin-right: 4px;
+  }
+
+  /* ── Typography ── */
+  .type-specimen {
+    margin-bottom: 48px;
+    padding: 32px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+  }
+  .type-specimen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .type-family-name {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .type-usage {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-text-secondary);
+  }
+  .type-sample-serif {
+    font-family: var(--font-body);
+  }
+  .type-sample-mono {
+    font-family: var(--font-mono);
+  }
+  .type-sample-large {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.72px;
+    margin-bottom: 12px;
+  }
+  .type-sample-medium {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .type-sample-body {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+  .type-weights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+  }
+  .type-weight-item {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .type-weight-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+  }
+
+  /* ── Typography Scale ── */
+  .type-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .type-scale-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 200px;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border);
+    gap: 16px;
+  }
+  .type-scale-row:last-child { border-bottom: none; }
+  .scale-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+  .scale-sample {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .scale-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    text-align: right;
+  }
+
+  /* ── Components ── */
+  .component-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 700px) {
+    .component-grid { grid-template-columns: 1fr; }
+  }
+  .component-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .component-preview {
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+    background: var(--color-bg-secondary);
+  }
+  .component-meta {
+    padding: 16px;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg);
+  }
+  .component-name {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .component-specs {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ── Button demos ── */
+  .btn-primary {
+    font-family: var(--font-mono);
+    font-size: 14.4px;
+    font-weight: 500;
+    color: var(--color-code-bg);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .btn-primary:hover { background-color: var(--color-accent-hover); }
+
+  .btn-nav {
+    font-family: var(--font-mono);
+    font-size: 13.6px;
+    font-weight: 600;
+    color: var(--color-code-bg);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 4px;
+    padding: 6.4px 12px;
+    cursor: pointer;
+    letter-spacing: 0.27px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  /* ── Input demo ── */
+  .input-demo {
+    font-family: var(--font-mono);
+    font-size: 14.4px;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 280px;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .input-demo:focus {
+    border-color: var(--color-accent);
+  }
+  .input-demo::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+  }
+
+  /* ── Signup box demo ── */
+  .signup-demo {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+  }
+  .signup-demo .signup-header {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .signup-demo .signup-header .prompt-char {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  .signup-demo .signup-text {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .signup-demo .signup-form {
+    display: flex;
+    gap: 8px;
+  }
+
+  /* ── Blog card demo ── */
+  .blog-card-demo {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .blog-card-demo:hover { border-color: var(--color-accent); }
+  .blog-card-demo h3 {
+    font-family: var(--font-mono);
+    font-size: 17.6px;
+    font-weight: 600;
+    letter-spacing: -0.35px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .blog-card-demo p {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .blog-card-demo time {
+    font-family: var(--font-mono);
+    font-size: 13.6px;
+    color: var(--color-text-secondary);
+    opacity: 0.7;
+  }
+
+  /* ── Lesson card demo ── */
+  .lesson-card-demo {
+    display: flex;
+    gap: 16px;
+    padding: 16px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    align-items: flex-start;
+    width: 100%;
+    transition: border-color 0.2s;
+  }
+  .lesson-card-demo:hover { border-color: var(--color-accent); }
+  .lesson-card-demo .lesson-num {
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    line-height: 1.7;
+  }
+  .lesson-card-demo h3 {
+    font-family: var(--font-mono);
+    font-size: 17.6px;
+    font-weight: 600;
+    letter-spacing: -0.35px;
+    margin-bottom: 4px;
+  }
+  .lesson-card-demo p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ── Blockquote demo ── */
+  .blockquote-demo {
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-bg-secondary);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 16.8px;
+    line-height: 1.8;
+    width: 100%;
+  }
+
+  /* ── Inline code demo ── */
+  .code-inline-demo {
+    font-family: var(--font-mono);
+    font-size: 14.28px;
+    background: var(--color-code-bg);
+    color: var(--color-code-text);
+    padding: 3.2px 6.4px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+  }
+
+  /* ── Animation section ── */
+  .animation-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .animation-row:last-child { border-bottom: none; }
+  .animation-demo-box {
+    width: 48px;
+    height: 48px;
+    background: var(--color-accent);
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .animation-info {
+    flex: 1;
+  }
+  .animation-name {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .animation-desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+  .animation-code {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-accent);
+    margin-top: 4px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .demo-blink {
+    animation: blink 1s infinite;
+  }
+  .demo-fadeInUp {
+    animation: fadeInUp 1.5s ease infinite;
+  }
+  .cursor-demo {
+    display: inline-block;
+    width: 10px;
+    height: 22px;
+    background: var(--color-accent);
+    animation: blink 1s infinite;
+    vertical-align: middle;
+    border-radius: 1px;
+  }
+
+  /* ── Spacing ── */
+  .spacing-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .spacing-table th,
+  .spacing-table td {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .spacing-table th {
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .spacing-bar {
+    height: 8px;
+    background: var(--color-accent);
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  /* ── CSS Variable Reference ── */
+  .var-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .var-table th,
+  .var-table td {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .var-table th {
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .var-table .var-name { color: var(--color-accent); }
+  .var-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 6px;
+    border: 1px solid var(--color-border);
+  }
+
+  /* ── Design Motifs ── */
+  .motif-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 700px) {
+    .motif-grid { grid-template-columns: 1fr; }
+  }
+  .motif-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .motif-card .motif-title {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .motif-card .motif-title .icon {
+    color: var(--color-accent);
+  }
+  .motif-card .motif-desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+  .motif-card .motif-example {
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--color-text);
+    background: var(--color-bg-secondary);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+  }
+
+  /* ── Full-width component ── */
+  .full-width-component {
+    grid-column: 1 / -1;
+  }
+
+  /* ── Footer ── */
+  .brand-footer {
+    padding: 32px 24px;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: 12.8px;
+    color: var(--color-text-secondary);
+  }
+  .brand-footer .hash { color: var(--color-accent); }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="brand-nav">
+  <a href="#" class="logo">
+    <span class="prompt">></span> Claude Code for Marketers Brand Guide
+  </a>
+  <div class="nav-right">
+    <a href="#colors" class="nav-link">Colors</a>
+    <a href="#typography" class="nav-link">Type</a>
+    <a href="#components" class="nav-link">Components</a>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light theme">
+      <span class="theme-icon">&#9789;</span>
+    </button>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="hero">
+    <div class="hero-terminal">
+      <div class="terminal-titlebar">
+        <div class="terminal-dot dot-red"></div>
+        <div class="terminal-dot dot-yellow"></div>
+        <div class="terminal-dot dot-green"></div>
+      </div>
+      <div class="terminal-body">
+        <div><span class="prompt-char">$</span> brand --inspect</div>
+        <div class="output">Extracting brand elements...</div>
+      </div>
+    </div>
+    <h1>
+      Claude Code
+      <span class="accent">for Marketers</span>
+    </h1>
+    <p class="tagline">Comprehensive Visual Identity &amp; Brand System</p>
+
+    <!-- Process screenshot -->
+    <div class="process-banner">
+      <img src="claude_devtools_mcp.png" alt="Claude extracting styles from claudecodeformarketers.com using Chrome DevTools MCP" />
+      <div class="caption">Brand extraction via Claude + Chrome DevTools MCP</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- DESIGN PHILOSOPHY -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-label"># Philosophy</div>
+    <div class="section-title">Design Motifs</div>
+    <div class="section-desc">The visual identity is built on a terminal-native aesthetic blended with warm, approachable typography. Every detail reinforces the idea that powerful tools don't have to feel cold.</div>
+
+    <div class="motif-grid">
+      <div class="motif-card">
+        <div class="motif-title"><span class="icon">></span> Terminal CLI Aesthetic</div>
+        <div class="motif-desc">Monospace headings, prompt characters, terminal window mockups, and a blinking cursor create a developer-tool feel that's still accessible to non-technical users.</div>
+        <div class="motif-example"><span style="color:var(--color-accent)">></span> Master Claude Code in 15 minutes a day<span class="cursor-demo" style="margin-left:2px"></span></div>
+      </div>
+      <div class="motif-card">
+        <div class="motif-title"><span class="icon">#</span> Markdown-Inspired Syntax</div>
+        <div class="motif-desc">Section headings use visible markdown syntax (# Recent Posts, # &copy; 2026) and shell-style titles ($ ./start-here.sh), reinforcing the code-meets-content theme.</div>
+        <div class="motif-example"><span style="color:var(--color-accent)">#</span> Recent Posts</div>
+      </div>
+      <div class="motif-card">
+        <div class="motif-title"><span class="icon" style="font-style:italic">Aa</span> Warm Serif + Sharp Mono</div>
+        <div class="motif-desc">Body text uses Source Serif 4 for readability and warmth, while JetBrains Mono handles all headings, UI, navigation, and code. The pairing creates a literate-programming vibe.</div>
+      </div>
+      <div class="motif-card">
+        <div class="motif-title"><span class="icon">&#9681;</span> Light / Dark Duality</div>
+        <div class="motif-desc">Full theme toggle with smooth 0.3s transitions. The dark palette uses warm, stone-toned blacks (#0C0A09), never pure black. Light mode uses creamy off-whites (#FAFAF8).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- COLORS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section" id="colors">
+    <div class="section-label"># Palette</div>
+    <div class="section-title">Color System</div>
+    <div class="section-desc">A warm, earth-toned palette anchored by terracotta accents. Colors adapt between light and dark themes via CSS custom properties.</div>
+
+    <!-- Light theme -->
+    <div class="theme-pair">
+      <h3><span class="hash">#</span> Light Theme &mdash; :root</h3>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#FAFAF8;"></div>
+          <div class="color-info">
+            <div class="color-name">Background</div>
+            <div class="color-value">#FAFAF8</div>
+            <div class="color-var">--color-bg</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#F0EFEB;"></div>
+          <div class="color-info">
+            <div class="color-name">Background Secondary</div>
+            <div class="color-value">#F0EFEB</div>
+            <div class="color-var">--color-bg-secondary</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#1C1917;"></div>
+          <div class="color-info">
+            <div class="color-name">Text Primary</div>
+            <div class="color-value">#1C1917</div>
+            <div class="color-var">--color-text</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#57534E;"></div>
+          <div class="color-info">
+            <div class="color-name">Text Secondary</div>
+            <div class="color-value">#57534E</div>
+            <div class="color-var">--color-text-secondary</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#DA7756;"></div>
+          <div class="color-info">
+            <div class="color-name">Accent (Terracotta)</div>
+            <div class="color-value">#DA7756</div>
+            <div class="color-var">--color-accent</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#C4684A;"></div>
+          <div class="color-info">
+            <div class="color-name">Accent Hover</div>
+            <div class="color-value">#C4684A</div>
+            <div class="color-var">--color-accent-hover</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#E7E5E0;"></div>
+          <div class="color-info">
+            <div class="color-name">Border</div>
+            <div class="color-value">#E7E5E0</div>
+            <div class="color-var">--color-border</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#292524;"></div>
+          <div class="color-info">
+            <div class="color-name">Code Background</div>
+            <div class="color-value">#292524</div>
+            <div class="color-var">--color-code-bg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dark theme -->
+    <div class="theme-pair">
+      <h3><span class="hash">#</span> Dark Theme &mdash; [data-theme="dark"]</h3>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#0C0A09; border:1px solid #292524;"></div>
+          <div class="color-info">
+            <div class="color-name">Background</div>
+            <div class="color-value">#0C0A09</div>
+            <div class="color-var">--color-bg</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#1C1917; border:1px solid #292524;"></div>
+          <div class="color-info">
+            <div class="color-name">Background Secondary</div>
+            <div class="color-value">#1C1917</div>
+            <div class="color-var">--color-bg-secondary</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#FAFAF9;"></div>
+          <div class="color-info">
+            <div class="color-name">Text Primary</div>
+            <div class="color-value">#FAFAF9</div>
+            <div class="color-var">--color-text</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#A8A29E;"></div>
+          <div class="color-info">
+            <div class="color-name">Text Secondary</div>
+            <div class="color-value">#A8A29E</div>
+            <div class="color-var">--color-text-secondary</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#F2A688;"></div>
+          <div class="color-info">
+            <div class="color-name">Accent (Peach)</div>
+            <div class="color-value">#F2A688</div>
+            <div class="color-var">--color-accent</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#DA7756;"></div>
+          <div class="color-info">
+            <div class="color-name">Accent Hover</div>
+            <div class="color-value">#DA7756</div>
+            <div class="color-var">--color-accent-hover</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#292524; border:1px solid #57534E;"></div>
+          <div class="color-info">
+            <div class="color-name">Border</div>
+            <div class="color-value">#292524</div>
+            <div class="color-var">--color-border</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#1C1917; border:1px solid #292524;"></div>
+          <div class="color-info">
+            <div class="color-name">Code Background</div>
+            <div class="color-value">#1C1917</div>
+            <div class="color-var">--color-code-bg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terminal traffic lights -->
+    <div class="theme-pair">
+      <h3><span class="hash">#</span> Terminal Traffic Lights</h3>
+      <div class="color-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#FF5F56;"></div>
+          <div class="color-info">
+            <div class="color-name">Close</div>
+            <div class="color-value">#FF5F56</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#FFBD2E;"></div>
+          <div class="color-info">
+            <div class="color-name">Minimize</div>
+            <div class="color-value">#FFBD2E</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#27CA40;"></div>
+          <div class="color-info">
+            <div class="color-name">Maximize</div>
+            <div class="color-value">#27CA40</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TYPOGRAPHY -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section" id="typography">
+    <div class="section-label"># Type</div>
+    <div class="section-title">Typography</div>
+    <div class="section-desc">Two typefaces, clearly divided by role. JetBrains Mono owns structure and UI. Source Serif 4 owns readability and content.</div>
+
+    <!-- JetBrains Mono -->
+    <div class="type-specimen">
+      <div class="type-specimen-header">
+        <span class="type-family-name">JetBrains Mono</span>
+        <span class="type-usage">Headings, navigation, buttons, labels, code</span>
+      </div>
+      <div class="type-sample-mono type-sample-large">Claude Code for Marketers</div>
+      <div class="type-sample-mono type-sample-medium">AI superpowers for marketers. No coding required.</div>
+      <div class="type-sample-mono type-sample-body">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789 !@#$%^&*()_+-=[]{}|;:',.<>?</div>
+      <div class="type-weights">
+        <div>
+          <div class="type-weight-item type-sample-mono" style="font-weight:400">Regular 400</div>
+          <div class="type-weight-label">Body mono, inputs, meta</div>
+        </div>
+        <div>
+          <div class="type-weight-item type-sample-mono" style="font-weight:500">Medium 500</div>
+          <div class="type-weight-label">Buttons, nav links</div>
+        </div>
+        <div>
+          <div class="type-weight-item type-sample-mono" style="font-weight:600">Semibold 600</div>
+          <div class="type-weight-label">Headings, logo</div>
+        </div>
+        <div>
+          <div class="type-weight-item type-sample-mono" style="font-weight:700">Bold 700</div>
+          <div class="type-weight-label">Lesson numbers</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Source Serif 4 -->
+    <div class="type-specimen">
+      <div class="type-specimen-header">
+        <span class="type-family-name">Source Serif 4</span>
+        <span class="type-usage">Body text, article content, descriptions</span>
+      </div>
+      <div class="type-sample-serif type-sample-large" style="font-style:italic">for Marketers</div>
+      <div class="type-sample-serif type-sample-medium">Join our free 7-day email course and learn how to use Claude Code for your marketing work.</div>
+      <div class="type-sample-serif type-sample-body">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789 !@#$%^&*()_+-=[]{}|;:',.<>?</div>
+      <div class="type-weights">
+        <div>
+          <div class="type-weight-item type-sample-serif" style="font-weight:400">Regular 400</div>
+          <div class="type-weight-label">Body text, paragraphs</div>
+        </div>
+        <div>
+          <div class="type-weight-item type-sample-serif" style="font-weight:400;font-style:italic">Regular 400 Italic</div>
+          <div class="type-weight-label">"for Marketers" in H1</div>
+        </div>
+        <div>
+          <div class="type-weight-item type-sample-serif" style="font-weight:700">Bold 700</div>
+          <div class="type-weight-label">Strong / emphasis</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Type Scale -->
+    <h3 style="font-family:var(--font-mono);font-size:16px;font-weight:600;margin: 48px 0 16px;letter-spacing:-0.3px"><span style="color:var(--color-accent)">#</span> Type Scale</h3>
+    <div class="type-scale">
+      <div class="type-scale-row">
+        <div class="scale-label">H1 (hero)</div>
+        <div class="scale-sample" style="font-size:44px;letter-spacing:-0.88px;line-height:1.15">Claude Code</div>
+        <div class="scale-meta">44px / 600 / -0.88px<br>Line-height: 1.15</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">H1 (post)</div>
+        <div class="scale-sample" style="font-size:36px;letter-spacing:-0.72px;line-height:1.25">Blog Post Title</div>
+        <div class="scale-meta">36px / 600 / -0.72px<br>Line-height: 1.25</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">H1 (start)</div>
+        <div class="scale-sample" style="font-size:28px;letter-spacing:-0.56px;line-height:1.3">$ ./start-here.sh</div>
+        <div class="scale-meta">28px / 600 / -0.56px<br>Line-height: 1.3</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">H2</div>
+        <div class="scale-sample" style="font-size:20px;letter-spacing:-0.4px;line-height:1.3"># Recent Posts</div>
+        <div class="scale-meta">20px / 600 / -0.4px<br>Line-height: 1.3</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">H3</div>
+        <div class="scale-sample" style="font-size:17.6px;letter-spacing:-0.35px;line-height:1.3">Blog Card Title</div>
+        <div class="scale-meta">17.6px / 600 / -0.35px<br>Line-height: 1.3</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">Body</div>
+        <div class="scale-sample type-sample-serif" style="font-size:17px;font-weight:400;line-height:1.7">Body text in Source Serif 4</div>
+        <div class="scale-meta">17px / 400 / normal<br>Line-height: 1.7</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">Content</div>
+        <div class="scale-sample type-sample-serif" style="font-size:16.8px;font-weight:400;line-height:1.8">Article paragraph text</div>
+        <div class="scale-meta">16.8px / 400 / normal<br>Line-height: 1.8</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">Nav Logo</div>
+        <div class="scale-sample" style="font-size:15.2px;letter-spacing:-0.3px">> Claude Code for Marketers</div>
+        <div class="scale-meta">15.2px / 600 / -0.3px<br>Line-height: 1.7</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">Button</div>
+        <div class="scale-sample" style="font-size:14.4px;font-weight:500">Send me the free course</div>
+        <div class="scale-meta">14.4px / 500 / normal</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">Code Inline</div>
+        <div class="scale-sample" style="font-size:14.28px;font-weight:400"><span class="code-inline-demo">claude --help</span></div>
+        <div class="scale-meta">14.28px (0.84em) / 400</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">Nav Link</div>
+        <div class="scale-sample" style="font-size:13.6px;font-weight:500;letter-spacing:0.27px">Use Cases</div>
+        <div class="scale-meta">13.6px / 500 / +0.27px</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="scale-label">Footer</div>
+        <div class="scale-sample" style="font-size:12.8px;font-weight:400;color:var(--color-text-secondary)"># &copy; 2026 Claude Code for Marketers</div>
+        <div class="scale-meta">12.8px / 400 / normal</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- COMPONENTS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section" id="components">
+    <div class="section-label"># UI</div>
+    <div class="section-title">Components</div>
+    <div class="section-desc">Every interactive element rendered with actual brand styles. All dimensions, radii, and padding values are extracted directly from the live site.</div>
+
+    <div class="component-grid">
+
+      <!-- Terminal Window -->
+      <div class="component-card">
+        <div class="component-preview" style="padding:16px">
+          <div class="hero-terminal" style="margin:0;max-width:100%;width:100%">
+            <div class="terminal-titlebar">
+              <div class="terminal-dot dot-red"></div>
+              <div class="terminal-dot dot-yellow"></div>
+              <div class="terminal-dot dot-green"></div>
+            </div>
+            <div class="terminal-body">
+              <div><span class="prompt-char">$</span> claude --help</div>
+              <div class="output">Welcome, Marketer.</div>
+            </div>
+          </div>
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Terminal Window</div>
+          <div class="component-specs">
+            bg: --color-code-bg &bull; radius: 8px<br>
+            shadow: 0 8px 32px rgba(0,0,0,0.2)<br>
+            border: 1px solid --color-border<br>
+            max-width: 320px &bull; font: 13.6px mono
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="component-card">
+        <div class="component-preview" style="flex-direction:column;gap:16px">
+          <button class="btn-primary">Send me the free course</button>
+          <a href="#" class="btn-nav">Start Here</a>
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Buttons</div>
+          <div class="component-specs">
+            CTA: 14.4px/500, pad: 12px 20px, radius: 6px<br>
+            Nav pill: 13.6px/600, pad: 6.4px 12px, radius: 4px<br>
+            bg: --color-accent &bull; text: --color-code-bg<br>
+            transition: background-color 0.2s
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Input -->
+      <div class="component-card">
+        <div class="component-preview">
+          <input type="email" class="input-demo" placeholder="you@example.com" aria-label="Email demo">
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Email Input</div>
+          <div class="component-specs">
+            font: 14.4px JetBrains Mono / 400<br>
+            pad: 12px 16px &bull; radius: 6px<br>
+            border: 1px solid --color-border<br>
+            focus: border-color --color-accent<br>
+            transition: border-color 0.2s
+          </div>
+        </div>
+      </div>
+
+      <!-- Blockquote -->
+      <div class="component-card">
+        <div class="component-preview" style="padding:16px">
+          <div class="blockquote-demo">
+            The terminal looks intimidating, but it's just a textbox.
+          </div>
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Blockquote</div>
+          <div class="component-specs">
+            border-left: 3px solid --color-accent<br>
+            bg: --color-bg-secondary<br>
+            pad: 16px 20px &bull; radius: 0 8px 8px 0<br>
+            font: 16.8px Source Serif 4 / line-height 1.8
+          </div>
+        </div>
+      </div>
+
+      <!-- Signup Box (full width) -->
+      <div class="component-card full-width-component">
+        <div class="component-preview" style="padding:16px">
+          <div class="signup-demo">
+            <div class="signup-header"><span class="prompt-char">></span> Master Claude Code in 15 minutes a day</div>
+            <div class="signup-text">Join our free 7-day email course and learn how to use Claude Code for your marketing work.</div>
+            <div class="signup-form">
+              <input type="email" class="input-demo" placeholder="you@example.com" style="flex:1;max-width:none" aria-label="Email signup demo">
+              <button class="btn-primary">Send me the free course</button>
+            </div>
+          </div>
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Signup / CTA Box</div>
+          <div class="component-specs">
+            bg: --color-bg-secondary &bull; border: 1px solid --color-border &bull; radius: 8px &bull; pad: 24px &bull; margin: 32px 0<br>
+            Header: mono 14px/600 with ">" prompt &bull; Description: serif/secondary color &bull; Form: flex row with gap 8px
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card -->
+      <div class="component-card">
+        <div class="component-preview" style="padding:16px">
+          <div class="blog-card-demo">
+            <h3>How I automated my email marketing</h3>
+            <p>I used to put off promoting my blog posts because the context switch was just enough friction to kill momentum.</p>
+            <time>Feb 3, 2026</time>
+          </div>
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Blog Post Card</div>
+          <div class="component-specs">
+            border: 1px solid --color-border &bull; radius: 8px<br>
+            pad: 20px &bull; hover: border-color --color-accent<br>
+            title: mono 17.6px/600 &bull; desc: serif/secondary<br>
+            time: mono 13.6px/secondary &bull; transition: 0.2s
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson Card -->
+      <div class="component-card">
+        <div class="component-preview" style="padding:16px">
+          <div class="lesson-card-demo">
+            <span class="lesson-num">01</span>
+            <div>
+              <h3>Don't Be Scared of the Terminal</h3>
+              <p>The terminal looks intimidating, but it's just a textbox.</p>
+            </div>
+          </div>
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Lesson Card (Start Here)</div>
+          <div class="component-specs">
+            display: flex &bull; gap: 16px &bull; pad: 16px 20px<br>
+            border: 1px solid --color-border &bull; radius: 8px<br>
+            number: mono 20px/700 in --color-accent<br>
+            hover: border-color --color-accent
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline Code -->
+      <div class="component-card">
+        <div class="component-preview">
+          <p style="font-family:var(--font-body);font-size:16.8px;line-height:1.8">
+            Run <span class="code-inline-demo">claude --help</span> to see all available commands in your <span class="code-inline-demo">terminal</span>.
+          </p>
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Inline Code</div>
+          <div class="component-specs">
+            font: 14.28px (0.84em) JetBrains Mono / 400<br>
+            bg: --color-code-bg &bull; color: --color-code-text<br>
+            pad: 3.2px 6.4px &bull; radius: 4px<br>
+            border: 1px solid --color-border
+          </div>
+        </div>
+      </div>
+
+      <!-- "View all posts" link -->
+      <div class="component-card">
+        <div class="component-preview">
+          <a href="#" style="font-family:var(--font-mono);font-size:13.6px;font-weight:500;color:var(--color-accent);text-decoration:none;display:flex;align-items:center;gap:6px;letter-spacing:0.27px;transition:color 0.2s">
+            View all posts <span style="font-size:16px">&rarr;</span>
+          </a>
+        </div>
+        <div class="component-meta">
+          <div class="component-name">Arrow Link</div>
+          <div class="component-specs">
+            font: 13.6px mono / 500 / +0.27px tracking<br>
+            color: --color-accent &bull; no underline<br>
+            arrow icon suffix &bull; transition: color 0.2s
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ANIMATIONS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-label"># Motion</div>
+    <div class="section-title">Animations &amp; Transitions</div>
+    <div class="section-desc">Subtle motion that reinforces the terminal metaphor. All transitions use ease timing with short durations to keep interactions feeling responsive.</div>
+
+    <div class="animation-row">
+      <div class="animation-demo-box demo-blink" style="width:10px;height:24px;border-radius:2px"></div>
+      <div class="animation-info">
+        <div class="animation-name">Cursor Blink</div>
+        <div class="animation-desc">Terminal cursor animation used in the navbar logo and hero. Opacity toggles 1 &rarr; 0 &rarr; 1 on a 1s infinite loop.</div>
+        <div class="animation-code">@keyframes blink { 50% { opacity: 0 } }</div>
+      </div>
+    </div>
+    <div class="animation-row">
+      <div class="animation-demo-box demo-fadeInUp"></div>
+      <div class="animation-info">
+        <div class="animation-name">Fade In Up</div>
+        <div class="animation-desc">Content entrance animation. Elements translate 10px upward while fading from 0 to full opacity.</div>
+        <div class="animation-code">@keyframes fadeInUp { from { opacity:0; translateY(10px) } }</div>
+      </div>
+    </div>
+    <div class="animation-row">
+      <div style="width:48px;flex-shrink:0;text-align:center">
+        <div style="width:36px;height:36px;background:var(--color-accent);border-radius:6px;transition:background-color 0.2s;margin:0 auto" onmouseenter="this.style.background='var(--color-accent-hover)'" onmouseleave="this.style.background='var(--color-accent)'"></div>
+      </div>
+      <div class="animation-info">
+        <div class="animation-name">Hover Transitions</div>
+        <div class="animation-desc">All interactive elements use consistent transition durations. Hover the square to preview.</div>
+        <div class="animation-code">
+          background-color: 0.2s (buttons)<br>
+          color: 0.2s (links)<br>
+          border-color: 0.2s (inputs, cards)
+        </div>
+      </div>
+    </div>
+    <div class="animation-row">
+      <div style="width:48px;flex-shrink:0;text-align:center">
+        <div style="width:36px;height:36px;border-radius:6px;background:var(--color-bg-secondary);border:1px solid var(--color-border);transition:background-color 0.3s;margin:0 auto"></div>
+      </div>
+      <div class="animation-info">
+        <div class="animation-name">Theme Transition</div>
+        <div class="animation-desc">The body element transitions both background-color and color over 0.3s when toggling between light and dark themes.</div>
+        <div class="animation-code">transition: background-color 0.3s, color 0.3s</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SPACING & LAYOUT -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-label"># Layout</div>
+    <div class="section-title">Spacing &amp; Layout</div>
+    <div class="section-desc">A constrained, centered layout with generous vertical rhythm. The max-width keeps reading comfortable while spacing scales consistently.</div>
+
+    <table class="spacing-table">
+      <thead>
+        <tr>
+          <th>Token</th>
+          <th>Value</th>
+          <th>Usage</th>
+          <th style="width:200px">Visual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>--max-width</td>
+          <td>820px</td>
+          <td>Content container, nav</td>
+          <td><div class="spacing-bar" style="width:100%"></div></td>
+        </tr>
+        <tr>
+          <td>section-gap</td>
+          <td>64px</td>
+          <td>Between major sections</td>
+          <td><div class="spacing-bar" style="width:78%"></div></td>
+        </tr>
+        <tr>
+          <td>component-gap</td>
+          <td>40px</td>
+          <td>Terminal to heading, heading to content</td>
+          <td><div class="spacing-bar" style="width:49%"></div></td>
+        </tr>
+        <tr>
+          <td>card-margin</td>
+          <td>32px</td>
+          <td>Signup box margin</td>
+          <td><div class="spacing-bar" style="width:39%"></div></td>
+        </tr>
+        <tr>
+          <td>card-padding</td>
+          <td>24px</td>
+          <td>Signup box, footer inner</td>
+          <td><div class="spacing-bar" style="width:29%"></div></td>
+        </tr>
+        <tr>
+          <td>content-gap</td>
+          <td>24px</td>
+          <td>Between paragraphs, h2 margin-bottom</td>
+          <td><div class="spacing-bar" style="width:29%"></div></td>
+        </tr>
+        <tr>
+          <td>element-gap</td>
+          <td>16px</td>
+          <td>H1 margin-bottom, lesson card gap</td>
+          <td><div class="spacing-bar" style="width:20%"></div></td>
+        </tr>
+        <tr>
+          <td>input-padding</td>
+          <td>12px 16px</td>
+          <td>Text inputs vertical/horizontal</td>
+          <td><div class="spacing-bar" style="width:15%"></div></td>
+        </tr>
+        <tr>
+          <td>btn-padding</td>
+          <td>12px 20px</td>
+          <td>Primary CTA button</td>
+          <td><div class="spacing-bar" style="width:15%"></div></td>
+        </tr>
+        <tr>
+          <td>nav-pill-padding</td>
+          <td>6.4px 12px</td>
+          <td>Start Here nav button</td>
+          <td><div class="spacing-bar" style="width:8%"></div></td>
+        </tr>
+        <tr>
+          <td>inline-code-pad</td>
+          <td>3.2px 6.4px</td>
+          <td>Inline code snippets</td>
+          <td><div class="spacing-bar" style="width:4%"></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family:var(--font-mono);font-size:16px;font-weight:600;margin:48px 0 16px;letter-spacing:-0.3px"><span style="color:var(--color-accent)">#</span> Border Radii</h3>
+    <table class="spacing-table">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Usage</th>
+          <th style="width:80px">Preview</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8px</td>
+          <td>Cards, terminal window, signup box, blockquote (right side)</td>
+          <td><div style="width:40px;height:40px;border:2px solid var(--color-accent);border-radius:8px"></div></td>
+        </tr>
+        <tr>
+          <td>6px</td>
+          <td>CTA buttons, email inputs</td>
+          <td><div style="width:40px;height:40px;border:2px solid var(--color-accent);border-radius:6px"></div></td>
+        </tr>
+        <tr>
+          <td>4px</td>
+          <td>Nav pill button, inline code</td>
+          <td><div style="width:40px;height:40px;border:2px solid var(--color-accent);border-radius:4px"></div></td>
+        </tr>
+        <tr>
+          <td>50%</td>
+          <td>Theme toggle button, terminal dots</td>
+          <td><div style="width:40px;height:40px;border:2px solid var(--color-accent);border-radius:50%"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CSS VARIABLE REFERENCE -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-label"># Reference</div>
+    <div class="section-title">CSS Custom Properties</div>
+    <div class="section-desc">The complete token system. Copy these variables directly into any project to match the brand.</div>
+
+    <table class="var-table">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Light Value</th>
+          <th>Dark Value</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="var-name">--color-bg</td>
+          <td><span class="var-swatch" style="background:#FAFAF8"></span>#FAFAF8</td>
+          <td><span class="var-swatch" style="background:#0C0A09;border-color:#57534E"></span>#0C0A09</td>
+          <td>Page background</td>
+        </tr>
+        <tr>
+          <td class="var-name">--color-bg-secondary</td>
+          <td><span class="var-swatch" style="background:#F0EFEB"></span>#F0EFEB</td>
+          <td><span class="var-swatch" style="background:#1C1917;border-color:#57534E"></span>#1C1917</td>
+          <td>Cards, signup, blockquotes</td>
+        </tr>
+        <tr>
+          <td class="var-name">--color-text</td>
+          <td><span class="var-swatch" style="background:#1C1917"></span>#1C1917</td>
+          <td><span class="var-swatch" style="background:#FAFAF9"></span>#FAFAF9</td>
+          <td>Primary text</td>
+        </tr>
+        <tr>
+          <td class="var-name">--color-text-secondary</td>
+          <td><span class="var-swatch" style="background:#57534E"></span>#57534E</td>
+          <td><span class="var-swatch" style="background:#A8A29E"></span>#A8A29E</td>
+          <td>Muted text, descriptions</td>
+        </tr>
+        <tr>
+          <td class="var-name">--color-accent</td>
+          <td><span class="var-swatch" style="background:#DA7756"></span>#DA7756</td>
+          <td><span class="var-swatch" style="background:#F2A688"></span>#F2A688</td>
+          <td>CTAs, links, accents</td>
+        </tr>
+        <tr>
+          <td class="var-name">--color-accent-hover</td>
+          <td><span class="var-swatch" style="background:#C4684A"></span>#C4684A</td>
+          <td><span class="var-swatch" style="background:#DA7756"></span>#DA7756</td>
+          <td>Hover state for accent</td>
+        </tr>
+        <tr>
+          <td class="var-name">--color-border</td>
+          <td><span class="var-swatch" style="background:#E7E5E0"></span>#E7E5E0</td>
+          <td><span class="var-swatch" style="background:#292524;border-color:#57534E"></span>#292524</td>
+          <td>Borders, dividers</td>
+        </tr>
+        <tr>
+          <td class="var-name">--color-code-bg</td>
+          <td><span class="var-swatch" style="background:#292524"></span>#292524</td>
+          <td><span class="var-swatch" style="background:#1C1917;border-color:#57534E"></span>#1C1917</td>
+          <td>Code blocks, terminal</td>
+        </tr>
+        <tr>
+          <td class="var-name">--color-code-text</td>
+          <td><span class="var-swatch" style="background:#FAFAF9"></span>#FAFAF9</td>
+          <td><span class="var-swatch" style="background:#FAFAF9"></span>#FAFAF9</td>
+          <td>Code text (both themes)</td>
+        </tr>
+        <tr>
+          <td class="var-name">--font-mono</td>
+          <td colspan="2" style="font-family:var(--font-mono);font-size:12px">"JetBrains Mono", "SF Mono", "Fira Code", monospace</td>
+          <td>UI typeface</td>
+        </tr>
+        <tr>
+          <td class="var-name">--font-body</td>
+          <td colspan="2" style="font-family:var(--font-mono);font-size:12px">"Source Serif 4", Georgia, "Times New Roman", serif</td>
+          <td>Body typeface</td>
+        </tr>
+        <tr>
+          <td class="var-name">--max-width</td>
+          <td colspan="2">820px</td>
+          <td>Content max-width</td>
+        </tr>
+        <tr>
+          <td class="var-name">--scanline-opacity</td>
+          <td>0</td>
+          <td>0.03</td>
+          <td>CRT scanline overlay (dark only)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="brand-footer">
+  <p><span class="hash">#</span> Brand guide extracted from claudecodeformarketers.com</p>
+  <p style="margin-top:4px">Generated by Claude Code + Chrome DevTools MCP</p>
+</footer>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    document.querySelector('.theme-icon').textContent = next === 'dark' ? '\u2600' : '\u263D';
+  }
+  // Default to light
+  document.documentElement.setAttribute('data-theme', 'light');
+</script>
+
+</body>
+</html>

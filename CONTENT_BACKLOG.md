@@ -4,16 +4,16 @@ Ideas, planned posts, and in-progress content.
 
 ## 📋 Backlog
 
-### How to create a brand guide for a website using Claude Code and the DevTools MCP
-- **Status:** `idea`
-- **Type:** Tutorial/quick win
-- **Angle:** Inspect live site CSS → extract brand system → auto-generate documentation
-- **Notes:** The DevTools MCP angle lets readers grab real color values, font stacks, and spacing from any site without manual inspection. Good for documenting their own brand or reverse-engineering competitors.
-- **Added:** 2026-02-04
+*No items currently in backlog*
 
 ---
 
 ## ✅ Published
+
+### How I used Claude Code to build a brand guide without opening a design tool
+- **Published:** 2026-02-04
+- **Category:** Use Cases
+- **File:** `create-a-brand-guide-with-devtools-mcp.md`
 
 ### Don't Be Scared of the Terminal
 - **Published:** 2026-01-06
