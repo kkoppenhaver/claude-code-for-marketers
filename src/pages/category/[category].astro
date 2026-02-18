@@ -50,6 +50,7 @@ const posts = (await getCollection('blog', ({ data }) =>
                     year: 'numeric',
                     month: 'short',
                     day: 'numeric',
+                    timeZone: 'UTC',
                   })}
                 </time>
                 <span class="separator">•</span>

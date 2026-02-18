@@ -61,6 +61,7 @@ const allCategories = [...new Set(posts.flatMap((post) => post.data.categories))
                     year: 'numeric',
                     month: 'short',
                     day: 'numeric',
+                    timeZone: 'UTC',
                   })}
                 </time>
                 <span class="separator">•</span>
