@@ -19,7 +19,7 @@ I knew this was a problem. What's the point of writing something if the people w
 
 ## A quick word about skills
 
-If you've read my post on [what skills are and how they work](/blog/what-are-skills), you already know the basics. If not, here's the short version: skills are reusable instructions you can give Claude Code. Think of them like SOPs for your AI assistant. You write down how you want something done once, and Claude can follow those instructions whenever that type of task comes up.
+If you've read my post on [what skills are and how they work](/blog/what-are-skills/), you already know the basics. If not, here's the short version: skills are reusable instructions you can give Claude Code. Think of them like SOPs for your AI assistant. You write down how you want something done once, and Claude can follow those instructions whenever that type of task comes up.
 
 What makes skills more powerful than just prompting is that they can include supporting files like templates, reference documents, and even scripts that actually do things. A prompt is just text. A skill is text plus context plus the ability to take real actions.
 

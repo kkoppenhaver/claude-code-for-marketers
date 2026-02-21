@@ -41,7 +41,7 @@ The better approach is to feed it something you *actually said*, with your real 
 
 I use [Granola](https://granola.ai) for my call transcription, and this is where the workflow gets really smooth. Granola has an MCP server, which means Claude Code can connect to it directly and pull your transcripts without any copy-pasting.
 
-If you're not familiar with MCP servers, they're basically bridges that let Claude Code talk to external tools. I wrote a whole post about them: [Giving Claude Code superpowers with MCP servers](/blog/giving-claude-code-superpowers-with-mcp-servers). The short version is that they unlock a ton of useful integrations, and Granola's is one of my favorites.
+If you're not familiar with MCP servers, they're basically bridges that let Claude Code talk to external tools. I wrote a whole post about them: [Giving Claude Code superpowers with MCP servers](/blog/giving-claude-code-superpowers-with-mcp-servers/). The short version is that they unlock a ton of useful integrations, and Granola's is one of my favorites.
 
 Setting it up is a one-time thing. Open your terminal and run:
 
@@ -83,9 +83,9 @@ The key thing here is that **Claude isn't coming up with ideas from nothing.** I
 
 Once I've picked the insight I want to run with, the next step is turning it into an actual post.
 
-I use the `/linkedin` and `/tweet` skills from my [cc-skills repo](https://github.com/kkoppenhaver/cc-skills) for this. If you've read the [content repurposing article](/blog/turn-one-piece-of-content-into-ten-social-posts), you've seen these in action. They handle the platform-specific formatting (LinkedIn posts are structured very differently from tweets), and they have voice calibration built in so the output actually sounds like you, not like a corporate AI.
+I use the `/linkedin` and `/tweet` skills from my [cc-skills repo](https://github.com/kkoppenhaver/cc-skills) for this. If you've read the [content repurposing article](/blog/turn-one-piece-of-content-into-ten-social-posts/), you've seen these in action. They handle the platform-specific formatting (LinkedIn posts are structured very differently from tweets), and they have voice calibration built in so the output actually sounds like you, not like a corporate AI.
 
-If you haven't used skills before, check out [What are skills (and why should marketers care)?](/blog/what-are-skills) for the full walkthrough. But the short version is: skills are reusable instructions you give Claude Code for specific types of tasks. The social media skills know about hook structures, post formatting, and how to match your writing voice.
+If you haven't used skills before, check out [What are skills (and why should marketers care)?](/blog/what-are-skills/) for the full walkthrough. But the short version is: skills are reusable instructions you give Claude Code for specific types of tasks. The social media skills know about hook structures, post formatting, and how to match your writing voice.
 
 So I'll say something like:
 
@@ -118,7 +118,7 @@ Once that's configured, you can tell Claude Code:
 
 And it handles the rest. The skill calls Typefully's API to create a draft with your scheduled time, and the post goes out without you ever opening another app.
 
-For anyone curious about how it works under the hood: the skill includes a Python script that talks to Typefully's API. It calls their drafts endpoint to create new posts, and you can set it to publish immediately or schedule for a specific time. If you want to build your own version or customize it, the [skills article](/blog/what-are-skills) walks through how skills are structured. But you don't need to understand any of that to use it. Just install the skill and tell Claude when you want to post.
+For anyone curious about how it works under the hood: the skill includes a Python script that talks to Typefully's API. It calls their drafts endpoint to create new posts, and you can set it to publish immediately or schedule for a specific time. If you want to build your own version or customize it, the [skills article](/blog/what-are-skills/) walks through how skills are structured. But you don't need to understand any of that to use it. Just install the skill and tell Claude when you want to post.
 
 If you don't use Typefully, that's totally fine. You can always copy the finished post into whatever tool you prefer (Buffer, Hootsuite, or just post it manually). The generation part of the workflow works the same either way.
 

@@ -52,7 +52,7 @@ const posts = introSequenceSlugs
       <ol class="post-list">
         {posts.map((post, index) => (
           <li style={`animation-delay: ${index * 0.05}s`}>
-            <a href={`/blog/${post.id}`}>
+            <a href={`/blog/${post.id}/`}>
               <span class="post-index">{String(index + 1).padStart(2, '0')}</span>
               <div class="post-content">
                 <h2>{post.data.title}</h2>

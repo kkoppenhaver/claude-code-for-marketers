@@ -9,7 +9,7 @@ categories: ["Getting Started"]
 draft: false
 ---
 
-So, you've heard about Claude Code, read our post about [why the terminal isn't as scary as it looks](/blog/dont-be-scared-of-the-terminal) and now you're ready to try it yourself.
+So, you've heard about Claude Code, read our post about [why the terminal isn't as scary as it looks](/blog/dont-be-scared-of-the-terminal/) and now you're ready to try it yourself.
 
 But how do you actually get it running?
 
@@ -34,7 +34,7 @@ There are two ways to get Claude Code running:
 
 ![Claude Code in the Desktop app](../../assets/images/blog/claude_code_desktop.png)
 
-My recommendation: if you followed along with [our intro to the terminal](/blog/dont-be-scared-of-the-terminal) and you're feeling even a little bit brave, go with the terminal installation. It's not much harder, and you'll have access to everything Claude Code can do.
+My recommendation: if you followed along with [our intro to the terminal](/blog/dont-be-scared-of-the-terminal/) and you're feeling even a little bit brave, go with the terminal installation. It's not much harder, and you'll have access to everything Claude Code can do.
 
 ## Method 1: Terminal installation
 

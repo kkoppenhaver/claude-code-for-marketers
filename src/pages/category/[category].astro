@@ -40,7 +40,7 @@ const posts = (await getCollection('blog', ({ data }) =>
     <ul class="post-list">
       {posts.map((post, index) => (
         <li style={`animation-delay: ${index * 0.05}s`}>
-          <a href={`/blog/${post.id}`}>
+          <a href={`/blog/${post.id}/`}>
             <div class="post-content">
               <h2>{post.data.title}</h2>
               <p class="description">{post.data.description}</p>

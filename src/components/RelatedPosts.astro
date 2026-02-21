@@ -52,7 +52,7 @@ if (relatedPosts.length === 0) return null;
   <ul>
     {relatedPosts.map(post => (
       <li>
-        <a href={`/blog/${post.id}`}>
+        <a href={`/blog/${post.id}/`}>
           <h4>{post.data.title}</h4>
           <p>{post.data.description}</p>
         </a>

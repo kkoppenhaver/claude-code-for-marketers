@@ -44,7 +44,7 @@ You can get something that looks 80% right pretty fast. But that last 20% is whe
 
 When Claude Code generates an HTML page, every element on it is explicit and editable. A heading is a heading. A color is a hex code. There's nothing ambiguous about it.
 
-"Move this chart up 20px" is a CSS change instead of requiring a complete regeneration, which means you can iterate on one section without touching the rest. Fonts, colors, spacing, and data are all exact, not approximated. And if you have a [brand guide](/blog/create-a-brand-guide-with-devtools-mcp) already, Claude can match it precisely.
+"Move this chart up 20px" is a CSS change instead of requiring a complete regeneration, which means you can iterate on one section without touching the rest. Fonts, colors, spacing, and data are all exact, not approximated. And if you have a [brand guide](/blog/create-a-brand-guide-with-devtools-mcp/) already, Claude can match it precisely.
 
 **For information-dense documents, code gives you more control than image generation ever will.** And you don't need to know how to write that code yourself, because we have Claude Code to help with that.
 
@@ -52,7 +52,7 @@ When Claude Code generates an HTML page, every element on it is explicit and edi
 
 I needed a one-page reference document covering three Claude Code features (Hooks, MCP Servers, and Skills). Basically, the kind of thing you'd hand someone after a training session so they have something to refer back to.
 
-Instead of opening Figma or trying to prompt an image generator, I asked Claude Code to build it as an HTML page. But before writing any code, I had Claude Code use the Chrome DevTools MCP to crawl Anthropic's website and extract their visual identity: the color palette, typography system, spacing tokens, and component patterns. It assembled all of that into a design system reference that it could then use as a foundation for the cheatsheet. (If you've read my post on [building a brand guide with the DevTools MCP](/blog/create-a-brand-guide-with-devtools-mcp), it's the same idea, just pointed at someone else's site instead of my own.)
+Instead of opening Figma or trying to prompt an image generator, I asked Claude Code to build it as an HTML page. But before writing any code, I had Claude Code use the Chrome DevTools MCP to crawl Anthropic's website and extract their visual identity: the color palette, typography system, spacing tokens, and component patterns. It assembled all of that into a design system reference that it could then use as a foundation for the cheatsheet. (If you've read my post on [building a brand guide with the DevTools MCP](/blog/create-a-brand-guide-with-devtools-mcp/), it's the same idea, just pointed at someone else's site instead of my own.)
 
 From there, I gave it the content direction:
 
@@ -71,7 +71,7 @@ This is where the gap between image generation and code becomes impossible to ig
 
 With an image generator, "make the code blocks darker" means regenerating everything and hoping it doesn't break something else. With HTML, Claude Code just changes `background: var(--slate-dark)` in one CSS rule. The code blocks get darker. Everything else stays exactly the same.
 
-I also used the [DevTools MCP](/blog/giving-claude-code-superpowers-with-mcp-servers) so Claude Code could see its own work in Chrome and fix rendering issues without me having to screenshot and describe problems back to it. Claude could look at the page, spot something that didn't look right, and fix it, all in the same conversation.
+I also used the [DevTools MCP](/blog/giving-claude-code-superpowers-with-mcp-servers/) so Claude Code could see its own work in Chrome and fix rendering issues without me having to screenshot and describe problems back to it. Claude could look at the page, spot something that didn't look right, and fix it, all in the same conversation.
 
 Each iteration touches only what needs to change. That's the whole point.
 

@@ -29,7 +29,7 @@ By the end of this post, you'll have a competitor comparison report that covers:
 - Strengths, weaknesses, and opportunities
 - Key takeaways for your team
 
-If you've been following along with this series, you already have [Claude Code installed and ready to go](/blog/installing-claude-code). If not, start there (it only takes a few minutes).
+If you've been following along with this series, you already have [Claude Code installed and ready to go](/blog/installing-claude-code/). If not, start there (it only takes a few minutes).
 
 ## Kicking off the research
 

@@ -47,7 +47,7 @@ So what does this actually look like in practice? Here are a few ways I use my C
 
 **Content calendar management.** I keep my content ideas, drafts, and publishing schedule in Obsidian. When I'm planning what to write next, I can ask Claude Code to look at my existing content and suggest gaps, or to take an idea from my "someday" list and turn it into an outline.
 
-**Competitor research notes.** In my [last post about competitor analysis](/blog/deep-research-competitor-analysis), I showed how Claude Code can research competitors and save the output to Markdown files. Those files now live in my Obsidian vault. When I need to reference them later, or want Claude to build on that research, it's all right there.
+**Competitor research notes.** In my [last post about competitor analysis](/blog/deep-research-competitor-analysis/), I showed how Claude Code can research competitors and save the output to Markdown files. Those files now live in my Obsidian vault. When I need to reference them later, or want Claude to build on that research, it's all right there.
 
 **Brand and style guidelines.** Outside of just what I have in `CLAUDE.md`, I have a note with my brand voice, my target audience, and the phrases I like to use (and avoid). Claude can reference this whenever I'm drafting content.
 

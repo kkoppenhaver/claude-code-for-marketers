@@ -60,7 +60,7 @@ This is the difference between content that sounds like a robot wrote it and con
 
 Both of these tools look at content you've already published and distill your writing patterns: how you structure sentences, what kind of vocabulary you use, whether you're formal or casual, and more.
 
-Once you have a voice profile, you can add it to your `CLAUDE.md` file (that's the file that tells Claude Code about your preferences) or incorporate it into a skill. If you're not sure what skills are, I wrote a whole piece about them that you should take a look at: [What are skills (and why should marketers care)?](/blog/what-are-skills)
+Once you have a voice profile, you can add it to your `CLAUDE.md` file (that's the file that tells Claude Code about your preferences) or incorporate it into a skill. If you're not sure what skills are, I wrote a whole piece about them that you should take a look at: [What are skills (and why should marketers care)?](/blog/what-are-skills/)
 
 The short version is: skills are like little instruction manuals you give to Claude Code for specific tasks. And the ones we're about to use have voice calibration built right in.
 
@@ -109,7 +109,7 @@ Each skill includes:
 - **A preflight checklist** that makes sure you've given it enough context before generating
 - **A postflight checklist** that reviews the output for quality before you publish
 
-If you haven't installed skills before, check out [the skills article](/blog/what-are-skills) for a walkthrough. Otherwise, clone the repo and Claude Code can use them like built-in commands. You'll want to update the voice in these particular skills to fit how _you_ post.
+If you haven't installed skills before, check out [the skills article](/blog/what-are-skills/) for a walkthrough. Otherwise, clone the repo and Claude Code can use them like built-in commands. You'll want to update the voice in these particular skills to fit how _you_ post.
 
 Once you've got the skills installed and you've had your brainstorming conversation, you can start generating. Something like:
 
@@ -178,7 +178,7 @@ You're still the one deciding what's worth saying. Claude Code just helps you sa
 
 Here's my challenge to you: take your most recent webinar, blog post, or podcast episode and run it through this workflow. You just need Claude Code, the [skills from the repo](https://github.com/kkoppenhaver/cc-skills), and about 30 minutes.
 
-If you're new to skills, start with [What are skills (and why should marketers care)?](/blog/what-are-skills) to get the background. Then come back here and try this workflow.
+If you're new to skills, start with [What are skills (and why should marketers care)?](/blog/what-are-skills/) to get the background. Then come back here and try this workflow.
 
 I think you'll be surprised how quickly you go from "I have one piece of content" to "I have two weeks of social posts ready to go."
 

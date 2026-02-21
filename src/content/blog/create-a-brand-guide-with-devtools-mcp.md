@@ -17,7 +17,7 @@ What if I pointed Claude Code at the site and asked it to build the brand guide 
 
 ## What the DevTools MCP is
 
-If you've read my post on [giving Claude Code superpowers with MCP servers](/blog/giving-claude-code-superpowers-with-mcp-servers), you already know that MCP servers let Claude Code interact with external tools. The [DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) is one of the most useful ones I've found. It connects Claude Code to a Chrome browser session, giving it the ability to inspect elements, read computed styles, take snapshots of the page, and generally do everything you'd do manually in Chrome DevTools.
+If you've read my post on [giving Claude Code superpowers with MCP servers](/blog/giving-claude-code-superpowers-with-mcp-servers/), you already know that MCP servers let Claude Code interact with external tools. The [DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) is one of the most useful ones I've found. It connects Claude Code to a Chrome browser session, giving it the ability to inspect elements, read computed styles, take snapshots of the page, and generally do everything you'd do manually in Chrome DevTools.
 
 With this MCP enabled, Claude can process an entire page's worth of CSS variables, font stacks, and component patterns in seconds, without you having to squint at Chrome Dev Tools yourself.
 
