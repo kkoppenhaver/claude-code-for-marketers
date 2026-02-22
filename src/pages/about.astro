@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmailSignup from '../components/EmailSignup.astro';
+import { Image } from 'astro:assets';
+import headshotImage from '../assets/images/blog/me.jpeg';
+---
+
+<BaseLayout
+  title="About"
+  description="I'm Keanan, the developer and marketer behind Claude Code for Marketers. Learn why this site exists and how it can help you."
+>
+  <header class="page-header">
+    <h1><span class="prompt">$</span> whoami</h1>
+    <p class="subtitle">About this site and the person behind it</p>
+  </header>
+
+  <section class="about-section">
+    <h2>What is Claude Code for Marketers?</h2>
+    <p>
+      Claude Code for Marketers is a free resource for marketers who want to use AI tools but feel intimidated by technical interfaces. If you've ever seen someone do something incredible with AI and thought "I could never do that," this site is for you.
+    </p>
+    <p>
+      I built this because I kept watching marketers hit the same wall: they'd hear about Claude Code, get excited, open the terminal, and immediately feel lost. The documentation assumes you already know how to code. The tutorials skip the basics. And the AI community can feel like a club with a secret handshake.
+    </p>
+    <p>
+      So I decided to build the resource I wished existed: a straightforward, jargon-free guide to using Claude Code for real marketing work. No programming experience required.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>What you'll learn here</h2>
+    <ul>
+      <li>How to get comfortable with the terminal (it's less scary than it looks)</li>
+      <li>Real marketing workflows you can build with Claude Code, from competitor research to content repurposing</li>
+      <li>How to extend Claude Code with tools and skills that fit the way you work</li>
+      <li>Practical tips and tricks that aren't obvious from the documentation</li>
+    </ul>
+    <p>
+      If you're brand new, I'd recommend starting with the <a href="/start/">free 7-day email course</a>. It walks you through everything from installation to building your first real workflow.
+    </p>
+  </section>
+
+  <section class="about-section bio-section">
+    <h2>About me</h2>
+    <div class="bio-layout">
+      <div class="bio-image">
+        <Image src={headshotImage} alt="Keanan Koppenhaver" width={400} />
+      </div>
+      <div class="bio-text">
+        <p>
+          I'm Keanan Koppenhaver. I've spent my career at the intersection of development and marketing, which means I speak both languages. I've built products, led engineering teams, and worked closely with marketing teams who wanted to do more with technology but didn't know where to start.
+        </p>
+        <p>
+          That experience is exactly why I started this site. I've seen firsthand how powerful it is when marketers get access to developer-level tools without needing to become developers themselves. Claude Code is one of those tools, and I think it has the potential to change how marketers work.
+        </p>
+        <p>
+          Everything on this site is written from my own experience using Claude Code for real projects. When I share a workflow, it's because I've actually used it. When I say something works, it's because I've tested it myself.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section connect">
+    <h2>Get in touch</h2>
+    <p>
+      I'd love to hear from you, whether you have a question, want to share something you've built, or just want to say hi.
+    </p>
+    <ul class="contact-list">
+      <li>
+        <span class="contact-label">Twitter</span>
+        <a href="https://twitter.com/kkoppenhaver" target="_blank" rel="noopener noreferrer">@kkoppenhaver</a>
+      </li>
+      <li>
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://linkedin.com/in/keanankoppenhaver" target="_blank" rel="noopener noreferrer">Keanan Koppenhaver</a>
+      </li>
+      <li>
+        <span class="contact-label">Email</span>
+        <a href="mailto:keanan@claudecodeformarketers.com">keanan@claudecodeformarketers.com</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="email-signup">
+    <EmailSignup
+      headline="Want to learn Claude Code?"
+      description="Sign up for the free 7-day course and I'll walk you through everything you need to know to get started."
+      buttonText="Start learning"
+      tagId="14154457"
+    />
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: 2rem;
+    border-bottom: none;
+    padding: 0;
+    position: static;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 .prompt {
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+  }
+
+  .subtitle {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+  }
+
+  .about-section {
+    margin-bottom: 2rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .about-section p {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+  }
+
+  .about-section ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .about-section ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .bio-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .bio-image {
+    position: sticky;
+    top: 6rem;
+  }
+
+  .bio-image img {
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid var(--color-border);
+  }
+
+  .image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    border: 2px dashed var(--color-border);
+    background: var(--color-bg-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .image-placeholder .placeholder-prompt {
+    color: var(--color-accent);
+  }
+
+  .image-placeholder .placeholder-text {
+    opacity: 0.5;
+    font-size: 0.7rem;
+  }
+
+  .bio-text p {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .bio-layout {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .bio-image {
+      max-width: 160px;
+      position: static;
+    }
+  }
+
+  .contact-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0;
+  }
+
+  .contact-label {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    min-width: 5rem;
+  }
+
+  .email-signup {
+    margin-top: 2rem;
+  }
+
+  .email-signup :global(.signup-box) {
+    margin: 0;
+  }
+</style>
