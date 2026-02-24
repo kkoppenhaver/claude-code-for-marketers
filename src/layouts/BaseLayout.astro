@@ -1,5 +1,6 @@
 ---
 import SEO from '../components/SEO.astro';
+import { getCollection } from 'astro:content';
 
 interface Props {
   title: string;
@@ -17,6 +18,12 @@ interface Props {
 const { title, description, image, imageAlt, article } = Astro.props;
 const siteTitle = 'Claude Code for Marketers';
 const fullTitle = `${title} | ${siteTitle}`;
+
+const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-');
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const categoryOrder = ['Getting Started', 'Concepts', 'Use Cases', 'Tips and Techniques'];
+const allCategories = [...new Set(posts.flatMap(post => post.data.categories))];
+const categories = categoryOrder.filter(c => allCategories.includes(c));
 ---
 
 <!doctype html>
@@ -67,7 +74,19 @@ const fullTitle = `${title} | ${siteTitle}`;
         <div class="nav-right">
           <ul>
             <li><a href="/about/">About</a></li>
-            <li><a href="/category/use-cases">Use Cases</a></li>
+            <li class="dropdown">
+              <a href="/blog/" class="dropdown-toggle">
+                Topics
+                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                {categories.map(category => (
+                  <li><a href={`/category/${slugify(category)}/`}>{category}</a></li>
+                ))}
+              </ul>
+            </li>
             <li><a href="/start" class="nav-cta">Start Here</a></li>
           </ul>
           <button class="theme-toggle" aria-label="Toggle theme" type="button">
@@ -105,6 +124,23 @@ const fullTitle = `${title} | ${siteTitle}`;
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
       });
+
+      // Mobile dropdown toggle
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      if (dropdown && dropdownToggle) {
+        dropdownToggle.addEventListener('click', (e) => {
+          if (window.innerWidth <= 600) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+          }
+        });
+        document.addEventListener('click', (e) => {
+          if (!dropdown.contains(e.target as Node)) {
+            dropdown.classList.remove('open');
+          }
+        });
+      }
     </script>
   </body>
 </html>
@@ -251,6 +287,7 @@ const fullTitle = `${title} | ${siteTitle}`;
 
   nav ul {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
     list-style: none;
   }
@@ -278,6 +315,88 @@ const fullTitle = `${title} | ${siteTitle}`;
   nav ul a.nav-cta:hover {
     background: var(--color-accent-hover);
     color: var(--color-bg);
+  }
+
+  /* Dropdown */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.75rem;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+  }
+
+  .dropdown-toggle .chevron {
+    transition: transform 0.2s ease;
+  }
+
+  .dropdown:hover .chevron,
+  .dropdown.open .chevron {
+    transform: rotate(180deg);
+  }
+
+  .dropdown:hover .dropdown-toggle,
+  .dropdown.open .dropdown-toggle {
+    color: var(--color-accent);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    z-index: 200;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown-menu li {
+    padding: 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    text-align: left;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu a:hover {
+    background: var(--color-bg-secondary);
+  }
+
+  [data-theme="dark"] .dropdown-menu {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 
   .theme-toggle {
