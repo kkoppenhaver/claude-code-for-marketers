@@ -131,6 +131,7 @@ Based on edits to the introduction section:
 - **Use colons for transitions**: "But here's the thing: as with most AI tools..." - creates natural pauses and emphasis
 - **Parenthetical asides**: "(or prompts)" - add clarifying details without breaking flow
 - **Use a conjunction before the final item in a series**: Use "and" or "or" as appropriate. "crafting the perfect prompt, structuring your requests, and including context" not "crafting the perfect prompt, structuring your requests, including context"
+- **Avoid repetitive parallel sentence structures**: Don't stack 3+ short sentences with the same "A [noun] that [verb]" pattern. Combine them or vary the structure. Example: "Maybe it was a spreadsheet that auto-formatted reports or a simple app that helped you organize content" not "Maybe it was a spreadsheet that auto-formatted reports. A dashboard that pulled data from three platforms. A simple app that helped you organize content."
 
 ## Word Choices & Phrasing
 - **"Reached into my AI toolbox"** vs. "turned to AI tools" - more colorful, active phrasing
