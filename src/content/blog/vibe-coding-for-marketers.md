@@ -82,17 +82,6 @@ Don't let a label keep you from a capability.
 
 ## Getting started
 
-If this sounds like something you want to try, I built a free 7-day email course that walks you through everything, from opening the terminal to building real marketing workflows with Claude Code. No coding experience required.
-
-import EmailSignup from '../../components/EmailSignup.astro';
-
-<EmailSignup
-  headline="Start vibe coding in 7 days"
-  description="A free email course that takes you from zero to building real marketing workflows with Claude Code. No coding experience required."
-  buttonText="Start the course"
-  tagId="14154457"
-/>
-
-Or if you want to jump right in, [Don't be scared of the terminal](/blog/dont-be-scared-of-the-terminal/) is where I'd start.
+If this sounds like something you want to try, I built a free 7-day email course that walks you through everything, from opening the terminal to building real marketing workflows with Claude Code. No coding experience required. Sign up below, or if you want to jump right in, [Don't be scared of the terminal](/blog/dont-be-scared-of-the-terminal/) is where I'd start.
 
 Happy vibing!
