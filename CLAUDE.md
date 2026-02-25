@@ -111,6 +111,29 @@ The foundation of the site is a 7-post intro sequence that also serves as an ema
 - **All content reviewed by Keanan before publishing**
 - **Task balance:** ~40% creating, ~40% promoting, ~20% optimizing
 
+## Content backlog and strategic priorities
+
+Two planning documents live in the repo root:
+
+- **`CONTENT_BACKLOG.md`** — Prioritized list of planned posts and a record of all published posts.
+- **`STRATEGIC_ACTIONS.md`** — Non-content tasks (site improvements, promotion, partnerships).
+
+### Keeping the backlog in sync
+
+Whenever a blog post is created, published, or has its status changed, update `CONTENT_BACKLOG.md` to match:
+- Move newly published posts from Backlog/In Progress/Drafts to the Published section.
+- When starting a draft, move the item to In Progress.
+- When a new post idea comes up during conversation, offer to add it to the Backlog.
+
+### Proactive strategic nudges
+
+At natural pause points (e.g., after finishing a post, at the start of a session, or when asked "what should I work on next"), proactively suggest the next highest-impact item from either document. Prioritize:
+1. Any in-progress content that's close to done
+2. The highest-priority unbriefed or briefed backlog item
+3. Quick-win strategic actions (items in the "this week" section of `STRATEGIC_ACTIONS.md`)
+
+Frame suggestions as options, not directives. Example: "The next highest-priority backlog item is X. Want to tackle that, or did you have something else in mind?"
+
 ---
 
 # Writing Style Guide
