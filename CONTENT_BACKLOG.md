@@ -4,14 +4,6 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## Backlog
 
-### 1. Claude Code vs. ChatGPT for marketing: when to use which (and why I use both)
-- **Status:** `briefed`
-- **Priority:** High (acquisition)
-- **Category:** Tips and Techniques
-- **Target keyword:** *Claude Code vs ChatGPT marketing*
-- **Angle:** Show specific scenarios from daily use: ChatGPT for quick brainstorming, Claude Code for anything touching files, automation, or multi-step workflows. Include a simple decision flowchart. Be honest about ChatGPT's strengths.
-- **Why now:** Highest-intent comparison query in this space. Zero quality results exist for marketers. This alone could drive meaningful organic traffic.
-
 ### 2. The $20 vs. $100 question: is Claude Max actually worth it for marketers?
 - **Status:** `briefed`
 - **Priority:** High (acquisition)
@@ -113,7 +105,12 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## In Progress
 
-*Move items here when drafting begins*
+### Claude Code vs. ChatGPT for marketing: when to use which (and why I use both)
+- **Status:** `drafting`
+- **Priority:** High (acquisition)
+- **Category:** Tips and Techniques
+- **Target keyword:** *Claude Code vs ChatGPT marketing*
+- **File:** `claude-code-vs-chatgpt-for-marketing.md`
 
 ---
 
