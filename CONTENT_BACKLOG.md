@@ -105,12 +105,7 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## In Progress
 
-### Claude Code vs. ChatGPT for marketing: when to use which (and why I use both)
-- **Status:** `drafting`
-- **Priority:** High (acquisition)
-- **Category:** Tips and Techniques
-- **Target keyword:** *Claude Code vs ChatGPT marketing*
-- **File:** `claude-code-vs-chatgpt-for-marketing.md`
+*Move items here when drafting begins*
 
 ---
 
@@ -121,6 +116,11 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### Claude Code vs. ChatGPT for marketing: when to use which (and why I use both)
+- **Published:** 2026-02-26
+- **Category:** Tips and Techniques
+- **File:** `claude-code-vs-chatgpt-for-marketing.md`
 
 ### Vibe coding for marketers: what it actually means (and what it doesn't)
 - **Published:** 2026-02-25
