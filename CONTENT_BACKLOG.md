@@ -4,14 +4,6 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## Backlog
 
-### 2. The $20 vs. $100 question: is Claude Max actually worth it for marketers?
-- **Status:** `briefed`
-- **Priority:** High (acquisition)
-- **Category:** Tips and Techniques
-- **Target keyword:** *Claude Code pricing marketers, is Claude Max worth it*
-- **Angle:** Share actual usage data. Break down what Pro gives you vs. Max. Show which marketing tasks burn through context fast (long transcripts, multi-file projects) and which don't. Give clear recommendations: "If you do X, Pro is fine. If you do Y, Max pays for itself."
-- **Why now:** Cost confusion is the #2 documented barrier after intimidation. Nobody has published this analysis.
-
 ### 3. Claude Code vs. Lovable vs. Cursor vs. Bolt: a marketer's decision guide
 - **Status:** `briefed`
 - **Priority:** High (acquisition)
@@ -116,6 +108,11 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### The $20 vs. $100 question: is Claude Max actually worth it for marketers?
+- **Published:** 2026-02-27
+- **Category:** Tips and Techniques
+- **File:** `is-claude-max-worth-it-for-marketers.md`
 
 ### Claude Code vs. ChatGPT for marketing: when to use which (and why I use both)
 - **Published:** 2026-02-26

@@ -202,6 +202,7 @@ Based on edits to the introduction section:
 - Unnecessary framing before making a point (get to the point directly)
 - Em dashes — use appositives (commas) or parentheticals instead. Example: "all in a single interface" not "all—without leaving the terminal"
 - "It's not just X. It's Y." sentence structure — this is a visible AI writing tell. Instead, reframe with a comparison or analogy. Example: "It's not just executing your instructions better. It's helping you figure out what the instructions should be." → "In this way, Claude Code's acting more like a human would: clarifying your instructions before executing them."
+- "Here's the thing:" as a lead-in — it's filler that delays the point. Just make the point directly. Example: "But here's the thing: the real question isn't..." → "But the real question isn't..."
 
 ## Tool References
 - Use **ChatGPT** specifically (not "ChatGPT or Claude") since that's what was actually used in the examples
