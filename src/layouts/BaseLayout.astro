@@ -17,7 +17,7 @@ interface Props {
 
 const { title, description, image, imageAlt, article } = Astro.props;
 const siteTitle = 'Claude Code for Marketers';
-const fullTitle = `${title} | ${siteTitle}`;
+const fullTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
 
 const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-');
 const posts = await getCollection('blog', ({ data }) => !data.draft);
