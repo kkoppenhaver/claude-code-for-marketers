@@ -31,6 +31,7 @@ npm run preview  # Preview production build
 - Blog posts are Markdown files in `src/content/blog/`
 - Content schema defined in `src/content.config.ts` with Zod validation
 - Required frontmatter: `title`, `description`, `pubDate`
+- **Meta descriptions must be 150-160 characters.** This is the `description` field in frontmatter. Google truncates anything longer and shorter descriptions look thin in search results.
 - Optional: `updatedDate`, `author`, `image`, `imageAlt`, `tags`, `categories`, `draft`
 
 ### Images

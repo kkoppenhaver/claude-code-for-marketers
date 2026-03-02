@@ -1,6 +1,6 @@
 ---
 title: "Getting better Claude Code output without prompt engineering"
-description: "You don't need to master prompt engineering. Just tell Claude to ask you questions until it understands what you need."
+description: "You don't need to master prompt engineering to get great results from Claude Code. Just tell it to ask you questions until it understands what you need."
 pubDate: 2026-01-27
 author: "Keanan Koppenhaver"
 draft: false

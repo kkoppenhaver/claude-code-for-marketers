@@ -1,6 +1,6 @@
 ---
 title: "How I use Claude Code to research competitors"
-description: "A step-by-step walkthrough of using Claude Code to build a competitor analysis, from web research to polished report."
+description: "A step-by-step walkthrough of using Claude Code to build a full competitor analysis, from initial web research to a polished report you can share with your team."
 pubDate: 2026-01-14
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"
@@ -17,7 +17,7 @@ This is exactly the kind of task I now hand to Claude Code.
 
 In this post, I'll walk you through how I used Claude Code to research a competitor and turn that research into a polished report, all in a single interface.
 
-### A quick note on "deep research" functionality
+## A quick note on "deep research" functionality
 If you've used Claude's web interface, you might have seen its [Research](https://support.claude.com/en/articles/11088861-using-research-on-claude) feature, which does extensive multi-step research. That feature isn't available natively in Claude Code (yet). What we're doing here is simpler: using Claude Code's built-in web search to get solid research without leaving the terminal. For most competitor analyses, this is more than enough.
 
 ## What we're building

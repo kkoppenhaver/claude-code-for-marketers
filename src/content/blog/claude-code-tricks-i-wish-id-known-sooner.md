@@ -1,6 +1,6 @@
 ---
 title: "4 Claude Code Tricks I Wish I'd Known Sooner"
-description: "Small things that make a big difference once you know about them: drag-and-drop images, self-improving instructions, and more."
+description: "These are things that aren't immediately obvious but make a huge difference: drag-and-drop images, self-improving instructions, custom shortcuts, and more."
 pubDate: 2026-01-19
 author: "Keanan Koppenhaver"
 draft: false

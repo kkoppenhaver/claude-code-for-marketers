@@ -1,6 +1,6 @@
 ---
 title: "Why I stopped using AI image generators for infographics"
-description: "Everyone freaked out when Nano Banana could generate infographics. But I've found a better approach: have Claude Code build them as HTML, iterate in the browser, and export with print stylesheets."
+description: "AI image generators can make infographics, but I've found a better approach: have Claude Code build them as HTML, iterate in the browser, and export as images."
 pubDate: 2026-02-17
 author: "Keanan Koppenhaver"
 draft: false
