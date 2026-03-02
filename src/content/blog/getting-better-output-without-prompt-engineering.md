@@ -5,7 +5,7 @@ pubDate: 2026-01-27
 author: "Keanan Koppenhaver"
 draft: false
 kitTagId: "14154457"
-tags: []
+tags: ["prompting"]
 categories: ["Tips and Techniques"]
 ---
 

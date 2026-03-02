@@ -5,7 +5,7 @@ pubDate: 2026-02-17
 author: "Keanan Koppenhaver"
 draft: false
 categories: ["Use Cases"]
-tags: []
+tags: ["design"]
 ---
 
 They have the same content. The same three-column layout. Same information about Claude Code's Hooks, MCP Servers, and Skills features.

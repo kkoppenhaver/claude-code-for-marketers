@@ -4,7 +4,7 @@ description: "From zero to running Claude Code in under five minutes. I'll walk 
 pubDate: 2026-01-12
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"
-tags: []
+tags: ["setup"]
 categories: ["Getting Started"]
 draft: false
 ---

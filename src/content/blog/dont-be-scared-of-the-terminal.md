@@ -4,7 +4,7 @@ description: "The terminal looks intimidating, but it's just a textbox. Here's w
 pubDate: 2026-01-06
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"
-tags: []
+tags: ["setup"]
 categories: ["Getting Started"]
 ---
 

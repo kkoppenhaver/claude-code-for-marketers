@@ -5,7 +5,7 @@ pubDate: 2026-02-25
 author: "Keanan Koppenhaver"
 draft: false
 categories: ["Concepts"]
-tags: []
+tags: ["prompting"]
 ---
 
 You've probably seen "vibe coding" everywhere lately. It was Collins Dictionary's Word of the Year. Tech Twitter won't stop talking about it. Everyone from startup founders to venture capitalists has an opinion on what it means for the future of software.

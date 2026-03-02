@@ -5,7 +5,7 @@ pubDate: 2026-02-03
 author: "Keanan Koppenhaver"
 draft: false
 kitTagId: "14154457"
-tags: []
+tags: ["skills", "content-repurposing"]
 categories: ["Use Cases"]
 ---
 

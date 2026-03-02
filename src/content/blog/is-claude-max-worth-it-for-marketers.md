@@ -5,7 +5,7 @@ pubDate: 2026-02-27
 author: "Keanan Koppenhaver"
 draft: false
 categories: ["Tips and Techniques"]
-tags: []
+tags: ["comparison"]
 ---
 
 I'll just say it: I spend $100 a month on Claude.

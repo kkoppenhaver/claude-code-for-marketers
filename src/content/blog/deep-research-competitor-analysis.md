@@ -4,7 +4,7 @@ description: "A step-by-step walkthrough of using Claude Code to build a full co
 pubDate: 2026-01-14
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"
-tags: []
+tags: ["research"]
 categories: ["Use Cases"]
 draft: false
 ---

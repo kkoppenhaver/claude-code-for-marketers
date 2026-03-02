@@ -5,7 +5,7 @@ pubDate: 2026-02-26
 author: "Keanan Koppenhaver"
 draft: false
 categories: ["Tips and Techniques"]
-tags: []
+tags: ["comparison"]
 ---
 
 I write a whole blog about Claude Code, so you'd probably expect me to tell you it's the only AI tool you need, that ChatGPT is yesterday's news, and that you should cancel your OpenAI subscription and never look back.

@@ -4,7 +4,7 @@ description: "MCP servers let Claude Code reach beyond the terminal and interact
 pubDate: 2026-01-20
 author: "Keanan Koppenhaver"
 draft: false
-tags: []
+tags: ["mcp"]
 categories: ["Getting Started"]
 ---
 

@@ -5,6 +5,7 @@ pubDate: 2026-02-05
 author: "Keanan Koppenhaver"
 draft: false
 categories: ["Use Cases"]
+tags: ["mcp", "design"]
 ---
 
 Most website brands don't get created all at once, the accumulate over time. You pick a heading font one week, a button color the next, tweak the link hover state three months later, and it just keeps building from there.

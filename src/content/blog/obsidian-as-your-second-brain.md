@@ -4,7 +4,7 @@ description: "Stop scattering files across your computer. Learn how to use Obsid
 pubDate: 2026-01-16
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"
-tags: []
+tags: ["mcp", "research"]
 categories: ["Getting Started", "Use Cases"]
 draft: false
 ---
