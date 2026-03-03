@@ -14,7 +14,7 @@ function slugify(text: string): string {
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate, updatedDate, author, image, imageAlt, tags, categories, kitTagId } = post.data;
+const { title, description, pubDate, updatedDate, author, image, imageAlt, tags, categories, kitTagId, kitHeadline, kitDescription, kitButtonText, hideRelatedPosts } = post.data;
 
 // Use custom image if provided, otherwise use generated OG image
 const ogImage = image || `/og/${post.id}.png`;
@@ -55,13 +55,6 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
           { name: title }
         ]}
       />
-      <a href="/blog" class="back-link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-        <span>Back to posts</span>
-      </a>
       <h1>{title}</h1>
       <div class="meta">
         <time datetime={pubDate.toISOString()}>{formattedPubDate}</time>
@@ -89,12 +82,14 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     <div class="content">
       <slot />
     </div>
-    <EmailSignup tagId={kitTagId} />
-    <RelatedPosts
-      currentPostId={post.id}
-      categories={categories}
-      tags={tags}
-    />
+    <EmailSignup tagId={kitTagId} headline={kitHeadline} description={kitDescription} buttonText={kitButtonText} />
+    {!hideRelatedPosts && (
+      <RelatedPosts
+        currentPostId={post.id}
+        categories={categories}
+        tags={tags}
+      />
+    )}
     <footer class="post-footer">
       <a href="/blog" class="back-link-footer">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -196,6 +191,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
   .tag {
     background: var(--color-border);
     color: var(--color-text-secondary);
+    text-transform: capitalize;
   }
 
   .featured-image {

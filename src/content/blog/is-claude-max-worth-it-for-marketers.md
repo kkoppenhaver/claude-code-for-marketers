@@ -6,6 +6,10 @@ author: "Keanan Koppenhaver"
 draft: false
 categories: ["Tips and Techniques"]
 tags: ["comparison"]
+hideRelatedPosts: true
+kitHeadline: "Ready to see if Claude Code is worth it for you?"
+kitDescription: "Start with the free 7-day email course. I'll walk you through real marketing workflows so you can decide for yourself, before spending a dollar."
+kitButtonText: "Start the free course"
 ---
 
 I'll just say it: I spend $100 a month on Claude.
@@ -61,9 +65,15 @@ That changed when I found [CodexBar](https://github.com/steipete/CodexBar), a fr
 
 </div>
 
-Having actual numbers changed how I thought about my usage entirely. Instead of guessing, I could see that a 45-minute research session cost roughly $X, while a quick blog edit was pennies. My real numbers are up in the screenshot above. It looks like I used about $143 of usage in the last month, which means the $100 flat rate is saving me money compared to what I'd spend on pay-as-you-go.
+Having actual numbers changed how I thought about my usage entirely. Instead of guessing, I could see that a 45-minute research session cost roughly $8, while a quick blog edit was pennies. My real numbers are up in the screenshot above. It looks like I used about $143 of usage in the last month, which means the $100 flat rate is saving me money compared to what I'd spend on pay-as-you-go.
 
 My recommendation is to install CodexBar on day one, even if you're on Pro. Having real data makes the "should I upgrade?" decision obvious instead of stressful.
+
+<aside>
+
+**Want to see what Claude Code can actually do for marketing?** I put together a [free 7-day email course](/start) that walks you through real workflows, starting from zero. Each lesson takes about 15 minutes.
+
+</aside>
 
 ## My honest take on whether Max is worth $100/month
 

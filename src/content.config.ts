@@ -15,6 +15,10 @@ const blog = defineCollection({
     categories: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
     kitTagId: z.string().optional(), // Kit tag ID for post-specific lead magnets
+    hideRelatedPosts: z.boolean().default(false),
+    kitHeadline: z.string().optional(),
+    kitDescription: z.string().optional(),
+    kitButtonText: z.string().optional(),
   }),
 });
 
