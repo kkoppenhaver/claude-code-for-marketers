@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import sarahPhoto from '../assets/images/sarah-sherman.jpg';
+
 interface Props {
   headline?: string;
   description?: string;
@@ -39,6 +42,18 @@ const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
     </div>
   </form>
   <p class="signup-note">No spam. Unsubscribe anytime.</p>
+  <div class="testimonial">
+    <blockquote>
+      <p>"I watched Keanan work magic with Claude [Code] in the terminal. My brain: 'It's far too technical!' 'Dark mode? Not for me!' ...I shipped 4 things in my first month."</p>
+      <cite>
+        <Image src={sarahPhoto} alt="Sarah Sherman" width={96} height={96} class="testimonial-avatar" />
+        <div>
+          <strong>Sarah Sherman</strong>
+          <span>Community Builder at Retool</span>
+        </div>
+      </cite>
+    </blockquote>
+  </div>
 </div>
 
 <style>
@@ -142,6 +157,58 @@ const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
     font-size: 0.75rem;
     color: var(--color-text-secondary);
     opacity: 0.7;
+  }
+
+  .testimonial {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .testimonial :global(blockquote) {
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-accent);
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .testimonial :global(blockquote p) {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+
+  .testimonial :global(cite) {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-style: normal;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+  }
+
+  .testimonial :global(cite div) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial :global(cite strong) {
+    color: var(--color-text);
+  }
+
+  .testimonial :global(cite span) {
+    color: var(--color-text-secondary);
+  }
+
+  .testimonial :global(.testimonial-avatar) {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
   }
 
   @media (max-width: 500px) {
