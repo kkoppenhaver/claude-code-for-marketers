@@ -76,13 +76,9 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Angle:** Authentic reflection. Share real mistakes: prompts that didn't work, skills that broke, times you burned credits unnecessarily, the mental model shifts that unlocked better output. Position the 7-day email course as the "skip the mistakes" shortcut.
 - **Why now:** Vulnerability content drives the strongest email signups. This is the trust builder post.
 
-### 12. The non-technical marketer's Claude Code FAQ: 15 questions answered honestly
-- **Status:** `briefed`
-- **Priority:** Medium (evergreen resource)
-- **Category:** Getting Started
-- **Target keyword:** *Claude Code FAQ non-developers*
-- **Angle:** Consolidate every question from Reddit, X, YouTube, and email replies into one definitive resource. Include honest answers about limitations, costs, and the learning curve. Be the adult in the room: "No, Claude Code won't replace your entire marketing team. Here's what it actually can and can't do."
-- **Why now:** Evergreen, updatable monthly, strong SEO foundation. Becomes the page you link to when anyone asks "should I learn Claude Code?"
+### 12. ~~The non-technical marketer's Claude Code FAQ~~ → Published as "15 Claude Code questions every marketer is afraid to ask"
+- **Status:** `published`
+- **See Published section below**
 
 ---
 
@@ -99,6 +95,11 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### 15 Claude Code questions every marketer is afraid to ask
+- **Published:** 2026-03-12
+- **Category:** Getting Started
+- **File:** `non-technical-marketers-claude-code-faq.md`
 
 ### The CLAUDE.md masterclass
 - **Published:** 2026-03-10
