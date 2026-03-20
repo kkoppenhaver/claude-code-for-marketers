@@ -96,6 +96,11 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## Published
 
+### What --dangerously-skip-permissions actually does (and when you'd want to use it)
+- **Published:** 2026-03-19
+- **Category:** Tips and Techniques
+- **File:** `what-is-dangerously-skip-permissions.md`
+
 ### 15 Claude Code questions every marketer is afraid to ask
 - **Published:** 2026-03-12
 - **Category:** Getting Started
