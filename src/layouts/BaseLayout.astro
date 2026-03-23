@@ -308,12 +308,14 @@ const categories = categoryOrder.filter(c => allCategories.includes(c));
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-left: auto;
   }
 
   .nav-actions {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-left: 1.5rem;
   }
 
   nav ul {
@@ -470,6 +472,8 @@ const categories = categoryOrder.filter(c => allCategories.includes(c));
     margin: 0 auto;
     padding: 3rem 1.5rem;
     width: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   footer {
