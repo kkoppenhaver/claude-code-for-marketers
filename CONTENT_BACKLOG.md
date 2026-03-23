@@ -84,7 +84,12 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## In Progress
 
-*Move items here when drafting begins*
+### How I publish blog posts to WordPress without leaving Claude Code
+- **Status:** `briefed`
+- **Priority:** High (publish this week)
+- **Category:** Use Cases
+- **Target keyword:** *Claude Code WordPress, WordPress MCP server publish*
+- **Angle:** Use the WordPress MCP to draft, review, and publish posts directly from Claude Code. Also covers site configuration and content auditing capabilities.
 
 ---
 
@@ -95,6 +100,11 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### How I edit Google Docs without leaving Claude Code
+- **Published:** 2026-03-22
+- **Category:** Use Cases
+- **File:** `hooking-claude-code-up-to-google-docs.md`
 
 ### What --dangerously-skip-permissions actually does (and when you'd want to use it)
 - **Published:** 2026-03-19
