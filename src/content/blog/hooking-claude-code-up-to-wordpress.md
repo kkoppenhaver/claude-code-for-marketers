@@ -1,7 +1,7 @@
 ---
 title: "Claude Code is my new WordPress editor"
 description: "The WordPress MCP lets Claude Code create, edit, and publish posts on your site. Here's how I set it up and my draft-to-publish workflow."
-pubDate: 2026-03-23
+pubDate: 2026-03-24
 author: "Keanan Koppenhaver"
 draft: false
 tags: ["wordpress", "mcp", "integrations", "workflow"]
