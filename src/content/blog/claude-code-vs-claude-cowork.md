@@ -3,7 +3,7 @@ title: "Claude Code vs. Claude Cowork: what's the difference (and which should y
 description: "Claude Code and Claude Cowork are both AI agents from Anthropic, but they work very differently. Here's how to figure out which one fits your workflow."
 pubDate: 2026-03-25
 author: "Keanan Koppenhaver"
-draft: true
+draft: false
 categories: ["Tips and Techniques"]
 tags: ["comparison", "cowork"]
 ---
