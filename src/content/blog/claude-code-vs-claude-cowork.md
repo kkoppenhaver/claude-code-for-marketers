@@ -36,7 +36,7 @@ If you're curious about getting started, drop your email down below and you'll g
 
 ## What is Claude Cowork?
 
-Cowork launched in January 2026 and the origin story is actually pretty interesting. After launching Claude Code, Anthropic noticed that developers kept using it for things that had nothing to do with code: vacation planning, slide decks, email management, file organization. So they built a dedicated tool for those use cases.
+Cowork launched in January 2026 as a research preview (meaning it's still evolving and some features may change) and the origin story is actually pretty interesting. After launching Claude Code, Anthropic noticed that developers kept using it for things that had nothing to do with code: vacation planning, slide decks, email management, file organization. So they built a dedicated tool for those use cases.
 
 The experience is more visual. You open the Claude Desktop app, switch to the Cowork tab, describe what you need, and optionally point it at a folder of files to work with.
 
