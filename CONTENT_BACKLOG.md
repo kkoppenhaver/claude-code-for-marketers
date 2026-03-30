@@ -4,12 +4,12 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## Backlog
 
-### Skill idea: fact-checker for fast-changing articles
+### How to use Claude Code to keep fact-based articles up to date
 - **Status:** `idea`
-- **Priority:** Low (tooling)
-- **Category:** Internal tooling / skill
-- **Angle:** A Claude Code skill that audits published posts where facts change frequently (product comparisons, pricing, feature lists). Would re-research key claims and flag anything outdated. The Claude Code vs. Cowork post is a prime candidate once published — Cowork is still in research preview and features are shipping fast.
-- **Why eventually:** Comparison posts drive traffic but go stale. A skill that flags "Cowork now supports Linux" or "pricing changed" would keep our best acquisition content accurate without manual re-reads.
+- **Priority:** High (this week)
+- **Category:** Use Cases
+- **Angle:** Show how to use Claude Code to audit and update articles where facts change frequently (competitor pages, product comparisons, pricing). Walk through the workflow for re-researching key claims and flagging anything outdated. Lead magnet: a ready-to-install skill that does this automatically.
+- **Why now:** Comparison posts drive traffic but go stale fast. The Claude Code vs. Cowork post is a prime example (Cowork is still in research preview and features ship weekly). Practical, relatable problem with a concrete giveaway.
 
 ### 3. Claude Code vs. Lovable vs. Cursor vs. Bolt: a marketer's decision guide
 - **Status:** `briefed`
@@ -91,12 +91,7 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## In Progress
 
-### Claude Code vs. Claude Cowork — what's the difference (and which should you use)?
-- **Status:** `drafting`
-- **Priority:** High (acquisition — broad SEO capture)
-- **Category:** Tips and Techniques
-- **Target keyword:** *Claude Code vs Claude Cowork*
-- **Brief:** `briefs/claude-code-vs-cowork.md`
+*Nothing here right now*
 
 ---
 
