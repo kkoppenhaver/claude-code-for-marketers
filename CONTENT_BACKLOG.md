@@ -103,6 +103,11 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## Published
 
+### Claude Code vs. Claude Cowork: what's the difference (and which should you use)?
+- **Published:** 2026-03-25
+- **Category:** Tips and Techniques
+- **File:** `claude-code-vs-claude-cowork.md`
+
 ### Claude Code is my new WordPress editor
 - **Published:** 2026-03-23
 - **Category:** Use Cases
