@@ -4,15 +4,9 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## Backlog
 
-### How to use Claude Code to keep fact-based articles up to date
-- **Status:** `review`
-- **Priority:** High (this week)
-- **Category:** Use Cases
-- **Target keyword:** *keep blog posts up to date, content freshness AI, update old blog posts*
-- **Brief:** `briefs/keeping-articles-up-to-date.md`
-- **Lead magnet:** `fact-check` skill (.skill file download)
-- **Angle:** Content decay is universal but existing solutions are either expensive SaaS or plugins that remind without helping. Claude Code fills the gap. Fresh hook: AI search platforms heavily favor recently updated content (76% of ChatGPT citations updated within 30 days).
-- **Why now:** Comparison posts drive traffic but go stale fast. The Claude Code vs. Cowork post is a prime example. Practical, relatable problem with a concrete giveaway.
+### ~~How to use Claude Code to keep fact-based articles up to date~~ → Published as "The blog posts you forgot about are losing you traffic"
+- **Status:** `published`
+- **See Published section below**
 
 ### 3. Claude Code vs. Lovable vs. Cursor vs. Bolt: a marketer's decision guide
 - **Status:** `briefed`
@@ -105,6 +99,12 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### The blog posts you forgot about are losing you traffic
+- **Published:** 2026-03-31
+- **Category:** Use Cases
+- **File:** `keep-articles-up-to-date-with-claude-code.mdx`
+- **Lead magnet:** `fact-check` skill (email-gated .zip download via Kit)
 
 ### Claude Code vs. Claude Cowork: what's the difference (and which should you use)?
 - **Published:** 2026-03-25
