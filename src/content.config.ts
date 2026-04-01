@@ -19,6 +19,7 @@ const blog = defineCollection({
     kitHeadline: z.string().optional(),
     kitDescription: z.string().optional(),
     kitButtonText: z.string().optional(),
+    kitFormId: z.string().optional(), // Kit form ID for post-specific lead magnets (e.g., download gating)
   }),
 });
 

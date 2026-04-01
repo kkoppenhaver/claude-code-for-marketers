@@ -5,11 +5,14 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ## Backlog
 
 ### How to use Claude Code to keep fact-based articles up to date
-- **Status:** `idea`
+- **Status:** `review`
 - **Priority:** High (this week)
 - **Category:** Use Cases
-- **Angle:** Show how to use Claude Code to audit and update articles where facts change frequently (competitor pages, product comparisons, pricing). Walk through the workflow for re-researching key claims and flagging anything outdated. Lead magnet: a ready-to-install skill that does this automatically.
-- **Why now:** Comparison posts drive traffic but go stale fast. The Claude Code vs. Cowork post is a prime example (Cowork is still in research preview and features ship weekly). Practical, relatable problem with a concrete giveaway.
+- **Target keyword:** *keep blog posts up to date, content freshness AI, update old blog posts*
+- **Brief:** `briefs/keeping-articles-up-to-date.md`
+- **Lead magnet:** `fact-check` skill (.skill file download)
+- **Angle:** Content decay is universal but existing solutions are either expensive SaaS or plugins that remind without helping. Claude Code fills the gap. Fresh hook: AI search platforms heavily favor recently updated content (76% of ChatGPT citations updated within 30 days).
+- **Why now:** Comparison posts drive traffic but go stale fast. The Claude Code vs. Cowork post is a prime example. Practical, relatable problem with a concrete giveaway.
 
 ### 3. Claude Code vs. Lovable vs. Cursor vs. Bolt: a marketer's decision guide
 - **Status:** `briefed`

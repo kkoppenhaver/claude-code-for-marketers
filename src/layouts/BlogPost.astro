@@ -14,7 +14,7 @@ function slugify(text: string): string {
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate, updatedDate, author, image, imageAlt, tags, categories, kitTagId, kitHeadline, kitDescription, kitButtonText, hideRelatedPosts } = post.data;
+const { title, description, pubDate, updatedDate, author, image, imageAlt, tags, categories, kitTagId, kitHeadline, kitDescription, kitButtonText, kitFormId, hideRelatedPosts } = post.data;
 
 // Use custom image if provided, otherwise use generated OG image
 const ogImage = image || `/og/${post.id}.png`;
@@ -82,7 +82,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     <div class="content">
       <slot />
     </div>
-    <EmailSignup tagId={kitTagId} headline={kitHeadline} description={kitDescription} buttonText={kitButtonText} />
+    <EmailSignup tagId={kitTagId} headline={kitHeadline} description={kitDescription} buttonText={kitButtonText} formId={kitFormId} />
     {!hideRelatedPosts && (
       <RelatedPosts
         currentPostId={post.id}

@@ -4,6 +4,7 @@ interface Props {
   description?: string;
   tagId?: string;
   buttonText?: string;
+  formId?: string;
 }
 
 const {
@@ -11,10 +12,10 @@ const {
   description = "Join our free 7-day email course and learn how to use Claude Code for your marketing work. Then, get notified when we publish new use cases and ways to stay ahead of the curve.",
   tagId,
   buttonText = "Send me the free course",
+  formId = "8947118",
 } = Astro.props;
 
-const FORM_ID = "8947118";
-const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
+const formAction = `https://app.kit.com/forms/${formId}/subscriptions`;
 ---
 
 <div class="signup-box">
