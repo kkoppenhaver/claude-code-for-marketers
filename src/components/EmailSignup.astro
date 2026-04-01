@@ -16,6 +16,25 @@ const {
 } = Astro.props;
 
 const formAction = `https://app.kit.com/forms/${formId}/subscriptions`;
+
+// Fetch subscriber count from Kit API at build time
+let subscriberText = "";
+try {
+  const KIT_API_KEY = import.meta.env.KIT_API_KEY;
+  if (KIT_API_KEY) {
+    const res = await fetch("https://api.kit.com/v4/tags/14154457/subscribers?include_total_count=true&per_page=1", {
+      headers: { "X-Kit-Api-Key": KIT_API_KEY },
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const total = data.pagination?.total_count;
+      if (total && total >= 100) {
+        const rounded = Math.floor(total / 100) * 100;
+        subscriberText = `Join ${rounded}+ marketers.`;
+      }
+    }
+  }
+} catch {}
 ---
 
 <div class="signup-box">
@@ -39,7 +58,7 @@ const formAction = `https://app.kit.com/forms/${formId}/subscriptions`;
       <button type="submit">{buttonText}</button>
     </div>
   </form>
-  <p class="signup-note">No spam. Unsubscribe anytime.</p>
+  <p class="signup-note">{subscriberText && <span class="subscriber-count">{subscriberText}</span>} No spam. Unsubscribe anytime.</p>
 </div>
 
 <style>
