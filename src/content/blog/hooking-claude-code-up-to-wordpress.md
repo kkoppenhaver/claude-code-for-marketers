@@ -75,9 +75,63 @@ Replace the URL, username, and application password with your own. Restart Claud
 
 If you're running WordPress locally for development, there's also a STDIO transport option that connects through WP-CLI. The [adapter's README](https://github.com/WordPress/mcp-adapter) has the details on that setup.
 
+### Step 4: Register abilities for content management
+
+Here's the part that tripped me up at first. Installing the MCP Adapter gives Claude Code a connection to your WordPress site, but it doesn't automatically know how to create or edit posts. The adapter is the bridge, but you still need to tell it what it's allowed to do.
+
+WordPress has a new Abilities API that lets plugins register specific capabilities. The MCP Adapter looks for abilities that have been flagged as publicly available, and exposes those as tools Claude Code can use. Out of the box, WordPress ships with a couple of read-only abilities (site info, environment info), but nothing for creating or updating content.
+
+You need a small plugin that registers the abilities you want. I built one that registers three:
+
+- **Get posts** — retrieve posts and pages with their content, categories, and tags
+- **Create draft** — create a new draft post or page (with automatic Gutenberg block conversion)
+- **Update post** — update the title, content, status, or excerpt of an existing post
+
+Here's what registering a "create draft" ability looks like:
+
+```php
+add_action( 'wp_abilities_api_init', 'my_register_abilities' );
+function my_register_abilities() {
+    wp_register_ability(
+        'my-plugin/create-draft',
+        array(
+            'label'               => 'Create Draft Post',
+            'description'         => 'Create a new draft post or page.',
+            'category'            => 'my-plugin',
+            'input_schema'        => array(
+                'type'       => 'object',
+                'required'   => array( 'title', 'content' ),
+                'properties' => array(
+                    'title'   => array( 'type' => 'string' ),
+                    'content' => array( 'type' => 'string' ),
+                ),
+            ),
+            'permission_callback' => function () {
+                return current_user_can( 'edit_posts' );
+            },
+            'execute_callback'    => 'my_create_draft_function',
+            'meta'                => array(
+                'show_in_rest' => true,
+                'mcp'          => array( 'public' => true ),
+            ),
+        )
+    );
+}
+```
+
+A few things to note:
+
+- The hook is `wp_abilities_api_init`, not `init`. If you register on the wrong hook, your abilities just silently don't show up. (I spent some time debugging that one.)
+- The `meta` array needs both `show_in_rest` and `mcp.public` set to `true`. Without `mcp.public`, the MCP Adapter won't expose the ability to Claude Code.
+- If you want categories registered before your abilities, use the `wp_abilities_api_categories_init` hook for those.
+
+The `execute_callback` is a regular PHP function that receives the input parameters and returns a result. In my case, it calls `wp_insert_post` with the title and content, handles category and tag creation, and returns the new post ID and edit URL. If the content comes in as plain HTML instead of Gutenberg block markup, I convert it automatically.
+
+Once this plugin is active on your site, restart Claude Code and you should see your abilities show up. You can verify by asking Claude to discover what it can do on your WordPress site.
+
 ## The workflow: draft, review, publish
 
-Here's how I actually use this day to day. I'll walk through what I did when I published that Discord bot post.
+With the adapter installed, your abilities registered, and Claude Code connected, you're ready to go. Here's how I actually use this day to day. I'll walk through what I did when I published that Discord bot post.
 
 ### Writing the post
 
@@ -93,7 +147,7 @@ Once the content was ready, I told Claude to create it in WordPress:
 
 > "Create this as a draft post on my WordPress site"
 
-Claude used the WordPress MCP to call `wp_create_post` with the title, content (formatted in WordPress block markup), excerpt, and draft status. A few seconds later, the post existed on my site as a draft.
+Claude used the create-draft ability we registered in Step 4, passing the title, content, excerpt, and draft status. A few seconds later, the post existed on my site as a draft.
 
 This is the part that surprised me the first time. Claude automatically wrapped the content in WordPress block markup (the `<!-- wp:paragraph -->` tags that Gutenberg uses). I didn't have to think about formatting at all.
 
@@ -103,7 +157,7 @@ With the draft live, I could preview it on my actual site to make sure everythin
 
 > "Great, let's publish this post."
 
-Claude called `wp_update_post` to flip the status from draft to published. Done. The post was live, with the correct URL, formatting, and everything.
+Claude called the update-post ability to flip the status from draft to published. Done. The post was live, with the correct URL, formatting, and everything.
 
 The whole process from "I have a finished draft" to "it's live on my site" took about 30 seconds. No browser, no WordPress admin, no copy-paste dance.
 
@@ -129,11 +183,13 @@ This is especially useful if you manage multiple WordPress sites. Instead of log
 
 ## A note on what it can't do (yet)
 
-The official MCP Adapter is built on WordPress's [Abilities API](https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/), which is still relatively new. The core abilities that ship with WordPress are focused on the basics: post creation and management, site info, and user info.
+The Abilities API is still new, and the ecosystem of pre-built abilities is small. The core abilities that ship with WordPress are read-only (site info, environment info). Everything else, including creating and editing posts, requires registering your own abilities like we did in Step 4.
 
-More advanced operations (media uploads, category/tag management, custom post types, comments) depend on plugins registering their own abilities. The ecosystem is growing, but it's not all there yet.
+That sounds like a lot of work, but once you've written one ability, the pattern is the same for everything else. The plugin I use handles post creation, updates, and category/tag management in about 200 lines of PHP.
 
-For me, the biggest gap is media uploads. I still set featured images manually in WordPress. But for the core writing-to-publishing workflow, which is what I do most often, the MCP handles everything I need. And because the Abilities API is extensible, the capabilities will only grow as more plugins adopt it.
+The biggest gap I'm still hitting is media uploads. I set featured images manually in the WordPress admin. Custom post types, comments, and WooCommerce data are all things that could be exposed as abilities, but someone has to write them. I expect the community and plugin authors will start shipping their own abilities as the API matures.
+
+For the core writing-to-publishing workflow, which is what I do most often, the setup I've described here handles everything I need.
 
 ## Getting started
 

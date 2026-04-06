@@ -84,6 +84,14 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Status:** `published`
 - **See Published section below**
 
+### 13. What the /insights command tells you about how you're actually using Claude Code
+- **Status:** `idea`
+- **Priority:** Medium (tips & optimization)
+- **Category:** Tips and Techniques
+- **Target keyword:** *Claude Code insights command, Claude Code usage stats*
+- **Angle:** Walk through the `/insights` command: what it shows you, what the numbers mean, and how to use that information to get more out of Claude Code. Frame it as a "fitness tracker for your AI usage" that helps you spot patterns, understand your habits, and improve your prompting over time.
+- **Why now:** Most marketers don't know this command exists and it's a quick win for understanding your own workflow.
+
 ---
 
 ## In Progress
