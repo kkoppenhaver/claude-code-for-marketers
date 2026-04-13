@@ -84,13 +84,17 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Status:** `published`
 - **See Published section below**
 
-### 13. What the /insights command tells you about how you're actually using Claude Code
+### 13. How I set up a daily Claude Code changelog digest (so I never miss what's new)
 - **Status:** `idea`
-- **Priority:** Medium (tips & optimization)
-- **Category:** Tips and Techniques
-- **Target keyword:** *Claude Code insights command, Claude Code usage stats*
-- **Angle:** Walk through the `/insights` command: what it shows you, what the numbers mean, and how to use that information to get more out of Claude Code. Frame it as a "fitness tracker for your AI usage" that helps you spot patterns, understand your habits, and improve your prompting over time.
-- **Why now:** Most marketers don't know this command exists and it's a quick win for understanding your own workflow.
+- **Priority:** Medium (automation use case)
+- **Category:** Use Cases
+- **Target keyword:** *Claude Code scheduled tasks, Claude Code automation, Claude Code remote triggers*
+- **Angle:** Walk through the real workflow of setting up a recurring Claude Code agent that monitors the Claude Code changelog and GitHub releases daily, filters for what matters to your role, and sends a Slack digest. Covers the `/schedule` skill, remote triggers, environment setup for internet access, and Slack webhook integration. Frame it as "your personal AI assistant that reads the release notes so you don't have to."
+- **Why now:** Remote triggers/scheduled agents are a new Claude Code capability most users don't know about. This is a concrete, reproducible automation that shows Claude Code doing real ongoing work, not just one-off tasks.
+
+### ~~What the /insights command tells you about how you're actually using Claude Code~~ → Published as "The command that shows you how you actually use Claude Code"
+- **Status:** `published`
+- **See Published section below**
 
 ---
 
@@ -107,6 +111,11 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### The command that shows you how you actually use Claude Code
+- **Published:** 2026-04-13
+- **Category:** Tips and Techniques
+- **File:** `claude-code-insights-command.md`
 
 ### The blog posts you forgot about are losing you traffic
 - **Published:** 2026-03-31
