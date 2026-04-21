@@ -212,7 +212,7 @@ Frame suggestions as options, not directives. Example: "The next highest-priorit
 
 * **Parenthetical asides**: "(or prompts)" — add clarifying details without breaking flow
 
-* **Use a conjunction before the final item in a series**: "crafting the perfect prompt, structuring your requests, and including context"
+* **Use a conjunction before the final item in a series**: "crafting the perfect prompt, structuring your requests, and including context". This applies to verb-phrase series too — don't drop the "and" before the last action. Wrong: "Point Claude Code at your own site, have it extract the visual identity, package it into a reusable reference." Right: "Point Claude Code at your own site, have it extract the visual identity, and package it into a reusable reference."
 
 * **Avoid repetitive parallel structures**: Don't stack 3+ short sentences with the same pattern. Combine them or vary the structure.
 
