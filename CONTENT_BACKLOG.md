@@ -35,12 +35,8 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Why now:** Every existing comparison is dev-focused. This would be the only marketer-focused guide.
 
 ### 6. Build your first landing page with Claude Code in 20 minutes
-- **Status:** `briefed`
-- **Priority:** High (shareable)
-- **Category:** Use Cases
-- **Target keyword:** *Claude Code landing page tutorial, build landing page AI*
-- **Angle:** Walk through describing what you want, Claude building it, iterating in the browser, deploying it. Keep it simpler than Boring Marketer's 2-part technical series. Emphasize the feedback loop: "Change the headline. Make the button bigger. Add a testimonial section." All in plain English.
-- **Why now:** Landing pages are the most tangible, exciting thing non-technical marketers can build. Everyone else's tutorial is too technical.
+- **Status:** `in-progress`
+- **See In Progress section below**
 
 ### 7. I built a client-ready lead magnet calculator in 30 minutes. Here's how.
 - **Status:** `briefed`
@@ -99,7 +95,17 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Angle:** Authentic reflection. Share real mistakes: prompts that didn't work, skills that broke, times you burned credits unnecessarily, the mental model shifts that unlocked better output. Position the 7-day email course as the "skip the mistakes" shortcut.
 - **Why now:** Vulnerability content drives the strongest email signups. This is the trust builder post.
 
-### 14. How to use Claude for market research (without an expensive tools subscription)
+### 14. Generate blog images, thumbnails, and icons without leaving Claude Code (the nano-banana skill)
+- **Status:** `idea`
+- **Priority:** Medium-High (utility + internal linking asset)
+- **Category:** Use Cases
+- **Target keyword:** *Claude Code image generation, nano banana Claude Code, generate images in terminal*
+- **Skill repo:** https://github.com/kkoppenhaver/cc-nano-banana
+- **Angle:** Walk through installing the nano-banana skill (Gemini CLI + nanobanana extension + the skill itself) and using it for real marketing work: blog featured images, YouTube thumbnails, app icons, simple diagrams. Frame it as "when AI image generation actually makes sense" — the complement to the infographics post. Show the natural-language interface ("Generate a featured image for this post"), a couple of real outputs, and the `./nanobanana-output/` workflow. Call out cost (~$0.04/image on the default model) so readers know what they're signing up for.
+- **Why now:** We reference image generation across multiple posts (landing page tutorial, brand guide post, etc.) but have no canonical "here's how to generate images inside Claude Code" piece to link to. Publishing this unlocks internal links from the landing page post, the infographics post (as the "yes, but sometimes this IS the right tool" counterpoint), and any future visual-asset tutorials.
+- **Cross-link targets:** Landing page tutorial (#6), "Why I stopped using AI image generators for infographics" (for contrast), brand guide post, skills roundup (#12).
+
+### 15. How to use Claude for market research (without an expensive tools subscription)
 - **Status:** `idea`
 - **Priority:** Medium (SEO — emerging queries)
 - **Category:** Use Cases
@@ -124,7 +130,32 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## In Progress
 
-*Nothing here right now*
+### Build your first landing page with Claude Code in 20 minutes
+- **Status:** `in-progress`
+- **Priority:** High (shareable)
+- **Category:** Use Cases
+- **Target keyword:** *Claude Code landing page tutorial, build landing page AI*
+- **Example project:** Landing page for goodicemap.com (Laravel app with brutalist aesthetic, no existing marketing page) — matches "I have a project but no marketing site" reader situation.
+- **Article angle:** Walk through pointing Claude Code at an existing app, letting it match the visual language, iterating in plain English, ending with a live landing page. Mention `/frontend-design` skill as the escape hatch for readers without an existing brand to match.
+- **Outline (agreed):**
+  1. Opening: Good Ice Map was live for months with no homepage telling anyone what it was.
+  2. The stall: "I have a project, no marketing page, can't justify a week."
+  3. Pointing Claude at the existing app — it reads Blade + Tailwind config, learns the look. (Escape hatch: `/frontend-design` skill for greenfield.)
+  4. First pass: real prompt, real screenshot, honest reaction.
+  5. Iteration in plain English — the feedback loop.
+  6. Copy beat — don't ship generic SaaS copy.
+  7. Final result screenshot + live link.
+  8. What 20 minutes does and doesn't include.
+  9. CTA: go point Claude at your own project.
+- **Artifacts to capture during Keanan's build session:**
+  - Literal first prompt
+  - Screenshot of existing app (before context)
+  - Screenshot of Claude's first landing page attempt
+  - 2–3 iteration prompts
+  - Any moment Claude got it wrong + correction
+  - Screenshot of final page
+  - Rough stopwatch time
+- **Next step:** Keanan runs the build in a separate Claude Code session against `~/code/good-ice-map`, returns with artifacts, then we draft the post in this session.
 
 ---
 
