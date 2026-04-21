@@ -8,14 +8,37 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Status:** `published`
 - **See Published section below**
 
-### 3. Vibe marketing: how to turn Claude Code into a one-person marketing team
-- **Status:** `idea`
+### ~~What vibe marketing actually means: turning Claude Code into a one-person marketing team~~ → Published
+- **Status:** `published`
+- **See Published section below**
 - **Priority:** High (SEO — already ranking)
 - **Category:** Concepts
 - **Target keyword:** *vibe marketing, vibe marketing Claude Code*
-- **GSC signal:** "vibe marketing" at position 5 with impressions; "vibe marketing - turn claude code into a marketing team" at position 38. We already rank for related "vibe coding" content — this extends into the hotter marketing-specific term.
-- **Angle:** Define "vibe marketing" the way the vibe coding post defined vibe coding. What it means for marketers: describing what you want in plain English and letting Claude handle the execution. Walk through 2-3 real examples (social posts, email campaigns, landing page tweaks). Bridge from the existing vibe coding post.
-- **Why now:** The term is gaining traction and we're already ranking at position 5. A dedicated piece could own this term.
+- **GSC signal:** "vibe marketing" at position 5 with impressions; "vibe marketing - turn claude code into a marketing team" at position 38. Title matches that real query while keeping the "what it actually means" top-of-funnel framing parallel to the vibe coding post.
+- **Reader:** Top-of-funnel. Curious readers (heard the term on X/LinkedIn) and skeptics (think it's hype), with a light nudge toward action for the ready-to-start. Not a how-to — the solo marketer's AI stack post (#11) will be the tactical follow-up.
+- **Definition (Keanan's own words):** "Using tools that let you work and iterate very quickly to build and ship marketing assets based on vibes. The marketing equivalent to vibe coding."
+- **Key distinction from "just AI marketing":** Vibe marketing is a *workflow* where the agent carries the whole thing and you guide from the output side — just like vibe coding, you only look at the output, not the underlying "code." One-off generations (ChatGPT drafting an email, a single Midjourney image) don't count.
+- **Tool framing:** Claude Code as THE vibe marketing tool. Strong narrative hero — no hedging about Lovable / v0 / ChatGPT agents.
+- **Opening scene (anchor):** Needed an infographic for a blog post. Instead of firing up Canva or calling a designer, fed the blog post + brand guidelines into Claude Code and iterated in under an hour. Loop was fast enough to experiment with multiple layouts. The key beat: this was going to be a blocker — instead it stayed in the flow, and the output was a blog post *and* a lead magnet. A real designer could still polish the graphic later; the point is having a starting place instead of getting stuck.
+- **Other example workflows to walk through:**
+  - Ad creative + copy iteration until the visual ad looks great
+  - Motion graphics with HyperFrames
+  - Slide decks
+  - Pull from existing posts where they fit the workflow definition: brand guide (`create-a-brand-guide-with-devtools-mcp.md`), social repurposing (`turn-one-piece-of-content-into-ten-social-posts.md`), and the infographics post (`why-i-stopped-using-ai-image-generators-for-infographics.md`) for nuance
+- **Honest boundary section (where it breaks down):**
+  - Without strong opinions, you get Generic AI Slop
+  - Without product knowledge, you get things that look good but don't make sense
+  - If you can't guide the process to be both accurate *and* brand-accurate, you'll get in trouble
+  - **"This is not a free marketer card, just like vibe coding doesn't replace developer experience"** — candidate for a verbatim line
+- **CTA (ending):** Dual — (1) try one small asset this week; (2) if you need to get more familiar with Claude Code first, sign up for the 7-day email course.
+- **Proposed outline:**
+  1. Opening: the infographic moment — tool that would've been a blocker stayed in the flow (blog post + lead magnet out the other side)
+  2. Define vibe marketing — the marketing equivalent of vibe coding, guiding from the output side
+  3. Distinction: it's a workflow, not a one-off ChatGPT email or single Midjourney image
+  4. What vibe marketing workflows look like: ad creative iteration, HyperFrames motion graphics, slide decks (link to existing posts that fit)
+  5. Honest boundary: not a free marketer card — needs strong opinions + product knowledge
+  6. CTA: try one asset this week, or sign up for the email course to get familiar with Claude Code first
+- **Why now:** We already rank pos 5 for "vibe marketing." A dedicated piece could own the term before someone else does.
 
 ### 4. Can Claude actually edit your Google Docs? Everything marketers need to know
 - **Status:** `idea`
@@ -166,6 +189,11 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### What vibe marketing actually means: turning Claude Code into a one-person marketing team
+- **Published:** 2026-04-21
+- **Category:** Concepts
+- **File:** `what-is-vibe-marketing.md`
 
 ### I never miss a competitor update anymore. Here's the 20-minute automation that fixed it.
 - **Published:** 2026-04-16
