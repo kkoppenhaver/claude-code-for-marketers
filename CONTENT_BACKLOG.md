@@ -137,6 +137,30 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Angle:** Broader than the existing competitor analysis post. Cover market sizing, audience research, trend analysis, and brand monitoring — all using Claude Code with web search and file tools. Position it as "the research toolkit you'd pay $500/month for, built in an afternoon."
 - **Why now:** Our competitor analysis post is already driving traffic for research-adjacent queries. This expands the cluster.
 
+### 16. How to create basic motion graphics with HyperFrames
+- **Status:** `idea`
+- **Priority:** Medium-High (utility + fills a link we already make)
+- **Category:** Use Cases
+- **Target keyword:** *HyperFrames tutorial, Claude Code motion graphics, AI B-roll, code-based video*
+- **Anchor project:** "The Tempting Shortcut" — 12-second pixel-art cybersecurity B-roll at `~/code/howhardcoulditbe/scripts/tempting-shortcut/`. Silent B-roll designed to cut behind Keanan's voiceover at 7:00–7:20 of a longer YouTube video.
+- **What the actual session looked like** (from the Claude Code transcript at `~/.claude/projects/-Users-keanan-code-howhardcoulditbe/45848a14-5ae9-45a4-ab45-edc7e01ec53a.jsonl`):
+  1. **One massive upfront prompt** — Keanan wrote a ~700-word brief specifying: visual identity (style, palette, typography, motion rules), the 3-beat scene breakdown with exact content and timing (0–3s, 3–6s, 6–12s), technical constraints (inline SVG, `crispEdges`, seeded PRNG, no `Math.random`), and a "what NOT to do" list (no Matrix rain, no bouncy easing on threat arrows, no blue cyber cliché, no stock lock icons). That brief was the whole game.
+  2. **The HyperFrames skill enforced a `DESIGN.md` step** — before writing any HTML, Claude generated `DESIGN.md` from the prompt. That doc became the reference for the composition. The `DESIGN.md` isn't something Keanan wrote first; it's output the skill forces.
+  3. **First render was ~90% there** — Claude ran `npx hyperframes preview` and `render` directly from the Claude Code chat. The initial MP4 worked.
+  4. **Two small iteration rounds, both subtractive.** Real prompts from the session:
+     - "This is a great start, can we make some edits? Let's remove the 'found in 4 hours' and 'don't do this' overlays. And can we make the arrows come in just a bit slower?"
+     - "Let's also remove the 'port fwd' text and the wink. Then we're good to go!"
+  5. **Total loop: heavy brief → one render → two rounds of cuts → done.** The `render` command kicks off an MP4 export straight from the chat.
+- **Angle (post thesis):** The HyperFrames workflow rewards *front-loaded specificity*. A 700-word brief got a 90% first render; two short removal prompts finished it. That's the inverse of the "iterate your way to the answer" pattern most people expect from AI tools. The post teaches why: because HyperFrames renders compositions as code, vague prompts produce vague code and a vague video. Specific prompts with NOT-lists produce the thing you actually wanted on the first try.
+- **Why now:** The vibe marketing post already references HyperFrames, but the link currently points to a LinkedIn announcement because we had no dedicated post. This fills the gap and strengthens the "code-defined media" cluster (infographics post, nano-banana post #14, this one).
+- **Artifacts to pull into the post:**
+  - Embedded MP4 from `renders/tempting-shortcut_2026-04-19_17-25-08.mp4` (the final one)
+  - A "before cuts" render to show the iteration (the earliest render `04-59-19.mp4` has the overlays that got removed)
+  - The initial prompt, trimmed or summarized — this is the real teaching artifact
+  - Both iteration prompts verbatim (they're short and perfect)
+  - The `DESIGN.md` the skill generated (or a condensed version) to show what "good output of the brief" looks like
+- **Cross-link targets:** vibe marketing post (update the HyperFrames link to point here once live), infographics post (code-defined media sibling), nano-banana post #14 (visual-asset generation companion).
+
 ### ~~The non-technical marketer's Claude Code FAQ~~ → Published as "15 Claude Code questions every marketer is afraid to ask"
 - **Status:** `published`
 - **See Published section below**
