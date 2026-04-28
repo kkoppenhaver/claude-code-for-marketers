@@ -57,9 +57,9 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Angle:** Build a comparison matrix for non-technical marketers: what each tool is best at, learning curve, cost, when to pick one over another. "If you want a landing page in 10 minutes, use Lovable. If you want a reusable workflow that runs every week, use Claude Code."
 - **Why now:** Every existing comparison is dev-focused. This would be the only marketer-focused guide.
 
-### 6. Build your first landing page with Claude Code in 20 minutes
-- **Status:** `in-progress`
-- **See In Progress section below**
+### ~~Build your first landing page with Claude Code in 20 minutes~~ → Published
+- **Status:** `published`
+- **See Published section below**
 
 ### 7. I built a client-ready lead magnet calculator in 30 minutes. Here's how.
 - **Status:** `briefed`
@@ -177,32 +177,7 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 
 ## In Progress
 
-### Build your first landing page with Claude Code in 20 minutes
-- **Status:** `in-progress`
-- **Priority:** High (shareable)
-- **Category:** Use Cases
-- **Target keyword:** *Claude Code landing page tutorial, build landing page AI*
-- **Example project:** Landing page for goodicemap.com (Laravel app with brutalist aesthetic, no existing marketing page) — matches "I have a project but no marketing site" reader situation.
-- **Article angle:** Walk through pointing Claude Code at an existing app, letting it match the visual language, iterating in plain English, ending with a live landing page. Mention `/frontend-design` skill as the escape hatch for readers without an existing brand to match.
-- **Outline (agreed):**
-  1. Opening: Good Ice Map was live for months with no homepage telling anyone what it was.
-  2. The stall: "I have a project, no marketing page, can't justify a week."
-  3. Pointing Claude at the existing app — it reads Blade + Tailwind config, learns the look. (Escape hatch: `/frontend-design` skill for greenfield.)
-  4. First pass: real prompt, real screenshot, honest reaction.
-  5. Iteration in plain English — the feedback loop.
-  6. Copy beat — don't ship generic SaaS copy.
-  7. Final result screenshot + live link.
-  8. What 20 minutes does and doesn't include.
-  9. CTA: go point Claude at your own project.
-- **Artifacts to capture during Keanan's build session:**
-  - Literal first prompt
-  - Screenshot of existing app (before context)
-  - Screenshot of Claude's first landing page attempt
-  - 2–3 iteration prompts
-  - Any moment Claude got it wrong + correction
-  - Screenshot of final page
-  - Rough stopwatch time
-- **Next step:** Keanan runs the build in a separate Claude Code session against `~/code/good-ice-map`, returns with artifacts, then we draft the post in this session.
+*Nothing here right now*
 
 ---
 
@@ -213,6 +188,12 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### Build your first landing page with Claude Code in 20 minutes
+- **Published:** 2026-04-27
+- **Category:** Use Cases
+- **File:** `build-a-landing-page-with-claude-code.md`
+- **Live example:** [goodicemap.com](https://goodicemap.com)
 
 ### What vibe marketing actually means: turning Claude Code into a one-person marketing team
 - **Published:** 2026-04-21
