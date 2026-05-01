@@ -16,6 +16,7 @@ const {
 } = Astro.props;
 
 const formAction = `https://app.kit.com/forms/${formId}/subscriptions`;
+const signupUrl = new URL(Astro.url.pathname, Astro.site).href;
 
 // Fetch subscriber count from Kit API at build time
 let subscriberText = "";
@@ -45,6 +46,7 @@ try {
   <p class="signup-description">{description}</p>
   <form action={formAction} method="post" class="signup-form">
     {tagId && <input type="hidden" name="tags[]" value={tagId} />}
+    <input type="hidden" name="fields[SIGNUP_URL]" value={signupUrl} />
     <div class="input-group">
       <label for="email-input" class="sr-only">Email address</label>
       <input
