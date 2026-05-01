@@ -61,6 +61,17 @@ try {
   <p class="signup-note">{subscriberText && <span class="subscriber-count">{subscriberText}</span>} No spam. Unsubscribe anytime.</p>
 </div>
 
+<script>
+  document.querySelectorAll<HTMLFormElement>('.signup-form').forEach((form) => {
+    form.addEventListener('submit', () => {
+      const fathom = (window as any).fathom;
+      if (fathom?.trackEvent) {
+        fathom.trackEvent('Email Signup');
+      }
+    });
+  });
+</script>
+
 <style>
   .signup-box {
     background: var(--color-bg-secondary);
