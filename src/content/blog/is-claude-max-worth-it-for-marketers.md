@@ -1,6 +1,8 @@
 ---
 title: "The $20 vs. $100 question: is Claude Max actually worth it for marketers?"
 description: "I spend $100/month on Claude. Here's my actual usage data, what burns through credits fast, and honest advice on which plan you actually need."
+target_keyword: "is claude max worth it"
+secondary_keywords: []
 pubDate: 2026-02-27
 author: "Keanan Koppenhaver"
 draft: false

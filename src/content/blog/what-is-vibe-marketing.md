@@ -1,6 +1,8 @@
 ---
 title: "What vibe marketing actually means: turning Claude Code into a one-person marketing team"
 description: "Vibe marketing is the marketer's version of vibe coding. Here's what it actually means, where Claude Code fits in, and why it's not a 'free marketer' card."
+target_keyword: "vibe marketing"
+secondary_keywords: []
 pubDate: 2026-04-21
 author: "Keanan Koppenhaver"
 categories: ["Concepts"]

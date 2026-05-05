@@ -1,6 +1,8 @@
 ---
 title: "How I used Claude Code to build a brand guide without opening a design tool"
 description: "Your website already has a visual identity. Here's how to use Claude Code and the DevTools MCP to extract it and generate a polished brand guide automatically."
+target_keyword: "ai brand guide generator"
+secondary_keywords: []
 pubDate: 2026-02-05
 author: "Keanan Koppenhaver"
 draft: false

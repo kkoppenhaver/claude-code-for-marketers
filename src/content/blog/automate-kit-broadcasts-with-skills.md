@@ -1,6 +1,8 @@
 ---
 title: "How I automated my email marketing with a Claude Code skill"
 description: "I used to put off promoting my blog posts because the context switch to Kit was just enough friction to kill my momentum. So I built a skill to handle it for me."
+target_keyword: "automate kit broadcasts"
+secondary_keywords: []
 pubDate: 2026-02-03
 author: "Keanan Koppenhaver"
 draft: false

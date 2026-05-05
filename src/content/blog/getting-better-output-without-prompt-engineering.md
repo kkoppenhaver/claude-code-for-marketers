@@ -1,6 +1,8 @@
 ---
 title: "Getting better Claude Code output without prompt engineering"
 description: "You don't need to master prompt engineering to get great results from Claude Code. Just tell it to ask you questions until it understands what you need."
+target_keyword: "improve claude code output"
+secondary_keywords: []
 pubDate: 2026-01-27
 author: "Keanan Koppenhaver"
 draft: false

@@ -1,6 +1,8 @@
 ---
 title: "Claude Code vs. ChatGPT for marketing: when to use which (and why I use both)"
 description: "I use both Claude Code and ChatGPT every day for marketing work. Here's honestly when I reach for each one, and why the real answer isn't 'just pick one.'"
+target_keyword: "claude code vs chatgpt"
+secondary_keywords: []
 pubDate: 2026-02-26
 author: "Keanan Koppenhaver"
 draft: false

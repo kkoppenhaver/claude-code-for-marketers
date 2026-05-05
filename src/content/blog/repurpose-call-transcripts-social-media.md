@@ -1,6 +1,8 @@
 ---
 title: "You're already 'creating content' (you just don't know it yet)"
 description: "Every sales call and client meeting is full of ideas worth sharing. Here's how I use Claude Code to find the best moments and turn them into social posts."
+target_keyword: "repurpose call transcripts"
+secondary_keywords: []
 pubDate: 2026-02-21
 author: "Keanan Koppenhaver"
 draft: false

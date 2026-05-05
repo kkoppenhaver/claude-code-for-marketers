@@ -1,6 +1,8 @@
 ---
 title: "How I use Claude Code to research competitors"
 description: "A step-by-step walkthrough of using Claude Code to build a full competitor analysis, from initial web research to a polished report you can share with your team."
+target_keyword: "ai competitor analysis"
+secondary_keywords: []
 pubDate: 2026-01-14
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"

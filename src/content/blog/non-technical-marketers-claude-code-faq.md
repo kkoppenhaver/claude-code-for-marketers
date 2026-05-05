@@ -1,6 +1,8 @@
 ---
 title: "15 Claude Code questions every marketer is afraid to ask"
 description: "Costs, safety, the terminal, alternatives, and whether you need to know how to code. Honest answers to the Claude Code questions marketers don't ask out loud."
+target_keyword: "claude code for marketers"
+secondary_keywords: []
 pubDate: 2026-03-12
 author: "Keanan Koppenhaver"
 tags: ["claude code", "faq", "getting started", "beginners"]

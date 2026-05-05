@@ -1,6 +1,8 @@
 ---
 title: "Giving Claude Code superpowers with MCP servers"
 description: "MCP servers let Claude Code reach beyond the terminal and interact with your favorite tools. Here's what they are and how to start using them."
+target_keyword: "claude code mcp servers"
+secondary_keywords: []
 pubDate: 2026-01-20
 author: "Keanan Koppenhaver"
 draft: false

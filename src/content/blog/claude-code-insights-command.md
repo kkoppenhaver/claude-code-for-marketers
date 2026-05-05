@@ -1,6 +1,8 @@
 ---
 title: "The command that shows you how you actually use Claude Code"
 description: "Claude Code's /insights command analyzes your sessions and shows you patterns you'd never notice. Here's what my report revealed about how I actually work."
+target_keyword: "claude code insights command"
+secondary_keywords: []
 pubDate: 2026-04-13
 author: "Keanan Koppenhaver"
 draft: false

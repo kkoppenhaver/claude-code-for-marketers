@@ -1,6 +1,8 @@
 ---
 title: "What are skills and how do they work?"
 description: "Skills let you teach Claude Code your specific workflows and preferences, turning it from a general-purpose assistant into one that knows exactly how you work."
+target_keyword: "claude code skills"
+secondary_keywords: []
 pubDate: 2026-01-22
 author: "Keanan Koppenhaver"
 draft: false

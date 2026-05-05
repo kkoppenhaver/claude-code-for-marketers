@@ -1,6 +1,8 @@
 ---
 title: "I never miss a competitor update anymore. Here's the 20-minute automation that fixed it."
 description: "I built a Claude Code automation that monitors a competitor's changelog every morning and Slacks me what matters. Here's exactly how I set it up."
+target_keyword: "automate competitor monitoring"
+secondary_keywords: []
 pubDate: 2026-04-15
 author: "Keanan Koppenhaver"
 draft: false

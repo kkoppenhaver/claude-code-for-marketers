@@ -36,11 +36,38 @@ npm run preview  # Preview production build
 
 * Content schema defined in `src/content.config.ts` with Zod validation
 
-* Required frontmatter: `title`, `description`, `pubDate`
+* Required frontmatter: `title`, `description`, `target_keyword`, `pubDate`
 
 * **Meta descriptions must be 150-160 characters.** This is the `description` field in frontmatter. Google truncates anything longer and shorter descriptions look thin in search results.
 
-* Optional: `updatedDate`, `author`, `image`, `imageAlt`, `tags`, `categories`, `draft`
+* **Every post must declare a `target_keyword`** — the primary search term the post is optimized to rank for. The build will fail without it. See [Target keywords](#target-keywords) below for how to pick one.
+
+* Optional: `secondary_keywords` (array), `updatedDate`, `author`, `image`, `imageAlt`, `tags`, `categories`, `draft`
+
+### Target keywords
+
+Every post declares one primary keyword and zero or more secondary keywords. These power the weekly site report (separate repo: `weekly-marketing-report`), which uses Search Console data to track ranking, find striking-distance opportunities, detect content decay, and recommend refreshes.
+
+**Picking a `target_keyword`:**
+
+* Match user intent. Comparison posts target `X vs Y`. How-to posts target the action (`build a landing page with claude code`). Concept posts target the concept (`vibe marketing`).
+* Lowercase, no quotes inside the value, no punctuation. The string is what someone would actually type into Google.
+* One per post. If you can think of two equally important keywords, the post is probably trying to do too much — split it, or pick one and put the other in `secondary_keywords`.
+* Don't keyword-stuff. The frontmatter target shapes strategy; on-page copy stays in your voice.
+
+**`secondary_keywords` (optional):** related queries the post should also rank for. Add when you can name 1-3 specific terms — leave empty (`[]`) otherwise. Don't pad.
+
+**Example:**
+
+```yaml
+---
+title: "How I edit Google Docs without leaving Claude Code"
+description: "..."
+target_keyword: "claude code google docs"
+secondary_keywords: ["google docs cli", "claude code workspace integration"]
+pubDate: 2026-03-04
+---
+```
 
 ### Images
 

@@ -6,6 +6,8 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    target_keyword: z.string(), // primary SEO target — used by the weekly site report. Required.
+    secondary_keywords: z.array(z.string()).default([]),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('Anonymous'),

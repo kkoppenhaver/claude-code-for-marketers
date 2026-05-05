@@ -1,6 +1,8 @@
 ---
 title: "Build your first landing page with Claude Code in 20 minutes"
 description: "I had a working app and no homepage to send anyone to. Twenty-one minutes later, Claude Code had built and shipped a real landing page. Here's how it went."
+target_keyword: "build a landing page with claude code"
+secondary_keywords: []
 pubDate: 2026-04-27
 author: "Keanan Koppenhaver"
 categories: ["Use Cases"]

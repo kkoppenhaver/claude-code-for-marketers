@@ -1,6 +1,8 @@
 ---
 title: "How I edit Google Docs without leaving Claude Code"
 description: "The Google Workspace CLI lets Claude Code pull down, edit, and push back your Google Docs. Here's how I set it up and the workflow I use."
+target_keyword: "claude code google docs"
+secondary_keywords: []
 pubDate: 2026-03-22
 author: "Keanan Koppenhaver"
 draft: false

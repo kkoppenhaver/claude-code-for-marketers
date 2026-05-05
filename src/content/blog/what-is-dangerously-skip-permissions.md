@@ -1,6 +1,8 @@
 ---
 title: "What --dangerously-skip-permissions actually does (and when you'd want to use it)"
 description: "Claude Code's permission prompts keep you safe, but sometimes they get in the way. Here's what this scary-sounding flag does and when to flip it on."
+target_keyword: "dangerously skip permissions"
+secondary_keywords: []
 pubDate: 2026-03-19
 author: "Keanan Koppenhaver"
 draft: false

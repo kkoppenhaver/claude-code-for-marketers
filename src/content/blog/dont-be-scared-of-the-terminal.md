@@ -1,6 +1,8 @@
 ---
 title: "Don't Be Scared of the Terminal"
 description: "The terminal looks intimidating, but it's just a textbox. Here's why you don't need to be afraid—and why Claude Code makes it even easier."
+target_keyword: "terminal for marketers"
+secondary_keywords: []
 pubDate: 2026-01-06
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"

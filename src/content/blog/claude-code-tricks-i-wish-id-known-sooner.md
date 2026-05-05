@@ -1,6 +1,8 @@
 ---
 title: "4 Claude Code Tricks I Wish I'd Known Sooner"
 description: "These are things that aren't immediately obvious but make a huge difference: drag-and-drop images, self-improving instructions, custom shortcuts, and more."
+target_keyword: "claude code tricks"
+secondary_keywords: []
 pubDate: 2026-01-19
 author: "Keanan Koppenhaver"
 draft: false

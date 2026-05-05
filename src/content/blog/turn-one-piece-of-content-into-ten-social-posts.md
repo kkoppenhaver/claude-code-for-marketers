@@ -1,6 +1,8 @@
 ---
 title: "How to turn one piece of content into 10 social posts with Claude Code"
 description: "A step-by-step workflow for turning any webinar, blog post, or podcast into platform-specific social media posts using Claude Code skills and auto-scheduling."
+target_keyword: "repurpose content into social posts"
+secondary_keywords: []
 pubDate: 2026-01-29
 author: "Keanan Koppenhaver"
 draft: false
