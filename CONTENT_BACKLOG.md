@@ -103,13 +103,9 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Angle:** Walk through three SEO workflows: (1) content audit of existing pages, (2) keyword gap analysis vs. competitors, (3) automated monitoring for ranking changes. Reference Firecrawl's approach but make it accessible for someone who's never used Ahrefs.
 - **Why now:** SEO automation is a hot topic but existing content assumes technical SEO knowledge. Our content decay piece is already pulling in SEO-minded readers — give them somewhere to go next.
 
-### 11. The solo marketer's AI stack: how to do the work of 10 people
-- **Status:** `briefed`
-- **Priority:** Medium (deeper workflow)
-- **Category:** Tips and Techniques
-- **Target keyword:** *AI marketing stack 2026, one-person marketing team AI*
-- **Angle:** Aspirational "north star" post. Claude Code as the orchestrator + the best skills to install + MCP servers for your marketing integrations + complementary tools (Obsidian, Typefully, Kit, etc.). Taps into the dominant X narrative about replacing entire teams. Link heavily to existing posts as the how-to guides for each piece.
-- **Why now:** High aspiration, high share potential. Perfect LinkedIn content.
+### ~~The solo marketer's AI stack: how to do the work of 10 people~~ → Published
+- **Status:** `published`
+- **See Published section below**
 
 ### 12. The Claude Code skills every marketer should install (curated roundup)
 - **Status:** `briefed`
@@ -205,6 +201,12 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### The solo marketer's AI stack: how to do the work of 10 people
+- **Published:** 2026-05-11
+- **Category:** Tips and Techniques
+- **File:** `solo-marketer-ai-stack.md`
+- **Featured image:** Layered stack infographic (`infographics/solo-marketer-stack.html` for source)
 
 ### Build your first landing page with Claude Code in 20 minutes
 - **Published:** 2026-04-27
