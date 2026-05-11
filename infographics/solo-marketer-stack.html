@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>The solo marketer's AI stack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+<style>
+  :root {
+    --color-bg: #FAFAF8;
+    --color-bg-secondary: #F0EFEB;
+    --color-text: #1C1917;
+    --color-text-secondary: #57534E;
+    --color-accent: #DA7756;
+    --color-border: #E7E5E0;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+
+    --layer-1: #DA7756;
+    --layer-1-wash: #FBEDE6;
+    --layer-1-border: #F2C9B6;
+    --layer-2: #D49A3A;
+    --layer-2-wash: #FBF2DE;
+    --layer-2-border: #ECD295;
+    --layer-3: #8B9D4F;
+    --layer-3-wash: #EEF1E0;
+    --layer-3-border: #C5CDA1;
+    --layer-4: #5E8B82;
+    --layer-4-wash: #E2ECEA;
+    --layer-4-border: #A6C0BB;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #888;  /* surrounding bg so the canvas stands out */
+    color: var(--color-text);
+    font-family: var(--font-body);
+  }
+  body {
+    display: flex; justify-content: center; align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  /* YouTube thumbnail dimensions: 1280x720 (16:9) */
+  .canvas {
+    width: 1280px;
+    height: 720px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 36px 44px 48px 44px;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 32px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .canvas::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      rgba(28, 25, 23, 0.02) 2px,
+      rgba(28, 25, 23, 0.02) 3px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+  .canvas > * { position: relative; z-index: 2; }
+
+  /* LEFT — title block */
+  .title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 28px;
+    border-right: 1px solid var(--color-border);
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .eyebrow::before { content: ">"; font-weight: 700; }
+
+  .title-block h1 {
+    font-family: var(--font-mono);
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+  .title-block h1 .accent { color: var(--color-accent); }
+  .title-block .lede {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--color-text);
+    margin-top: 16px;
+    max-width: 320px;
+  }
+  .title-block .lede em {
+    color: var(--color-accent);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* mini flow recap */
+  .flow {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--color-bg);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .pill.l1 { background: var(--layer-1); }
+  .pill.l2 { background: var(--layer-2); }
+  .pill.l3 { background: var(--layer-3); }
+  .pill.l4 { background: var(--layer-4); }
+  .flow .arrow {
+    color: var(--color-text-secondary);
+    font-weight: 700;
+  }
+
+  /* Example block in the left sidebar */
+  .example {
+    margin-top: 26px;
+    padding: 18px 18px 18px 20px;
+    background: var(--color-bg-secondary);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+  }
+  .example .label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 9px;
+  }
+  .example p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--color-text);
+    margin: 0;
+  }
+  .example .timing {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-top: 12px;
+    letter-spacing: 0.04em;
+  }
+  .example .timing strong { color: var(--color-accent); }
+
+  /* RIGHT — layer stack (equal-height rows) */
+  .layers {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 12px;
+    position: relative;
+    padding-left: 50px;
+  }
+  .layers::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      var(--layer-1) 0%, var(--layer-1) 22%,
+      var(--layer-2) 28%, var(--layer-2) 47%,
+      var(--layer-3) 53%, var(--layer-3) 72%,
+      var(--layer-4) 78%, var(--layer-4) 100%
+    );
+    z-index: 0;
+  }
+
+  .layer {
+    position: relative;
+    background: var(--layer-wash);
+    border: 1px solid var(--layer-border);
+    border-left: 6px solid var(--layer-color);
+    border-radius: 4px;
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .badge {
+    position: absolute;
+    left: -59px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-bg);
+    border: 3px solid var(--layer-color);
+    color: var(--layer-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 17px;
+    font-weight: 700;
+    z-index: 3;
+    box-shadow: 0 0 0 4px var(--color-bg);
+  }
+
+  .layer-1 { --layer-color: var(--layer-1); --layer-wash: var(--layer-1-wash); --layer-border: var(--layer-1-border); }
+  .layer-2 { --layer-color: var(--layer-2); --layer-wash: var(--layer-2-wash); --layer-border: var(--layer-2-border); }
+  .layer-3 { --layer-color: var(--layer-3); --layer-wash: var(--layer-3-wash); --layer-border: var(--layer-3-border); }
+  .layer-4 { --layer-color: var(--layer-4); --layer-wash: var(--layer-4-wash); --layer-border: var(--layer-4-border); }
+
+  .layer-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border-right: 1px solid var(--layer-border);
+    padding-right: 14px;
+  }
+  .layer-tag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--layer-color);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .layer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; height: 20px;
+    background: var(--layer-color);
+    color: var(--color-bg);
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .layer-name {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.1;
+    margin-top: 5px;
+  }
+  .layer-sub {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-style: italic;
+    color: var(--color-text-secondary);
+    line-height: 1.3;
+    margin-top: 4px;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-content: center;
+  }
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    background: var(--color-bg);
+    border: 1.5px solid var(--layer-color);
+    color: var(--layer-color);
+    border-radius: 999px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .chip.solid {
+    background: var(--layer-color);
+    color: var(--color-bg);
+  }
+
+  /* FOOTER spans both columns */
+  .footer {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--color-text-secondary);
+  }
+  .footer .url { color: var(--color-accent); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+
+    <!-- LEFT title block -->
+    <div class="title-block">
+      <div>
+        <div class="eyebrow">The stack</div>
+        <h1>The solo<br/>marketer's<br/><span class="accent">AI stack</span></h1>
+        <p class="lede">
+          Four layers, stacked. Each layer makes the one <em>above</em> it more powerful, and the whole thing is held together by an orchestrator at the top.
+        </p>
+
+        <div class="flow">
+          <span class="pill l1">Orchestrator</span>
+          <span class="arrow">→</span>
+          <span class="pill l2">Skills</span>
+          <span class="arrow">→</span>
+          <span class="pill l3">Wires</span>
+          <span class="arrow">→</span>
+          <span class="pill l4">Tools</span>
+        </div>
+
+        <div class="example">
+          <div class="label">In practice</div>
+          <p>Brainstorming new posts: Claude Code calls <strong>fetch-search-console</strong> and <strong>analyze-keyword-opportunities</strong> against the GSC and Fathom MCPs, cross-references the <strong>Obsidian</strong> ideas folder, and ships the finished draft to <strong>Cloudflare Pages</strong>.</p>
+          <span class="timing">All four layers. <strong>~20 minutes, end to end.</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT layer stack -->
+    <div class="layers">
+
+      <!-- Layer 1 -->
+      <div class="layer layer-1">
+        <div class="badge">01</div>
+        <div class="layer-meta">
+          <div class="layer-tag">Orchestrator</div>
+          <div class="layer-name">Claude Code</div>
+          <div class="layer-sub">The agent that runs the show.</div>
+        </div>
+        <div class="chips">
+          <span class="chip solid">Claude Code</span>
+        </div>
+      </div>
+
+      <!-- Layer 2 -->
+      <div class="layer layer-2">
+        <div class="badge">02</div>
+        <div class="layer-meta">
+          <div class="layer-tag">Skills</div>
+          <div class="layer-name">Specialists</div>
+          <div class="layer-sub">Domain experts you install.</div>
+        </div>
+        <div class="chips">
+          <span class="chip">kit-broadcast</span>
+          <span class="chip">fact-check</span>
+          <span class="chip">nano-banana</span>
+          <span class="chip">frontend-design</span>
+          <span class="chip">hyperframes</span>
+          <span class="chip">analyze-keyword-opportunities</span>
+        </div>
+      </div>
+
+      <!-- Layer 3 -->
+      <div class="layer layer-3">
+        <div class="badge">03</div>
+        <div class="layer-meta">
+          <div class="layer-tag">MCP servers</div>
+          <div class="layer-name">The wires</div>
+          <div class="layer-sub">Standardized integrations.</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Google Drive</span>
+          <span class="chip">Playwright</span>
+          <span class="chip">Google Search Console</span>
+          <span class="chip">Fathom</span>
+        </div>
+      </div>
+
+      <!-- Layer 4 -->
+      <div class="layer layer-4">
+        <div class="badge">04</div>
+        <div class="layer-meta">
+          <div class="layer-tag">Tools of record</div>
+          <div class="layer-name">The warehouse</div>
+          <div class="layer-sub">Where your data lives.</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Obsidian</span>
+          <span class="chip">Granola</span>
+          <span class="chip">Kit</span>
+          <span class="chip">WordPress</span>
+          <span class="chip">Typefully</span>
+          <span class="chip">HyperFrames</span>
+          <span class="chip">Cloudflare Pages</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER spans full width -->
+    <div class="footer">
+      <div class="url">claudecodeformarketers.com</div>
+    </div>
+
+  </div>
+</body>
+</html>

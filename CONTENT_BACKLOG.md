@@ -41,13 +41,22 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Why now:** We already rank pos 5 for "vibe marketing." A dedicated piece could own the term before someone else does.
 
 ### 4. Can Claude actually edit your Google Docs? Everything marketers need to know
-- **Status:** `idea`
-- **Priority:** High (SEO — massive query cluster)
+- **Status:** `briefed`
+- **Brief:** `briefs/can-claude-edit-google-docs-faq.md`
+- **Priority:** High (SEO — biggest single query cluster in GSC)
 - **Category:** Use Cases
-- **Target keyword:** *can claude edit google docs, claude google docs integration, connect claude to google docs*
-- **GSC signal:** 20+ query variations around "claude + google docs" driving impressions. Current post ranks positions 7-13 for many of these but doesn't capture the full cluster. Queries include: "can claude edit google docs" (pos 12.3), "claude google docs integration" (pos 8), "connect claude code to google docs" (pos 10.5), "can claude cowork edit google docs" (pos 10.7), "claude code read google docs" (pos 9.7), plus many more.
-- **Angle:** A comprehensive FAQ/guide that directly answers the "can Claude do X with Google Docs?" questions people are actually searching. Cover Claude Code (MCP approach), Cowork, Sheets, Drive access, and limitations. Different from the existing how-to post — this is the definitive reference page. Link heavily to the existing walkthrough post for the step-by-step.
-- **Why now:** This is the single biggest query cluster in our GSC data and nobody else owns a definitive answer page for it.
+- **Target keyword:** *can claude edit google docs*
+- **Secondary keywords:** *claude google docs integration*, *connect claude code to google docs*, *can claude edit google sheets*, *claude code google docs*
+- **GSC signal:** 75 distinct query variations, ~542 impressions / 14 clicks (90 days). Buckets: Docs 62 queries / 500 impr, Sheets 9 queries / 39 impr, Drive 1 / 1, Slides 0. Current Google Docs how-to ranks positions 7–13 for many but doesn't capture long-tail "can Claude do X" intent.
+- **Shape:** Pure Q&A FAQ, ~12 canonical questions consolidated by intent.
+- **Tool scope:** Claude Code (MCP) primary, Cowork secondary (short answers + link out to comparison post).
+- **Workspace scope:** Docs primary, Sheets secondary section, Drive/Slides one-line answers.
+- **Open:** Frame the confusion (3+ Claude products, answers differ).
+- **Length:** ~2,500–3,500 words.
+- **CTA:** Email course signup (default Kit tag).
+- **Internal links (heavy):** `hooking-claude-code-up-to-google-docs.md`, `claude-code-vs-claude-cowork.md`.
+- **Pre-draft testing required:** tables-in-Docs, comments-in-Docs, Sheets edit, claude.ai web connector capabilities.
+- **Why now:** Biggest single query cluster in GSC and nobody owns a definitive answer page.
 
 ### 5. Claude Code vs. Lovable vs. Cursor vs. Bolt: a marketer's decision guide
 - **Status:** `briefed`
@@ -102,13 +111,21 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 - **Angle:** Aspirational "north star" post. Claude Code as the orchestrator + the best skills to install + MCP servers for your marketing integrations + complementary tools (Obsidian, Typefully, Kit, etc.). Taps into the dominant X narrative about replacing entire teams. Link heavily to existing posts as the how-to guides for each piece.
 - **Why now:** High aspiration, high share potential. Perfect LinkedIn content.
 
-### 12. 7 Claude Code skills every marketer should install this week
+### 12. The Claude Code skills every marketer should install (curated roundup)
 - **Status:** `briefed`
-- **Priority:** Medium (community building)
+- **Brief:** `briefs/marketing-skills-roundup.md`
+- **Priority:** Medium-High (community building + companion to #11)
 - **Category:** Getting Started
-- **Target keyword:** *best Claude Code skills marketing, Claude Code skills install*
-- **Angle:** Curate the best marketing-specific skills from across the ecosystem (Corey Haines' repo, Boring Marketer's, emailmarketingskill.com, cc-skills repo, Anthropic's built-in frontend-design) with plain-English explanations and install instructions. Position this as the "app store guide" for marketing skills.
-- **Why now:** The skills ecosystem is exploding but most marketers don't know what to install or where to find them.
+- **Target keyword:** *best Claude Code skills marketing*
+- **Secondary keywords:** *Claude Code skills install*, *marketing skills Claude Code*, *Corey Haines marketing skills*
+- **Angle:** Curated roundup. "There are hundreds of public skills. Most aren't built for marketers. Here are the ones that are."
+- **Sources:** Anthropic built-ins, Corey Haines' marketing skills repo, Keanan's own skills.
+- **Structure:** Quick-card per skill (what it does / when to use / install / example), grouped by marketing workflow (writing → design → publishing → research).
+- **Title note:** "7" is flexible — final number locked at draft time after candidate audit (likely 5–9).
+- **Length:** ~1,500–2,000 words.
+- **CTA:** Email course (default Kit tag).
+- **Pre-draft research:** Audit Corey's repo, confirm Anthropic built-ins, inventory Keanan's skills, verify install commands.
+- **Why now:** Skills ecosystem is exploding; no trusted marketer-focused roundup exists.
 
 ### 13. What I got wrong about Claude Code in my first two months (and what changed everything)
 - **Status:** `briefed`
