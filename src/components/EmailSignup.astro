@@ -17,6 +17,13 @@ const {
 
 const formAction = `https://app.kit.com/forms/${formId}/subscriptions`;
 
+// Canonical URL of the page this form is rendered on — populates the
+// SIGNUP_URL custom field in Kit so we can see which page each subscriber
+// came from.
+const signupUrl = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site).toString()
+  : Astro.url.pathname;
+
 // Fetch subscriber count from Kit API at build time
 let subscriberText = "";
 try {
@@ -45,6 +52,7 @@ try {
   <p class="signup-description">{description}</p>
   <form action={formAction} method="post" class="signup-form">
     {tagId && <input type="hidden" name="tags[]" value={tagId} />}
+    <input type="hidden" name="fields[signup_url]" value={signupUrl} />
     <div class="input-group">
       <label for="email-input" class="sr-only">Email address</label>
       <input
