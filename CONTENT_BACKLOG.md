@@ -174,6 +174,40 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
   - The `DESIGN.md` the skill generated (or a condensed version) to show what "good output of the brief" looks like
 - **Cross-link targets:** vibe marketing post (update the HyperFrames link to point here once live), infographics post (code-defined media sibling), nano-banana post #14 (visual-asset generation companion).
 
+### 17. The /goal command: how to make Claude Code finish what it starts
+- **Status:** `idea`
+- **Priority:** Medium-High (timely — shipped in v2.1.139, no marketer-focused coverage yet)
+- **Category:** Tips and Techniques
+- **Target keyword:** *claude code goal command*
+- **Secondary keywords:** *claude code /goal*, *claude code autonomous tasks*, *claude code keep working until done*
+- **What it is (one-liner):** `/goal "<condition>"` sets a completion condition. After each turn, a small fast model checks whether the condition is met. If not, Claude starts another turn on its own. The goal clears when the condition holds (or when you run `/goal clear`).
+- **How it differs from related commands:**
+  - `/goal` — fires after every turn, stops when an evaluator confirms the condition
+  - `/loop` — fires on a time interval, stops when you stop it (already covered in scheduled work context)
+  - Auto mode — approves tool calls within a turn but doesn't start new ones
+  - Stop hooks — same mechanism as `/goal` but lives in settings and applies to every session
+- **Angle:** Most marketers using Claude Code stop a task too early because they're babysitting it. `/goal` lets you walk away from work with a verifiable end state. Frame it as "the difference between 'finish this when you can' and 'don't come back until it's done.'"
+- **Key teaching point:** A good goal condition is something Claude's own output can demonstrate. The evaluator only reads the transcript — it doesn't run commands or read files independently. So conditions need to reference what Claude has surfaced: a test result, a file count, an empty queue, a clean diff.
+- **Marketing-specific goal examples to include:**
+  - "Don't stop until every blog post in `src/content/blog/` has a `target_keyword` field, or stop after 30 turns" (we literally just did this manually)
+  - "Don't stop until all images referenced in this post have descriptive alt text"
+  - "Don't stop until all internal links to `/old-slug` have been updated to `/new-slug` site-wide"
+  - "Don't stop until 10 LinkedIn post drafts are written and saved to `drafts/linkedin/`"
+  - "Don't stop until the competitor research doc has pricing, positioning, and target ICP filled in for all 8 companies in `competitors.csv`"
+  - "Don't stop until every post in the Published section of `CONTENT_BACKLOG.md` exists as a file in `src/content/blog/` and vice versa"
+  - "Don't stop until `npm run build` exits 0"
+- **Practical tips to cover:**
+  - Always include a turn or time cap (`or stop after N turns`) — runaway goals burn tokens
+  - State the proof: "verify by running X" or "shown in `git status`"
+  - Add constraints that matter ("without modifying any test files")
+  - `/goal` with no argument shows status, turns spent, tokens spent, and the evaluator's most recent reason
+  - Resumes with `--continue` keep the condition but reset counters
+  - Works in headless mode: `claude -p "/goal ..."` runs the whole loop in one invocation
+- **Honest boundary:** Not a magic finisher. If the work is genuinely ambiguous or requires judgment you haven't put in the condition, the evaluator will either keep going forever or call it done prematurely. Best for work where "done" is observable.
+- **Why now:** Shipped in v2.1.139, so it's brand new (May 2026). Anthropic's docs are technical/dev-flavored ("until every call site compiles"). Zero marketer-focused coverage. We can own the search results before competitors catch up.
+- **Sources to reference:** Official docs (code.claude.com/docs/en/goal), v2.1.139 changelog.
+- **Cross-link targets:** The CLAUDE.md masterclass, `--dangerously-skip-permissions` post, insights command post.
+
 ### ~~The non-technical marketer's Claude Code FAQ~~ → Published as "15 Claude Code questions every marketer is afraid to ask"
 - **Status:** `published`
 - **See Published section below**
@@ -201,6 +235,13 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### How I built a 14-slide presentation in an hour (without opening Keynote)
+- **Published:** 2026-05-12
+- **Category:** Use Cases
+- **File:** `how-i-built-a-14-slide-presentation-in-an-hour.md`
+- **Target keyword:** `ai presentation builder`
+- **Featured image:** Hero composite of the deck title slide layered with the one-page PDF takeaway
 
 ### The solo marketer's AI stack: how to do the work of 10 people
 - **Published:** 2026-05-11
