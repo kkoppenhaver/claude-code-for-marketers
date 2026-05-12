@@ -235,6 +235,8 @@ Frame suggestions as options, not directives. Example: "The next highest-priorit
 
 * **Use fragments for emphasis when appropriate**
 
+* **Let sentences spool when the meaning runs together**: Conversational rhythm isn't always short-short-short. Sometimes the way to sound like a real person is to let a thought spool with "and" or "but" across several clauses, even when an editor would chop it. "I wanted something polished, but also practical and impactful, and when I start by staring at a blank page in Keynote, I can never quite get there" reads as someone thinking aloud. The three-sentence edit reads as someone who edited the life out of it.
+
 * **Use colons for transitions**: Creates natural pauses and emphasis
 
 * **Parenthetical asides**: "(or prompts)" — add clarifying details without breaking flow
@@ -267,6 +269,8 @@ Prefer vivid, specific, concrete language over generic or abstract phrasing:
 
 * **Open with a specific, observable moment**: Describe watching someone's reaction rather than making a general statement
 
+* **Open paragraphs with "I" or "my" when it's a personal beat**: AI default is to open with the scene or the noun phrase ("30-minute slot. Marketing audience. Practical goal."). Keanan's default is to open with the relationship to it ("My job was to..." / "I didn't have a designer..." / "I wanted..."). Starting with the person keeps the reader inside your head instead of reading a briefing doc.
+
 * **Establish conventional wisdom, then introduce the disruption**: Ground the reader before challenging assumptions
 
 * **Let the story unfold naturally**: Don't telegraph the structure or foreshadow what's coming
@@ -282,6 +286,8 @@ Prefer vivid, specific, concrete language over generic or abstract phrasing:
 * **Include specific details**: "giving original talks every time" not just "giving talks"
 
 * **Acknowledge quirks**: "I have a bad habit of..." — self-aware humor
+
+* **Admit the small personal struggle**: Different from acknowledging an expertise boundary ("I'm not a lawyer..."). This is the moment where you say *you* couldn't do the thing: "when I start by staring at a blank page in Keynote, I can never quite get there." It earns the workflow that follows, because the reader sees the gap the workflow filled. Use sparingly — once or twice per post — but reach for it when introducing why you needed the approach you're about to describe.
 
 * **Ground in real experience**: Specific situations, not generic scenarios
 
@@ -318,6 +324,8 @@ Prefer vivid, specific, concrete language over generic or abstract phrasing:
 * Foreshadowing post structure ("three completely different approaches before landing on...") — trust the reader to follow along
 
 * Adding flourishes after the point already lands
+
+* **Stacked noun-phrase fragments** — A single fragment lands a beat ("Locked it in. Threw away the rest."). Three or four stacked subject-less fragments in a row sound confident but read as AI cosplaying terseness. Wrong: "30-minute slot. Audience was our PMM team. No designer available. Half a day to ship it." Right: "My job was to take a 30-minute slot and help the PMM team uplevel. I didn't have a designer available and I was under a bit of time pressure." Reserve the fragment for landing a single line, not building a paragraph.
 
 ## Writing for non-technical audiences
 
