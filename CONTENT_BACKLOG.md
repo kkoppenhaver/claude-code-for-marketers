@@ -40,8 +40,9 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
   6. CTA: try one asset this week, or sign up for the email course to get familiar with Claude Code first
 - **Why now:** We already rank pos 5 for "vibe marketing." A dedicated piece could own the term before someone else does.
 
-### 4. Can Claude actually edit your Google Docs? Everything marketers need to know
-- **Status:** `briefed`
+### ~~4. Can Claude actually edit your Google Docs? Everything marketers need to know~~ → Published
+- **Status:** `published`
+- **See Published section below**
 - **Brief:** `briefs/can-claude-edit-google-docs-faq.md`
 - **Priority:** High (SEO — biggest single query cluster in GSC)
 - **Category:** Use Cases
@@ -235,6 +236,13 @@ Ideas, planned posts, and in-progress content. Ordered by priority.
 ---
 
 ## Published
+
+### Can Claude actually edit your Google Docs? Everything marketers need to know
+- **Published:** 2026-05-04
+- **Category:** Use Cases
+- **File:** `can-claude-edit-google-docs.md`
+- **Target keyword:** `can claude edit google docs`
+- **Why:** Owns the biggest single GSC query cluster (75 variations, ~542 impressions / 14 clicks over 90 days). Pre-draft testing pass against `gws` CLI and the claude.ai Drive connector locked the answers for tables, comments, Sheets, Slides, and the claude.ai read-only ceiling.
 
 ### How I built a 14-slide presentation in an hour (without opening Keynote)
 - **Published:** 2026-05-12
