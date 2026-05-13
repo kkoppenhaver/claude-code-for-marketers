@@ -113,7 +113,7 @@ The most valuable automations aren't the ones that do something you *can't* do. 
 
 </aside>
 
-For me, that was email promotion. For you, it might be something completely different. Maybe it's formatting social posts after you publish. Maybe it's updating a spreadsheet. Maybe it's sending a weekly report. Whatever it is, if you find yourself skipping it because of friction, that's a skill waiting to be built.
+For me, that was email promotion. For you, it might be something completely different. Maybe it's [formatting social posts after you publish](/blog/turn-one-piece-of-content-into-ten-social-posts/). Maybe it's updating a spreadsheet. Maybe it's sending a weekly report. Whatever it is, if you find yourself skipping it because of friction, that's a skill waiting to be built.
 
 ## Try it yourself
 

@@ -81,7 +81,7 @@ Installing the Playwright MCP takes one command:
 claude mcp add playwright npx '@playwright/mcp@latest'
 ```
 
-Run this in your terminal before starting Claude Code, and that's it! When you restart Claude Code, it will have access to its own browser.
+Run this in your terminal before starting Claude Code, and that's it! When you restart Claude Code, it will have access to its own browser. (Here's [a real example of using a browser MCP to extract a brand guide from a website](/blog/create-a-brand-guide-with-devtools-mcp/).)
 
 ### How to actually use it
 
@@ -136,7 +136,7 @@ Claude reads the structure of your Notion workspace and figures out how to inter
 
 Playwright and Notion are just two examples. The MCP ecosystem is growing fast, and many popular tools now have MCP servers available (either official ones from the vendor or community-built alternatives).
 
-If you're curious whether your favorite tool has an MCP server, a quick search for "[tool name] MCP server" will usually tell you. Slack, Google Sheets, Airtable, Linear, GitHub, Figma, and plenty of others have MCP servers that work with Claude Code.
+If you're curious whether your favorite tool has an MCP server, a quick search for "[tool name] MCP server" will usually tell you. Slack, Google Sheets, Airtable, Linear, GitHub, Figma, and plenty of others have MCP servers that work with Claude Code. I've written up specific walkthroughs for [hooking Claude Code up to Google Docs](/blog/hooking-claude-code-up-to-google-docs/) and [hooking it up to WordPress](/blog/hooking-claude-code-up-to-wordpress/) if you want a deeper look.
 
 I wouldn't recommend going out and installing them all right away. Start with one that connects to a tool you use every day, get comfortable with how it works, and expand from there!
 

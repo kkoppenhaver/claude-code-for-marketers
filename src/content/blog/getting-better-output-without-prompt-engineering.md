@@ -47,7 +47,7 @@ Claude will ask about my audience. It'll ask about specific points that seem vag
 
 Then we write. Section by section, with me giving specific, actionable feedback as we go. The first draft is dramatically better than if I'd just said "write a blog post from this outline."
 
-This works for writing, but the same pattern applies to any task where there's unspoken knowledge: coding, planning a campaign, building a landing page, or analyzing data. Anywhere you have context in your head that Claude needs to do good work, ask for a mini-interview to surface as much of that as possible.
+This works for writing, but the same pattern applies to any task where there's unspoken knowledge: coding, planning a campaign, [building a landing page](/blog/build-a-landing-page-with-claude-code/), or analyzing data. Anywhere you have context in your head that Claude needs to do good work, ask for a mini-interview to surface as much of that as possible.
 
 ## "Isn't this just slowing things down?"
 
@@ -78,6 +78,6 @@ The next time you're about to write a long, detailed prompt that tries to antici
 3. Answer the questions as they come
 4. Let Claude tell you when it's ready to begin
 
-You don't need to master prompt engineering. You just need to have a conversation.
+You don't need to master prompt engineering. You just need to have a conversation. (For more small habits that compound, see [Claude Code tricks I wish I'd known sooner](/blog/claude-code-tricks-i-wish-id-known-sooner/).)
 
 If you try this technique, I'd love to hear how it goes. Reach out on [Twitter](https://twitter.com/kkoppenhaver), [LinkedIn](https://linkedin.com/in/keanankoppenhaver), or send me an email at keanan@claudecodeformarketers.com.

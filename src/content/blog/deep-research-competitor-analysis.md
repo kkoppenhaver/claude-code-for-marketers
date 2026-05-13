@@ -78,7 +78,7 @@ Now when I ask for a competitor report, Claude already knows who "we" are, which
 
 ## Bonus: getting your report into Google Docs
 
-Markdown is great, but your team probably lives in Google Docs. Here's the good news: copying markdown into Google Docs works surprisingly well.
+Markdown is great, but your team probably lives in Google Docs. Here's the good news: copying markdown into Google Docs works surprisingly well. (If you'd rather skip the copy/paste step entirely, you can [hook Claude Code up to Google Docs directly](/blog/hooking-claude-code-up-to-google-docs/) and have it write the report straight into Drive.)
 
 1. Open your markdown file
 2. Select all and copy

@@ -195,6 +195,6 @@ For the core writing-to-publishing workflow, which is what I do most often, the 
 
 ## Getting started
 
-If you have a WordPress site and you're already using Claude Code, this is a low-effort, high-reward integration. Five minutes of setup, and you never have to copy-paste a blog post into the WordPress editor again.
+If you have a WordPress site and you're already using Claude Code, this is a low-effort, high-reward integration. Five minutes of setup, and you never have to copy-paste a blog post into the WordPress editor again. (If you draft in Google Docs instead, here's [how to hook Claude Code up to Google Docs](/blog/hooking-claude-code-up-to-google-docs/) for the same kind of round-trip.)
 
 Start with a draft. Write something in Claude Code, push it to WordPress as a draft, preview it on your site, and publish it when you're ready. Once you've done the round trip once, the old copy-paste workflow will feel painful by comparison!

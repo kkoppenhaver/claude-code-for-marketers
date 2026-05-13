@@ -14,7 +14,7 @@ A few weeks ago, a prospect asked me if we had feature parity with a competitor 
 
 That's a bad feeling, because I should have known about it. I should have had a response ready. Instead, I was scrambling to pull up their release notes on a live call.
 
-The thing is, I *know* I should be monitoring competitor changelogs. But have you actually tried doing that consistently? Most product teams ship updates weekly (some daily), and reading through a wall of version numbers and patch notes to figure out what actually matters for your positioning is mind-numbing work. Nobody is going to do that every morning before their first coffee.
+The thing is, I *know* I should be monitoring competitor changelogs. (I've written before about using Claude Code for [deep competitor research](/blog/deep-research-competitor-analysis/), and the daily monitoring piece was the missing companion to that.) But have you actually tried doing that consistently? Most product teams ship updates weekly (some daily), and reading through a wall of version numbers and patch notes to figure out what actually matters for your positioning is mind-numbing work. Nobody is going to do that every morning before their first coffee.
 
 So I stopped trying to do it myself and built a Claude Code automation that does it for me.
 
@@ -116,6 +116,6 @@ And once you've dialed in one competitor, you can set up a separate automation f
 
 ## Go build yours
 
-Pick one competitor. The one whose updates you should be tracking but aren't. Open Claude Code, use `/schedule`, and describe what you want. Twenty minutes from now, you'll have a system that makes sure you never get caught off guard on a sales call again.
+Pick one competitor. The one whose updates you should be tracking but aren't. Open Claude Code, use `/schedule`, and describe what you want. Twenty minutes from now, you'll have a system that makes sure you never get caught off guard on a sales call again. (If you want to see another "boring task on a schedule" example, here's how I [automate Kit broadcasts with a skill](/blog/automate-kit-broadcasts-with-skills/).)
 
 If you set one up, I'd love to hear how it goes. Find me on [Twitter](https://twitter.com/kkoppenhaver) or [LinkedIn](https://linkedin.com/in/keanankoppenhaver) and tell me what you're monitoring.

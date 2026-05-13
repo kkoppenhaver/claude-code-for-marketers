@@ -64,7 +64,7 @@ I don't have every terminal command memorized either. Looking things up isn't a 
 
 ### 3. Guardrails exist
 
-Claude Code has built-in ways to add extra safety rails—there's a feature called "hooks" that lets you block certain dangerous commands entirely, which we'll cover in a future post.
+Claude Code has built-in ways to add extra safety rails—there's a feature called "hooks" that lets you block certain dangerous commands entirely, which we'll cover in a future post. (And if you ever do want to take the training wheels off, [here's what `--dangerously-skip-permissions` actually does](/blog/what-is-dangerously-skip-permissions/) and when it's appropriate.)
 
 And then there's version control. Think of it like "track changes" in Microsoft Word, but for your entire project. Every change gets recorded. Made a mistake? You can see exactly what changed and restore any previous version. It's like having an unlimited undo button for everything Claude does.
 

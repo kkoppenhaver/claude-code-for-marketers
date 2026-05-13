@@ -80,7 +80,7 @@ a different AI assistant, you could always ask for this information to be presen
 
 This workflow isn't just about documenting your own brand (though that's useful enough on its own). Here are a few other ways I've been thinking about using it:
 
-**Competitor analysis.** Point Claude at a competitor's website and extract their entire visual system. You'll see exactly what colors they use, how they handle typography, what components they rely on. It's a level of competitive intelligence that would take hours to compile manually.
+**Competitor analysis.** Point Claude at a competitor's website and extract their entire visual system. You'll see exactly what colors they use, how they handle typography, what components they rely on. It's a level of competitive intelligence that would take hours to compile manually. (For the messaging side of that same workflow, see [how I research competitors with Claude Code](/blog/deep-research-competitor-analysis/).)
 
 **Agency briefs.** If you work with freelancers or agencies, generating a brand guide for your client gives you everything you need to stay on-brand without back-and-forth about "which shade of orange" you meant.
 

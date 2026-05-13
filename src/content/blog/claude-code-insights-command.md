@@ -105,7 +105,7 @@ The report also recommends Claude Code features based on your usage patterns. No
 
 For me, it recommended:
 
-- **Custom skills** for my recurring content pipeline (draft, edit, publish, schedule) so Claude starts with my voice and constraints baked in
+- **[Custom skills](/blog/what-are-skills/)** for my recurring content pipeline (draft, edit, publish, schedule) so Claude starts with my voice and constraints baked in
 - **Hooks** to auto-run linters after edits, since I had a lot of buggy-code friction that could've been caught earlier
 - **Headless mode** for the Jira-to-GitHub automation I was already building, so those workflows could run without me babysitting them
 
