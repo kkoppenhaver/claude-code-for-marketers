@@ -1,7 +1,16 @@
 /**
  * Pre-build script to resize images larger than 1600px wide.
  * Ensures images are appropriately sized for the content area (800px max, 2x for retina).
+ *
+ * Only runs in CI (Cloudflare Pages sets CI=true). Local builds skip the resize so
+ * the high-resolution source files in src/assets/ stay intact in git.
+ * To force the resize locally for testing, run with `CI=1 npm run build`.
  */
+
+if (!process.env.CI) {
+  console.log('Skipping image resize (local build — set CI=1 to force).');
+  process.exit(0);
+}
 
 import sharp from 'sharp';
 import { readdir } from 'fs/promises';
