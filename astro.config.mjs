@@ -7,5 +7,8 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://claudecodeformarketers.com',
   output: 'static',
+  build: {
+    inlineStylesheets: 'always',
+  },
   integrations: [mdx(), sitemap()],
 });

@@ -78,7 +78,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
         </div>
       )}
     </header>
-    {image && <img src={image} alt={imageAlt || title} class="featured-image" />}
+    {image && <img src={image} alt={imageAlt || title} class="featured-image" loading="eager" fetchpriority="high" decoding="async" />}
     <div class="content">
       <slot />
     </div>
