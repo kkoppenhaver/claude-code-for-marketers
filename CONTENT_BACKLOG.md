@@ -170,10 +170,12 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 
 ### The /goal command: how to make Claude Code finish what it starts
 - **channel:** ccfm
-- **status:**  idea
-- **next:**    write brief from existing notes below, then draft
-- **est:**     1.5h
+- **status:**  drafted
+- **next:**    review draft, then publish
+- **est:**     0.5h
 - **due:**
+- **Brief:** `briefs/the-goal-command.md` (includes pre-draft test results)
+- **Draft:** `src/content/blog/the-goal-command.md` (~2,100 words, `draft: true`)
 - **Priority:** Medium-High (timely — shipped in v2.1.139, no marketer-focused coverage yet)
 - **Category:** Tips and Techniques
 - **Target keyword:** *claude code goal command*
@@ -216,7 +218,15 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 
 ## Drafts Ready for Review
 
-*Nothing here right now*
+### The /goal command: how to make Claude Code finish what it starts
+- **channel:** ccfm
+- **status:**  drafted
+- **next:**    review draft, then publish
+- **est:**     0.5h
+- **Brief:** `briefs/the-goal-command.md`
+- **Draft:** `src/content/blog/the-goal-command.md`
+- **Length:** ~2,100 words (target was 1,800–2,200)
+- **Why now:** /goal shipped 2 days ago (v2.1.139, 2026-05-11). Anthropic's docs are dev-flavored. Window to own the search results is open.
 
 ---
 
