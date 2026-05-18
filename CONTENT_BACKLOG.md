@@ -32,6 +32,24 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 - **Angle:** Build a comparison matrix for non-technical marketers: what each tool is best at, learning curve, cost, when to pick one over another. "If you want a landing page in 10 minutes, use Lovable. If you want a reusable workflow that runs every week, use Claude Code."
 - **Why now:** Every existing comparison is dev-focused. This would be the only marketer-focused guide.
 
+### The first tool you should build with Claude Code is a Chrome extension
+- **channel:** ccfm
+- **status:**  idea
+- **next:**    build the data-extraction and Obsidian-save example extensions (voiceover-length one already exists), then draft
+- **est:**     4h
+- **due:**
+- **Priority:** High (thesis / pillar — "marketers can build software" arc)
+- **Category:** Tips and Techniques
+- **Target keyword:** *build chrome extension with claude code, claude code chrome extension* (TBD)
+- **Angle:** A Chrome extension is the perfect first piece of custom software for a non-developer. Good combination of *power* (it runs inside Chrome, the app you're in all day) and *low overhead* (no hosting, no Web Store review, no deploy pipeline — `chrome://extensions` → "Load unpacked" → done). You don't have to worry as much about security, permissions, or production-grade architecture when the only user is you, which makes it a forgiving on-ramp for marketers easing into building their own tools. Concept post + 3-4 mini-examples; Claude handles `manifest.json` and the file plumbing — the reader describes what they want.
+- **Mini-examples to feature:**
+  1. **Voiceover length estimator** — highlight any text on a page you've written, click the extension, get a duration estimate at natural speaking speed. Useful for scripting videos. Keanan already built this — real "I built this for myself" story.
+  2. **Extract structured data from a page** — one-click pull a competitor's pricing table, a SERP, or a list of items into clean CSV/JSON. (Needs building.)
+  3. **One-click save to Obsidian** — save the current page as clean markdown to a local vault. Swipe file for research, content ideas, competitor pages. (Needs building.)
+- **What to teach vs. wave past:** Wave past `manifest.json`, content scripts, popups — Claude generates them; the reader describes the behavior. Focus on the prompt patterns and the `chrome://extensions` "Load unpacked" install flow. Distribution = personal use only; mention "publishing to the Web Store" briefly as next-level but don't walk through it — that would dilute the "easiest first step" angle.
+- **Why now:** No marketer-focused "first software project" post exists. Most "build with Claude Code" content jumps to web apps or SaaS prototypes, which have hosting/deploy overhead that scares off non-devs. Chrome extensions skip all of that. Strong pillar potential and evergreen.
+- **Cross-link targets:** [[claude-code-tricks-i-wish-id-known-sooner]], [[what-are-skills]], the eventual nano-banana/landing-page posts (as "once you've built one tool, here's what's next").
+
 ### I built a client-ready lead magnet calculator in 30 minutes. Here's how.
 - **channel:** ccfm
 - **status:**  briefed
@@ -127,6 +145,39 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 - **Why now:** We reference image generation across multiple posts (landing page tutorial, brand guide post, etc.) but have no canonical "here's how to generate images inside Claude Code" piece to link to. Publishing this unlocks internal links from the landing page post, the infographics post (as the "yes, but sometimes this IS the right tool" counterpoint), and any future visual-asset tutorials.
 - **Cross-link targets:** Landing page tutorial, "Why I stopped using AI image generators for infographics" (for contrast), brand guide post, skills roundup.
 
+### Claude Code Desktop: a walkthrough for marketers
+- **channel:** ccfm
+- **status:**  idea
+- **next:**    write brief (install steps, first-run screenshots, what's missing vs. CLI)
+- **est:**     2h
+- **due:**
+- **Priority:** High (timely — brand new release, no marketer coverage yet)
+- **Category:** Getting Started
+- **Target keyword:** *claude code desktop, claude code desktop app, claude code mac app* (TBD)
+- **Angle:** Pure walkthrough. What Claude Code Desktop is, how to install it, what the first-run experience looks like, what's in it vs. the CLI, and the marketing workflows it unlocks for people who never want to touch a terminal. No big opinion piece — let the walkthrough itself make the case that this is now the easier entry point.
+- **Why now:** Brand new release. No marketer-focused coverage exists. Window to own search results before competitors catch up — same pattern as the /goal post.
+- **Cross-link targets:** [[installing-claude-code]], [[claude-code-tricks-i-wish-id-known-sooner]], [[dont-be-scared-of-the-terminal]] (as the "if you do want to use the CLI" branch).
+- **Companion strategic action:** Rework the 7-day email sequence to lead with Desktop instead of the terminal. Tracked in [STRATEGIC_ACTIONS.md](./STRATEGIC_ACTIONS.md).
+
+### Agent View: never lose track of long-running Claude Code work
+- **channel:** ccfm
+- **status:**  idea
+- **next:**    run 3 real long workflows through Agent View (HyperFrames render, deep research/competitor scrape, content audit), capture screenshots, then draft
+- **est:**     2h
+- **due:**
+- **Priority:** Medium-High (timely — new May 2026 release, ship after [[Claude Code Desktop walkthrough]])
+- **Category:** Tips and Techniques
+- **Target keyword:** *claude code agent view, claude agents dashboard* (TBD — confirm against GSC once Desktop post is live)
+- **Scope note:** This post covers **Agent View** — the `claude agents` dashboard launched May 11, 2026 that shows every background Claude Code session in one place, flags which agents are waiting on input, and lets you dispatch new sessions. It is *not* the `/agents` slash command (which manages subagents inside a single session). Brief should call out the distinction up top so readers don't conflate the two.
+- **Angle:** Marketers don't need Agent View when every workflow finishes in 30 seconds. They need it the moment they start running longer skill-based workflows — a HyperFrames render, a deep research crawl across competitors, a content audit across dozens of pages. Suddenly there's a session running in the background, you've context-switched to something else, and the question becomes: *"wait, what was Claude doing in that other window?"* Agent View is the dashboard that answers that question. Frame it as "the upgrade that quietly becomes essential once your workflows get bigger."
+- **Long workflows to feature as examples:**
+  1. **HyperFrames render** — kick it off, walk away, check the dashboard when the MP4 is ready.
+  2. **Deep research / competitor scrape** — long crawls or multi-source research that run for minutes. Dispatch and forget.
+  3. **Content audit across many pages** — site-wide SEO audit, content decay sweep, or batch rewrite. The kind of job that used to mean leaving a terminal window open and praying.
+- **Pre-draft tasks:** Keanan has poked at Agent View briefly but hasn't run a real marketing workflow through it yet. Before drafting: install/open Agent View, run each of the three example workflows end-to-end, capture screenshots of the dashboard at the "waiting on you" moment and at the "done" moment. The screenshots are the proof.
+- **Why now:** Brand new release with almost no marketer-focused coverage. Same playbook as the /goal post and the Desktop walkthrough — own search before the dev-focused content saturates it.
+- **Cross-link targets:** [[the-goal-command]] (other "Claude finishes what it starts" piece), [[claude-code-desktop-walkthrough]] (entry-point companion), HyperFrames tutorial (the workflow most obviously paired with Agent View).
+
 ### How to use Claude for market research (without an expensive tools subscription)
 - **channel:** ccfm
 - **status:**  idea
@@ -168,46 +219,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
   - The `DESIGN.md` the skill generated (or a condensed version) to show what "good output of the brief" looks like
 - **Cross-link targets:** vibe marketing post (update the HyperFrames link to point here once live), infographics post (code-defined media sibling), nano-banana post (visual-asset generation companion).
 
-### The /goal command: how to make Claude Code finish what it starts
-- **channel:** ccfm
-- **status:**  drafted
-- **next:**    review draft, then publish
-- **est:**     0.5h
-- **due:**
-- **Brief:** `briefs/the-goal-command.md` (includes pre-draft test results)
-- **Draft:** `src/content/blog/the-goal-command.md` (~2,100 words, `draft: true`)
-- **Priority:** Medium-High (timely — shipped in v2.1.139, no marketer-focused coverage yet)
-- **Category:** Tips and Techniques
-- **Target keyword:** *claude code goal command*
-- **Secondary keywords:** *claude code /goal*, *claude code autonomous tasks*, *claude code keep working until done*
-- **What it is (one-liner):** `/goal "<condition>"` sets a completion condition. After each turn, a small fast model checks whether the condition is met. If not, Claude starts another turn on its own. The goal clears when the condition holds (or when you run `/goal clear`).
-- **How it differs from related commands:**
-  - `/goal` — fires after every turn, stops when an evaluator confirms the condition
-  - `/loop` — fires on a time interval, stops when you stop it (already covered in scheduled work context)
-  - Auto mode — approves tool calls within a turn but doesn't start new ones
-  - Stop hooks — same mechanism as `/goal` but lives in settings and applies to every session
-- **Angle:** Most marketers using Claude Code stop a task too early because they're babysitting it. `/goal` lets you walk away from work with a verifiable end state. Frame it as "the difference between 'finish this when you can' and 'don't come back until it's done.'"
-- **Key teaching point:** A good goal condition is something Claude's own output can demonstrate. The evaluator only reads the transcript — it doesn't run commands or read files independently. So conditions need to reference what Claude has surfaced: a test result, a file count, an empty queue, a clean diff.
-- **Marketing-specific goal examples to include:**
-  - "Don't stop until every blog post in `src/content/blog/` has a `target_keyword` field, or stop after 30 turns" (we literally just did this manually)
-  - "Don't stop until all images referenced in this post have descriptive alt text"
-  - "Don't stop until all internal links to `/old-slug` have been updated to `/new-slug` site-wide"
-  - "Don't stop until 10 LinkedIn post drafts are written and saved to `drafts/linkedin/`"
-  - "Don't stop until the competitor research doc has pricing, positioning, and target ICP filled in for all 8 companies in `competitors.csv`"
-  - "Don't stop until every post in the Published section of `CONTENT_BACKLOG.md` exists as a file in `src/content/blog/` and vice versa"
-  - "Don't stop until `npm run build` exits 0"
-- **Practical tips to cover:**
-  - Always include a turn or time cap (`or stop after N turns`) — runaway goals burn tokens
-  - State the proof: "verify by running X" or "shown in `git status`"
-  - Add constraints that matter ("without modifying any test files")
-  - `/goal` with no argument shows status, turns spent, tokens spent, and the evaluator's most recent reason
-  - Resumes with `--continue` keep the condition but reset counters
-  - Works in headless mode: `claude -p "/goal ..."` runs the whole loop in one invocation
-- **Honest boundary:** Not a magic finisher. If the work is genuinely ambiguous or requires judgment you haven't put in the condition, the evaluator will either keep going forever or call it done prematurely. Best for work where "done" is observable.
-- **Why now:** Shipped in v2.1.139, so it's brand new (May 2026). Anthropic's docs are technical/dev-flavored ("until every call site compiles"). Zero marketer-focused coverage. We can own the search results before competitors catch up.
-- **Sources to reference:** Official docs (code.claude.com/docs/en/goal), v2.1.139 changelog.
-- **Cross-link targets:** The CLAUDE.md masterclass, `--dangerously-skip-permissions` post, insights command post.
-
 ---
 
 ## In Progress
@@ -218,15 +229,7 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 
 ## Drafts Ready for Review
 
-### The /goal command: how to make Claude Code finish what it starts
-- **channel:** ccfm
-- **status:**  drafted
-- **next:**    review draft, then publish
-- **est:**     0.5h
-- **Brief:** `briefs/the-goal-command.md`
-- **Draft:** `src/content/blog/the-goal-command.md`
-- **Length:** ~2,100 words (target was 1,800–2,200)
-- **Why now:** /goal shipped 2 days ago (v2.1.139, 2026-05-11). Anthropic's docs are dev-flavored. Window to own the search results is open.
+*Nothing here right now*
 
 ---
 

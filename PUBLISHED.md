@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### The /goal command: how to make Claude Code finish what it starts
+- **Published:** 2026-05-13
+- **Category:** Tips and Techniques
+- **File:** `the-goal-command.md`
+- **Target keyword:** `claude code goal command`
+- **Why:** /goal shipped in v2.1.139 on 2026-05-11 — Anthropic's docs were dev-flavored, so this was the window to own the search results with a marketer-focused take.
+
 ### Can Claude actually edit your Google Docs? Everything marketers need to know
 - **Published:** 2026-05-04
 - **Category:** Use Cases
