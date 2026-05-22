@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### What I got wrong about Claude Code in my first two months
+- **Published:** 2026-05-22
+- **Category:** Tips and Techniques
+- **File:** `what-i-got-wrong-about-claude-code.md`
+- **Target keyword:** `claude code mistakes`
+- **Why:** Vulnerability/trust-builder post. Four specific mistakes (throwaway sessions, redundant web research, no skills, typing everything) framed as symptoms of treating Claude Code like a chat instead of a workspace. Soft-CTAs the 7-day email course as the "skip the dumb middle" shortcut.
+
 ### The /goal command: how to make Claude Code finish what it starts
 - **Published:** 2026-05-13
 - **Category:** Tips and Techniques

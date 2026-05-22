@@ -119,18 +119,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 - **Pre-draft research:** Audit Corey's repo, confirm Anthropic built-ins, inventory Keanan's skills, verify install commands.
 - **Why now:** Skills ecosystem is exploding; no trusted marketer-focused roundup exists.
 
-### What I got wrong about Claude Code in my first two months (and what changed everything)
-- **channel:** ccfm
-- **status:**  briefed
-- **next:**    draft (personal reflection — no research needed)
-- **est:**     1h
-- **due:**
-- **Priority:** Medium (trust builder)
-- **Category:** Tips and Techniques
-- **Target keyword:** *Claude Code mistakes, learning Claude Code*
-- **Angle:** Authentic reflection. Share real mistakes: prompts that didn't work, skills that broke, times you burned credits unnecessarily, the mental model shifts that unlocked better output. Position the 7-day email course as the "skip the mistakes" shortcut.
-- **Why now:** Vulnerability content drives the strongest email signups. This is the trust builder post.
-
 ### Generate blog images, thumbnails, and icons without leaving Claude Code (the nano-banana skill)
 - **channel:** ccfm
 - **status:**  idea
