@@ -20,18 +20,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 
 ## Backlog
 
-### Claude Code vs. Lovable vs. Cursor vs. Bolt: a marketer's decision guide
-- **channel:** ccfm
-- **status:**  briefed
-- **next:**    draft the comparison matrix table, then write the body
-- **est:**     2h
-- **due:**
-- **Priority:** High (acquisition)
-- **Category:** Tips and Techniques
-- **Target keyword:** *Claude Code vs Lovable vs Cursor non-developers*
-- **Angle:** Build a comparison matrix for non-technical marketers: what each tool is best at, learning curve, cost, when to pick one over another. "If you want a landing page in 10 minutes, use Lovable. If you want a reusable workflow that runs every week, use Claude Code."
-- **Why now:** Every existing comparison is dev-focused. This would be the only marketer-focused guide.
-
 ### The first tool you should build with Claude Code is a Chrome extension
 - **channel:** ccfm
 - **status:**  idea

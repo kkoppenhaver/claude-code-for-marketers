@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### Claude Code vs. Lovable vs. Cursor vs. Bolt: a marketer's decision guide
+- **Published:** 2026-05-24
+- **Category:** Tips and Techniques
+- **File:** `claude-code-vs-lovable-vs-cursor-vs-bolt.md`
+- **Target keyword:** `claude code vs lovable vs cursor non-developers`
+- **Why:** The only marketer-focused comparison of the four AI builders (every existing one is dev-focused). Bias disclosed upfront, verdict earned: Claude Code owns the recurring/compounding work, the other three own specific jobs. Pricing + feature claims verified 2026-05-24. Post-draft assets still open: matrix screenshot + featured image.
+
 ### What I got wrong about Claude Code in my first two months
 - **Published:** 2026-05-22
 - **Category:** Tips and Techniques
