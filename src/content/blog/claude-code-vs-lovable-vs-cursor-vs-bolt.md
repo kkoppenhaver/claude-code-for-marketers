@@ -5,6 +5,8 @@ target_keyword: "claude code vs lovable vs cursor non-developers"
 secondary_keywords: ["lovable vs bolt", "best ai builder for marketers", "claude code vs cursor"]
 pubDate: 2026-05-24
 author: "Keanan Koppenhaver"
+image: "/images/blog/claude-code-vs-lovable-vs-cursor-vs-bolt.png"
+imageAlt: "A terminal-style card comparing four AI builders, each color-coded with a one-line verdict — Claude Code: the workspace the other three live next to; Lovable: a polished landing page, live today; Cursor: pair-programming inside a code editor; Bolt: browser-based full-stack prototypes, fast — with a 'pick it when' legend alongside."
 draft: false
 categories: ["Tips and Techniques"]
 tags: ["comparison", "lovable", "cursor", "bolt"]
