@@ -121,20 +121,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 - **Why now:** We reference image generation across multiple posts (landing page tutorial, brand guide post, etc.) but have no canonical "here's how to generate images inside Claude Code" piece to link to. Publishing this unlocks internal links from the landing page post, the infographics post (as the "yes, but sometimes this IS the right tool" counterpoint), and any future visual-asset tutorials.
 - **Cross-link targets:** Landing page tutorial, "Why I stopped using AI image generators for infographics" (for contrast), brand guide post, skills roundup.
 
-### Claude Code Desktop: a walkthrough for marketers
-- **channel:** ccfm
-- **status:**  idea
-- **next:**    write brief (install steps, first-run screenshots, what's missing vs. CLI)
-- **est:**     2h
-- **due:**
-- **Priority:** High (timely — brand new release, no marketer coverage yet)
-- **Category:** Getting Started
-- **Target keyword:** *claude code desktop, claude code desktop app, claude code mac app* (TBD)
-- **Angle:** Pure walkthrough. What Claude Code Desktop is, how to install it, what the first-run experience looks like, what's in it vs. the CLI, and the marketing workflows it unlocks for people who never want to touch a terminal. No big opinion piece — let the walkthrough itself make the case that this is now the easier entry point.
-- **Why now:** Brand new release. No marketer-focused coverage exists. Window to own search results before competitors catch up — same pattern as the /goal post.
-- **Cross-link targets:** [[installing-claude-code]], [[claude-code-tricks-i-wish-id-known-sooner]], [[dont-be-scared-of-the-terminal]] (as the "if you do want to use the CLI" branch).
-- **Companion strategic action:** Rework the 7-day email sequence to lead with Desktop instead of the terminal. Tracked in [STRATEGIC_ACTIONS.md](./STRATEGIC_ACTIONS.md).
-
 ### Agent View: never lose track of long-running Claude Code work
 - **channel:** ccfm
 - **status:**  idea

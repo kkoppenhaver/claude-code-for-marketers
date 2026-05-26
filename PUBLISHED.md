@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### Claude Code Desktop: a walkthrough for marketers
+- **Published:** 2026-05-25
+- **Category:** Getting Started
+- **File:** `claude-code-desktop-walkthrough.md`
+- **Target keyword:** `claude code desktop app`
+- **Why:** Timely walkthrough of the redesigned Desktop app while marketer-focused coverage is still nonexistent — same own-the-search-results play as the /goal post. Facts verified against the live Claude Code docs (three tabs, Local/Cloud/SSH, Ask-permissions diff, Mac/Windows-only). Leads with an explicit recommendation (start with Desktop, not the terminal) and differentiates from the `installing-claude-code` intro post by going deep on the first-run flow. Featured image + 3 inline screenshots shipped with the post.
+
 ### Claude Code vs. Lovable vs. Cursor vs. Bolt: a marketer's decision guide
 - **Published:** 2026-05-24
 - **Category:** Tips and Techniques
