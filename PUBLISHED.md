@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### The Claude Code skills every marketer should actually install
+- **Published:** 2026-05-27
+- **Category:** Getting Started
+- **File:** `claude-code-skills-for-marketers.md`
+- **Target keyword:** `best claude code skills marketing`
+- **Why:** Curated, marketer-only filter on an exploding ecosystem — ordered by content workflow (planning/writing → visuals → distribution → SEO/research → the meta skill-creator closer). Mixes installable picks (Corey Haines' v2.0.0 pack via `npx skills add coreyhaines31/marketingskills`, Anthropic's frontend-design + skill-creator) with skills Keanan built (featured-image, fact-check, tweet/linkedin, kit-broadcast, fetch-search-console), each linked to its repo. Thesis: the highest-value skill is the one you build for your own workflow. Featured image shipped (HTML→PNG via the featured-image skill). Strong internal-link hub for every post that references a specific skill.
+
 ### Claude Code Desktop: a walkthrough for marketers
 - **Published:** 2026-05-25
 - **Category:** Getting Started

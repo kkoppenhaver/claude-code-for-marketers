@@ -87,26 +87,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 - **Angle:** Walk through three SEO workflows: (1) content audit of existing pages, (2) keyword gap analysis vs. competitors, (3) automated monitoring for ranking changes. Reference Firecrawl's approach but make it accessible for someone who's never used Ahrefs.
 - **Why now:** SEO automation is a hot topic but existing content assumes technical SEO knowledge. Our content decay piece is already pulling in SEO-minded readers — give them somewhere to go next.
 
-### The Claude Code skills every marketer should install (curated roundup)
-- **channel:** ccfm
-- **status:**  briefed
-- **next:**    audit Corey Haines' repo + inventory my own skills
-- **est:**     2h
-- **due:**
-- **Brief:** `briefs/marketing-skills-roundup.md`
-- **Priority:** Medium-High (community building + companion to "solo marketer's AI stack")
-- **Category:** Getting Started
-- **Target keyword:** *best Claude Code skills marketing*
-- **Secondary keywords:** *Claude Code skills install*, *marketing skills Claude Code*, *Corey Haines marketing skills*
-- **Angle:** Curated roundup. "There are hundreds of public skills. Most aren't built for marketers. Here are the ones that are."
-- **Sources:** Anthropic built-ins, Corey Haines' marketing skills repo, Keanan's own skills.
-- **Structure:** Quick-card per skill (what it does / when to use / install / example), grouped by marketing workflow (writing → design → publishing → research).
-- **Title note:** "7" is flexible — final number locked at draft time after candidate audit (likely 5–9).
-- **Length:** ~1,500–2,000 words.
-- **CTA:** Email course (default Kit tag).
-- **Pre-draft research:** Audit Corey's repo, confirm Anthropic built-ins, inventory Keanan's skills, verify install commands.
-- **Why now:** Skills ecosystem is exploding; no trusted marketer-focused roundup exists.
-
 ### Generate blog images, thumbnails, and icons without leaving Claude Code (the nano-banana skill)
 - **channel:** ccfm
 - **status:**  idea
@@ -120,6 +100,22 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 - **Angle:** Walk through installing the nano-banana skill (Gemini CLI + nanobanana extension + the skill itself) and using it for real marketing work: blog featured images, YouTube thumbnails, app icons, simple diagrams. Frame it as "when AI image generation actually makes sense" — the complement to the infographics post. Show the natural-language interface ("Generate a featured image for this post"), a couple of real outputs, and the `./nanobanana-output/` workflow. Call out cost (~$0.04/image on the default model) so readers know what they're signing up for.
 - **Why now:** We reference image generation across multiple posts (landing page tutorial, brand guide post, etc.) but have no canonical "here's how to generate images inside Claude Code" piece to link to. Publishing this unlocks internal links from the landing page post, the infographics post (as the "yes, but sometimes this IS the right tool" counterpoint), and any future visual-asset tutorials.
 - **Cross-link targets:** Landing page tutorial, "Why I stopped using AI image generators for infographics" (for contrast), brand guide post, skills roundup.
+
+### Give every blog post an on-brand featured image with one repeatable workflow (HTML → PNG)
+- **channel:** ccfm
+- **status:**  briefed
+- **next:**    write the brief from the worked example below + capture the before/after (template → finished card), then draft
+- **est:**     2h
+- **due:**
+- **Priority:** Medium-High (utility + internal-linking hub for the code-defined-media cluster)
+- **Category:** Use Cases
+- **Target keyword:** *blog featured image generator, create featured images with code, HTML to PNG image, automate blog images*
+- **Angle:** Featured images are a tax on every post — fiddling in Canva, fighting inconsistent brand, or settling for generic stock. AI image generators (the nano-banana skill) are great for *illustrative* hero art but bad at text-heavy, precisely-branded cards — the infographics post already made that case. The fix: author the featured image as **HTML** — a 1280×720 "card" that uses your brand's exact hex codes and fonts as CSS — then render it to PNG with headless Chromium. Claude writes the HTML from your post; you tweak the headline and pick one visual; you render in seconds. Pixel-perfect brand fidelity, infinitely repeatable. The compounding move: do the brand setup **once** (tokens + fonts baked into a template), then every post is copy template → swap headline + one visual → render. Package that as a Claude Code skill and it becomes literally *"make a featured image for this post."*
+- **Worked example (already done — this is the teaching artifact):** Turned the FloorboardAI "client calls → requirements docs" post into a featured image in one pass — headline with one accent phrase + a "messy transcript → clean requirements doc" before/after visual, all in Floorboard's navy/tan/cream brand with its real fonts (Aileron + Cardo). Then extracted the whole thing into a generic **`featured-image` skill**: it walks you through brand setup (colors, fonts, dimensions) the first time a project uses it, then renders any post's card from a brand template. Files live in `~/code/floorboardai/infographics/` (`brand-template.html`, `export.mjs`, `featured-image.json`) — a clean reference implementation to screenshot.
+- **What to teach vs. wave past:** Teach the three moving parts — (1) the HTML card (fixed-size `#card`, brand tokens as CSS variables, `@font-face`/Google Fonts for the real brand fonts), (2) the Playwright export script (`deviceScaleFactor: 2` for crisp 2× output, screenshot the `#card` element), (3) the "configure once, render forever" skill pattern. Wave past the CSS minutiae — Claude writes it; the reader describes the layout and supplies the brand. Mention `node_modules` is gitignored and Chromium is cached so setup is a one-time, near-instant install.
+- **Contrast to draw (the key positioning):** text + exact brand = render it from HTML; illustrative/photographic hero = reach for an AI generator. This post and the nano-banana post are the two halves of "how to make blog visuals in Claude Code" — link them as a matched pair.
+- **Why now:** We have the *why* (infographics post) and reference image workflows all over the blog, but no canonical "here's the repeatable featured-image system" how-to to link to. Featured images are universal — every blogger needs one per post — so it's broad and evergreen, and it's a natural internal-linking hub for the code-defined-media cluster.
+- **Cross-link targets:** "Why I stopped using AI image generators for infographics" (philosophical sibling), nano-banana post (the counterpoint — when AI generation *is* the right tool), brand guide post (where your tokens come from), [[the skills roundup]] (strong candidate skill to feature), HyperFrames motion-graphics post (code-defined media cousin).
 
 ### Agent View: never lose track of long-running Claude Code work
 - **channel:** ccfm
