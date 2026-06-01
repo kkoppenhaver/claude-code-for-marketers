@@ -177,6 +177,21 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
   - The `DESIGN.md` the skill generated (or a condensed version) to show what "good output of the brief" looks like
 - **Cross-link targets:** vibe marketing post (update the HyperFrames link to point here once live), infographics post (code-defined media sibling), nano-banana post (visual-asset generation companion).
 
+### How I subtitle videos with Claude Code (a skill that runs Whisper for you)
+- **channel:** ccfm
+- **status:**  idea
+- **next:**    publish the subtitling skill to a public repo (currently local), capture a before/after (raw video → subtitled), then draft the walkthrough
+- **est:**     2h
+- **due:**
+- **Priority:** Medium-High (utility + skill-backed, fits the code-defined media cluster)
+- **Category:** Use Cases
+- **Target keyword:** *subtitle videos with claude code, add subtitles claude code, claude code video captions* (TBD — confirm against GSC)
+- **Skill repo:** TBD (currently a local skill, not yet published publicly — link once it's pushed)
+- **Angle:** Subtitling is the kind of tedious-but-mandatory chore every marketer publishing video runs into — captions drive watch time and accessibility, but doing them by hand (or paying per-minute for a SaaS) is a drag. The fix: a Claude Code skill that transcribes the audio locally with Whisper and produces a subtitle file (SRT/VTT) you can burn in or attach. No upload, no per-minute fees, no leaving the terminal. Frame it as "I built the boring part into a skill so I never think about it again" — describe the video, run the skill, get subtitles. Walk through installing the skill, pointing it at a video, and what the natural-language interface looks like end to end.
+- **What to teach vs. wave past:** Teach the workflow — install the skill, hand it a video file, get an SRT/VTT back, then how to use that file (burn-in vs. sidecar track for YouTube/social). Wave past the Whisper internals and model-size tradeoffs beyond a one-line "runs locally, your video never leaves your machine" callout (a privacy + cost win worth naming). Show the real skill in action with a short clip before/after.
+- **Why now:** Video captioning is a universal pain point with almost no marketer-friendly "do it inside Claude Code" coverage, and it's another concrete "marketers can build their own tools" proof point. Pairs with the skills roundup and the HyperFrames post to round out the video/code-defined-media cluster.
+- **Cross-link targets:** [[what-are-skills]], the skills roundup, HyperFrames motion-graphics post (video sibling), the eventual Chrome-extension "build your own tools" post.
+
 ---
 
 ## In Progress
