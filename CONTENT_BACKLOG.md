@@ -22,9 +22,9 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 
 ### The first tool you should build with Claude Code is a Chrome extension
 - **channel:** ccfm
-- **status:**  idea
-- **next:**    build the data-extraction and Obsidian-save example extensions (voiceover-length one already exists), then draft
-- **est:**     4h
+- **status:**  briefed
+- **next:**    draft from outline at `outlines/chrome-extension-first-tool.md` (build-along the existing voiceover/script-timer extension; capture real prompts + Load-unpacked screenshots at draft time)
+- **est:**     2h (was 4h — angle locked to a single build-along of the already-built hero; the 2 other extensions are now end-of-post ideas, not built)
 - **due:**
 - **Priority:** High (thesis / pillar — "marketers can build software" arc)
 - **Category:** Tips and Techniques
