@@ -32,7 +32,7 @@ The "keep going" mechanic is interesting, but not unique. Plenty of agentic codi
 
 That's the mental shift I'd say `/goal` is really asking for: it changes the question from "how do I keep Claude going?" to "how do I describe what done looks like?" The second question is harder, and a lot more useful. Most of the time when I'd been stopping a session too early, it was because I hadn't actually answered the second question for myself.
 
-A quick note on how `/goal` fits next to the other autonomy commands, since this confused me at first. `/loop` runs a prompt on a clock (every five minutes, say) and keeps going until you stop it. Stop hooks live in your settings file and run on every session in their scope. [Auto mode](/blog/dangerously-skip-permissions) approves tool calls within a turn but doesn't start new turns. `/goal` is the "keep working until the work is actually done" piece, and it's session-scoped, so it doesn't follow you around.
+A quick note on how `/goal` fits next to the other autonomy commands, since this confused me at first. `/loop` runs a prompt on a clock (every five minutes, say) and keeps going until you stop it. Stop hooks live in your settings file and run on every session in their scope. [Auto mode](/blog/what-is-dangerously-skip-permissions) approves tool calls within a turn but doesn't start new turns. `/goal` is the "keep working until the work is actually done" piece, and it's session-scoped, so it doesn't follow you around.
 
 ## The internal linking sweep
 
@@ -88,7 +88,7 @@ I want to be honest about the limits, because this pattern doesn't work for ever
 
 **Self-reported success isn't real success.** The evaluator believes what Claude tells it. If Claude says "all tests pass" without actually running them, the evaluator sees "all tests pass" in the transcript and signs off. The fix is to demand proof in the condition itself: "verified when `npm test` exits 0," "confirmed when `git status` is clean," "shown by the count being 0." Tell Claude what *evidence* should appear in the transcript, not just what state should hold.
 
-**`/goal` doesn't auto-approve tool calls.** This is the one that tripped me up. `/goal` removes the "should I keep going?" prompt between turns, but every Bash or Edit or Write call inside a turn still asks for permission unless you're also in auto mode. If you `/goal` something and walk away without enabling auto mode, you'll come back to a session paused on the first permission prompt and nothing will have happened. The real "walk away" combination is `/goal` plus auto mode (or [`--dangerously-skip-permissions`](/blog/dangerously-skip-permissions) if you're in a workspace where you trust that).
+**`/goal` doesn't auto-approve tool calls.** This is the one that tripped me up. `/goal` removes the "should I keep going?" prompt between turns, but every Bash or Edit or Write call inside a turn still asks for permission unless you're also in auto mode. If you `/goal` something and walk away without enabling auto mode, you'll come back to a session paused on the first permission prompt and nothing will have happened. The real "walk away" combination is `/goal` plus auto mode (or [`--dangerously-skip-permissions`](/blog/what-is-dangerously-skip-permissions) if you're in a workspace where you trust that).
 
 ## Practical tips that didn't fit anywhere else
 
