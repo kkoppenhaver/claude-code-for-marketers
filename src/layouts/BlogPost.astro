@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from './BaseLayout.astro';
 import EmailSignup from '../components/EmailSignup.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -13,8 +14,23 @@ function slugify(text: string): string {
   return text.toLowerCase().replace(/\s+/g, '-');
 }
 
+// Optimized hero images live in src/assets so Astro can resize them and emit
+// WebP with intrinsic dimensions. We key them by filename so a post's existing
+// `image` frontmatter (a /images/blog/*.png path used for the OG card) keeps
+// working untouched while the on-page hero loads an optimized asset.
+const heroModules = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/images/blog/heroes/*.{png,jpg,jpeg,webp}',
+  { eager: true }
+);
+const heroMap = Object.fromEntries(
+  Object.entries(heroModules).map(([path, mod]) => [path.split('/').pop(), mod.default])
+);
+
 const { post } = Astro.props;
 const { title, description, pubDate, updatedDate, author, image, imageAlt, tags, categories, kitTagId, kitHeadline, kitDescription, kitButtonText, kitFormId, hideRelatedPosts } = post.data;
+
+// On-page hero: optimized asset matched by the frontmatter image's filename.
+const heroImage = image ? heroMap[image.split('/').pop() ?? ''] : undefined;
 
 // Use custom image if provided, otherwise use generated OG image
 const ogImage = image || `/og/${post.id}.png`;
@@ -78,7 +94,21 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
         </div>
       )}
     </header>
-    {image && <img src={image} alt={imageAlt || title} class="featured-image" loading="eager" fetchpriority="high" decoding="async" />}
+    {heroImage ? (
+      <Image
+        src={heroImage}
+        alt={imageAlt || title}
+        class="featured-image"
+        widths={[480, 760, 1024, 1520]}
+        sizes="(max-width: 760px) 100vw, 760px"
+        format="webp"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    ) : (
+      image && <img src={image} alt={imageAlt || title} class="featured-image" loading="eager" fetchpriority="high" decoding="async" />
+    )}
     <div class="content">
       <slot />
     </div>
