@@ -20,24 +20,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 
 ## Backlog
 
-### The first tool you should build with Claude Code is a Chrome extension
-- **channel:** ccfm
-- **status:**  briefed
-- **next:**    draft from outline at `outlines/chrome-extension-first-tool.md` (build-along the existing voiceover/script-timer extension; capture real prompts + Load-unpacked screenshots at draft time)
-- **est:**     2h (was 4h — angle locked to a single build-along of the already-built hero; the 2 other extensions are now end-of-post ideas, not built)
-- **due:**
-- **Priority:** High (thesis / pillar — "marketers can build software" arc)
-- **Category:** Tips and Techniques
-- **Target keyword:** *build chrome extension with claude code, claude code chrome extension* (TBD)
-- **Angle:** A Chrome extension is the perfect first piece of custom software for a non-developer. Good combination of *power* (it runs inside Chrome, the app you're in all day) and *low overhead* (no hosting, no Web Store review, no deploy pipeline — `chrome://extensions` → "Load unpacked" → done). You don't have to worry as much about security, permissions, or production-grade architecture when the only user is you, which makes it a forgiving on-ramp for marketers easing into building their own tools. Concept post + 3-4 mini-examples; Claude handles `manifest.json` and the file plumbing — the reader describes what they want.
-- **Mini-examples to feature:**
-  1. **Voiceover length estimator** — highlight any text on a page you've written, click the extension, get a duration estimate at natural speaking speed. Useful for scripting videos. Keanan already built this — real "I built this for myself" story.
-  2. **Extract structured data from a page** — one-click pull a competitor's pricing table, a SERP, or a list of items into clean CSV/JSON. (Needs building.)
-  3. **One-click save to Obsidian** — save the current page as clean markdown to a local vault. Swipe file for research, content ideas, competitor pages. (Needs building.)
-- **What to teach vs. wave past:** Wave past `manifest.json`, content scripts, popups — Claude generates them; the reader describes the behavior. Focus on the prompt patterns and the `chrome://extensions` "Load unpacked" install flow. Distribution = personal use only; mention "publishing to the Web Store" briefly as next-level but don't walk through it — that would dilute the "easiest first step" angle.
-- **Why now:** No marketer-focused "first software project" post exists. Most "build with Claude Code" content jumps to web apps or SaaS prototypes, which have hosting/deploy overhead that scares off non-devs. Chrome extensions skip all of that. Strong pillar potential and evergreen.
-- **Cross-link targets:** [[claude-code-tricks-i-wish-id-known-sooner]], [[what-are-skills]], the eventual nano-banana/landing-page posts (as "once you've built one tool, here's what's next").
-
 ### I built a client-ready lead magnet calculator in 30 minutes. Here's how.
 - **channel:** ccfm
 - **status:**  briefed

@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### The first tool you should build with Claude Code is a Chrome extension
+- **Published:** 2026-06-16
+- **Category:** Tips and Techniques
+- **File:** `build-a-chrome-extension-with-claude-code.md`
+- **Target keyword:** `build chrome extension with claude code`
+- **Why:** Pillar piece for the "marketers can build software" arc. Reframes the stall point as the deployment tax (hosting, deploy, domains, a server to keep alive) and positions a Chrome extension as the one capable build that skips all of it via Load unpacked. Build-along of the real Script Timer extension Keanan uses for video scripts — verbatim build prompt (incl. "ask me questions one at a time"), the genuine Google Docs→clipboard-fallback iteration, calibration + pause-aware timing. Featured + inline images rendered from the extension's actual UI/CSS. Soft CTA links the public repo (github.com/kkoppenhaver/script-timer-extension). First post drafted against the full CC4M voice guide.
+
 ### The Claude Code skills every marketer should actually install
 - **Published:** 2026-05-27
 - **Category:** Getting Started
