@@ -79,6 +79,8 @@ pubDate: 2026-03-04
 
 * Do NOT use `public/` for blog images (no optimization) or absolute paths like `/images/...`
 
+* **Featured images: never use crop marks / corner framing brackets.** When building a featured image from the HTML→PNG template (`src/assets/images/blog/<slug>-featured.html`), omit the corner `.crop` marks entirely. No exceptions.
+
 ### Layout Hierarchy
 
 * `BaseLayout.astro` - Global layout with header, footer, theme toggle, CSS variables
