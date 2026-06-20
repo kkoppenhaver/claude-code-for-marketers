@@ -323,6 +323,10 @@ Prefer vivid, specific, concrete language over generic or abstract phrasing:
 
 * Overusing "honestly" — once per post at most. It becomes a crutch and implies everything else isn't honest.
 
+* **"genuinely" as an intensifier** — cut it, it's filler. "Those tools are genuinely great" → "Those tools are great." The word adds nothing the sentence didn't already say.
+
+* **"Honestly?" (or "Honest?") as a rhetorical-question lead-in** — same crutch as overusing "honestly," just dressed up as a question. Delete it and state the point directly.
+
 * Foreshadowing post structure ("three completely different approaches before landing on...") — trust the reader to follow along
 
 * Adding flourishes after the point already lands
