@@ -6,7 +6,7 @@
 
 * **Status:** `briefed`
 
-* **Priority:** High (SEO — biggest single query cluster in our GSC data)
+* **Priority:** High (SEO — b[]()iggest single query cluster in our GSC data)
 
 * **Category:** Use Cases
 

@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### Give every blog post an on-brand featured image with one repeatable workflow (HTML → PNG)
+- **Published:** 2026-06-18
+- **Category:** Use Cases
+- **File:** `give-every-post-a-featured-image-with-html-to-png.md`
+- **Target keyword:** `create featured images with code`
+- **Why:** Canonical how-to for the code-defined-media cluster and a natural internal-linking hub. Reframes featured images as a per-post tax that AI generators don't solve (bad at text + exact brand), then teaches the author-as-HTML, render-with-headless-Chromium workflow: brand tokens as CSS variables, the Playwright `export.mjs` at 2×, and the "configure once, render forever" config. Real worked example (FloorboardAI client-calls card, before/after template→finished) plus the public `featured-image` skill (`cc-skills` repo) as the one-line payoff. Contrast section positions it as the matched pair to the infographics post; links the skills roundup and brand-guide post.
+
 ### The first tool you should build with Claude Code is a Chrome extension
 - **Published:** 2026-06-16
 - **Category:** Tips and Techniques
