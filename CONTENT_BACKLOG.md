@@ -20,21 +20,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 
 ## Backlog
 
-### The Marketing AI Ops Ladder (pillar, named framework)
-- **channel:** ccfm
-- **status:**  briefed
-- **next:**    validate target keyword against GSC, then draft from the outline
-- **Framework name:** The Marketing AI Ops Ladder — Rung 1 Personal wins, Rung 2 Reusable tools, Rung 3 The shared playbook, Rung 4 Supervised autopilot, Rung 5 The compounding horizon (aspirational)
-- **Outline:** [briefs/the-marketing-ai-ops-ladder-outline.md](./briefs/the-marketing-ai-ops-ladder-outline.md)
-- **est:**     6h
-- **due:**
-- **Priority:** High (pillar content, direct reader request)
-- **Category:** SEO pillar / mindset
-- **Target keyword:** *ai ops for marketing* (candidate — validate against GSC before drafting)
-- **Brief/research:** [briefs/marketing-ai-ops-maturity-model-research.md](./briefs/marketing-ai-ops-maturity-model-research.md)
-- **Angle:** A maturity gradient for marketing teams adopting Claude Code / agentic AI ops: individual use → reusable artifacts → team-shared skills and conventions → supervised autonomous agents, with an explicitly aspirational self-improving top level. For marketing leaders who own AI Ops and need to benchmark their team and build a vision. Evidence-backed (Anthropic's Austin Lau case, RSL/A, De Jesus, McKinsey/Deloitte/Gartner data), honest about where evidence thins.
-- **Why now:** Prompted by Sid Suri's direct ask ("I need to create a vision for what this could look like") — the exact search intent, from the exact target reader. Deep research completed 2026-07-18.
-
 ### I built a client-ready lead magnet calculator in 30 minutes. Here's how.
 - **channel:** ccfm
 - **status:**  briefed

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-secondary: #F0EFEB;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  #card {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    padding: 56px 70px 64px;
+    overflow: hidden;
+    font-family: var(--mono);
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+  }
+  h1 .accent { color: var(--accent); }
+
+  .subtitle {
+    margin-top: 10px;
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--text-secondary);
+  }
+
+  .stage {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    margin-top: 34px;
+  }
+
+  .rung {
+    flex: 1;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 26px -14px rgba(28,25,23,.28);
+    padding: 18px 18px 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  .rung .num {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--accent);
+    letter-spacing: .06em;
+  }
+  .rung .name {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.25;
+  }
+  .rung .desc {
+    margin-top: 8px;
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--text-secondary);
+  }
+  .rung .fill { flex: 1; }
+  .rung .bars {
+    display: flex;
+    gap: 5px;
+  }
+  .rung .bar {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--accent);
+    flex: 1;
+  }
+  .rung .bar.off { background: var(--bg-secondary); }
+
+  .r1 { height: 214px; }
+  .r2 { height: 288px; }
+  .r3 { height: 362px; }
+  .r4 { height: 436px; }
+  .r5 {
+    height: 480px;
+    background: transparent;
+    border: 2px dashed var(--accent);
+    box-shadow: none;
+  }
+  .badge {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 10px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(218,119,86,.14);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .05em;
+  }
+
+  .footer {
+    position: absolute; bottom: 24px; right: 70px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <h1>The Marketing <span class="accent">AI Ops Ladder</span></h1>
+    <div class="subtitle">Five rungs from one person's chat history to a system that compounds</div>
+
+    <div class="stage">
+      <div class="rung r1">
+        <div class="num">RUNG 1</div>
+        <div class="name">Personal wins</div>
+        <div class="desc">Individuals use AI ad hoc for their own tasks</div>
+        <div class="fill"></div>
+        <div class="bars"><div class="bar"></div><div class="bar off"></div><div class="bar off"></div><div class="bar off"></div><div class="bar off"></div></div>
+      </div>
+      <div class="rung r2">
+        <div class="num">RUNG 2</div>
+        <div class="name">Reusable tools</div>
+        <div class="desc">Prompts become slash commands, brand files, and small tools</div>
+        <div class="fill"></div>
+        <div class="bars"><div class="bar"></div><div class="bar"></div><div class="bar off"></div><div class="bar off"></div><div class="bar off"></div></div>
+      </div>
+      <div class="rung r3">
+        <div class="num">RUNG 3</div>
+        <div class="name">The shared playbook</div>
+        <div class="desc">Team conventions and skills, encoded where agents can read them</div>
+        <div class="fill"></div>
+        <div class="bars"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar off"></div><div class="bar off"></div></div>
+      </div>
+      <div class="rung r4">
+        <div class="num">RUNG 4</div>
+        <div class="name">Supervised autopilot</div>
+        <div class="desc">Scheduled agents do recurring work, a human approves everything</div>
+        <div class="fill"></div>
+        <div class="bars"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar off"></div></div>
+      </div>
+      <div class="rung r5">
+        <div class="num">RUNG 5</div>
+        <div class="name">The compounding horizon</div>
+        <div class="desc">Every campaign makes the next one smarter</div>
+        <div class="badge">ASPIRATIONAL</div>
+        <div class="fill"></div>
+        <div class="bars"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>

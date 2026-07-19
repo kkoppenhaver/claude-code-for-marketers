@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### The Marketing AI Ops Ladder: what the best marketing teams actually do with AI
+- **Published:** 2026-07-18
+- **Category:** Concepts
+- **File:** `the-marketing-ai-ops-ladder.md`
+- **Target keyword:** `ai ops for marketing`
+- **Why:** Named-framework pillar for the marketing-leader/AI Ops-owner audience, prompted by Sid Suri's direct "what does great look like" ask. Five rungs (Personal wins → Reusable tools → The shared playbook → Supervised autopilot → The compounding horizon, explicitly aspirational), backed by deep research: Anthropic's Austin Lau case, RSL/A, De Jesus's 15-agent system, McKinsey/Salesforce/Gartner data, with self-reported numbers flagged throughout. All evidence external by design. Ladder diagram (HTML→PNG) doubles as hero + OG asset. Research + outline in `briefs/`. GSC checked at publish: zero existing impressions on any "ai ops" variant, so no cannibalization.
+
 ### Give every blog post an on-brand featured image with one repeatable workflow (HTML → PNG)
 - **Published:** 2026-06-18
 - **Category:** Use Cases
