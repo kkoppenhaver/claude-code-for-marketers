@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### How I subtitle videos with Claude Code (a skill that runs Whisper for you)
+- **Published:** 2026-07-20
+- **Category:** Use Cases
+- **File:** `subtitle-videos-with-claude-code.md`
+- **Target keyword:** `subtitle videos with claude code`
+- **Why:** Skill-backed proof point for the code-defined-media / "build your own tools" cluster. Walks the real 2026-07-15 session subtitling the Retool deploy video: whisper.cpp transcribing 3m40s locally in ~14s, brand names correct on first pass via prompt seeding, and the cleanup pass catching Whisper's "Cloud Code"→"Claude Code" mishear (4×) as the case for keeping a human in the loop. Privacy + $0 framing (no uploads, no per-minute fees). Links the public `video-subtitler` skill (cc-skills repo, published same day), the skills intro/roundup, and the Chrome extension post. Featured image: video card → SRT cues with the auto-fix highlighted (HTML→PNG).
+
 ### The Marketing AI Ops Ladder: what the best marketing teams actually do with AI
 - **Published:** 2026-07-18
 - **Category:** Concepts
