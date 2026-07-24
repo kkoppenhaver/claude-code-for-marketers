@@ -51,7 +51,7 @@ Once you have the workflow lens, vibe marketing starts showing up all over your 
 
 **Ad creative iteration.** I describe the ad I want (audience, offer, tone) and ask Claude Code to produce copy plus a visual layout. Then I iterate: "this is too corporate," "try a more playful voice," "what if the headline led with the objection instead of the benefit?" In half an hour I have three or four variants to test, all from the same session.
 
-**Motion graphics and short videos.** Using [HyperFrames](https://www.linkedin.com/feed/update/urn:li:activity:7451759171764400128/), an agent-native video tool, I can describe a scene (timing, captions, what's on screen) and watch it render. Adjust the timing, swap the copy, change the music, and re-render. Same workflow shape as everything else.
+**Motion graphics and short videos.** Using [HyperFrames](/blog/motion-graphics-with-hyperframes/), an agent-native video tool, I can describe a scene (timing, captions, what's on screen) and watch it render. Adjust the timing, swap the copy, change the music, and re-render. Same workflow shape as everything else.
 
 **Slide decks.** Describing a deck in plain English and letting Claude Code build the HTML version. Edit the headlines, swap sections, and reorder the flow without ever opening Keynote.
 

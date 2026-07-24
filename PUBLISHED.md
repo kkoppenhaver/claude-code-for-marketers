@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### How I make motion graphics with HyperFrames and Claude Code
+- **Published:** 2026-07-23
+- **Category:** Use Cases
+- **File:** `motion-graphics-with-hyperframes.md`
+- **Target keyword:** `hyperframes tutorial`
+- **Why:** Fills the code-defined-media cluster's video gap and replaces the LinkedIn link the vibe-marketing post pointed HyperFrames at (now updated to this post). Thesis "refine, never restart": specific intent + references → structurally-close first render → surgical tweaks, not restarts. Two real HyperFrames demos, both self-hosted `<video>`: the monochrome-purple Jetlag-style commute map (JFK→office, from the "Build It On The Commute" Retool video — needed *factual* accuracy, so more rounds) and the glitchy "vibe coding" title card (aesthetic-only → 80–90% first pass). Cameo: the `/goal`-driven clip supercut (Claude did YouTube search + transcript-scan + ffmpeg cutting; Keanan curated), plus the `render --workers 1` blur-flicker tip. Key nuance: refinement volume tracks how much objective correctness the piece demands. Sourced from the surviving `882b238f` session transcript + Keanan Q&A (original tempting-shortcut transcript was gone). Featured image is the first of the new no-caption style (code editor → render arrow → real rendered map, HTML→PNG). Anchor project moved to `~/code/floorboardai/scripts/hhcib/tempting-shortcut/`.
+
 ### How I subtitle videos with Claude Code (a skill that runs Whisper for you)
 - **Published:** 2026-07-20
 - **Category:** Use Cases
