@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-secondary: #F0EFEB;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --code-bg: #292524;
+    --code-text: #FAFAF9;
+    --code-muted: #A8A29E;
+    --green: #5FB67A;
+    --red: #E0685B;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  #card {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    padding: 72px 80px;
+    overflow: hidden;
+    font-family: var(--mono);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* corner crop marks */
+  .crop { position: absolute; width: 22px; height: 22px; border-color: var(--text); border-style: solid; opacity: .55; }
+  .crop.tl { top: 30px; left: 30px; border-width: 2px 0 0 2px; }
+  .crop.tr { top: 30px; right: 30px; border-width: 2px 2px 0 0; }
+  .crop.bl { bottom: 30px; left: 30px; border-width: 0 0 2px 2px; }
+  .crop.br { bottom: 30px; right: 30px; border-width: 0 2px 2px 0; }
+
+  h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+  }
+  h1 .accent { color: var(--accent); }
+
+  .stage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* faux desktop app window */
+  .window {
+    width: 1000px;
+    background: var(--code-bg);
+    border-radius: 14px;
+    box-shadow: 0 28px 70px -20px rgba(28,25,23,.5);
+    overflow: hidden;
+  }
+  .titlebar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 22px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+  .dots { display: flex; gap: 9px; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; }
+  .dot.r { background: #FF5F57; }
+  .dot.y { background: #FFBD2E; }
+  .dot.g { background: #27C93F; }
+  .tabs { display: flex; gap: 6px; }
+  .tab {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--code-muted);
+    padding: 7px 16px;
+    border-radius: 8px;
+  }
+  .tab.active { color: var(--code-bg); background: var(--accent); font-weight: 600; }
+
+  .win-body { padding: 28px 30px 30px; }
+  .filerow {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 16px; color: var(--code-muted); margin-bottom: 18px;
+  }
+  .filerow .counts span.add { color: var(--green); }
+  .filerow .counts span.del { color: var(--red); }
+
+  .diff { font-size: 18px; line-height: 1.75; border-radius: 9px; overflow: hidden; }
+  .diff .line { padding: 4px 18px; white-space: nowrap; }
+  .diff .del { background: rgba(224,104,91,.16); color: #F0B5AD; }
+  .diff .add { background: rgba(95,182,122,.16); color: #B6E0C2; }
+  .diff .mark { display: inline-block; width: 18px; color: inherit; opacity: .8; }
+
+  .approve {
+    display: flex; align-items: center; gap: 16px;
+    margin-top: 26px; padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.07);
+  }
+  .approve .q { color: var(--code-text); font-size: 16px; flex: 1; }
+  .btn {
+    font-family: var(--mono); font-size: 15px; font-weight: 600;
+    padding: 10px 20px; border-radius: 8px;
+  }
+  .btn.allow { background: var(--green); color: var(--code-bg); }
+  .btn.deny { background: transparent; color: var(--code-muted); border: 1px solid rgba(255,255,255,.16); }
+
+  .footer {
+    position: absolute; bottom: 56px; right: 80px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <span class="crop tl"></span><span class="crop tr"></span>
+    <span class="crop bl"></span><span class="crop br"></span>
+
+    <h1>Start with the <span class="accent">Desktop app</span>,<br/>not the terminal.</h1>
+
+    <div class="stage">
+      <div class="window">
+        <div class="titlebar">
+          <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+          <div class="tabs">
+            <span class="tab">Chat</span>
+            <span class="tab">Cowork</span>
+            <span class="tab active">Code</span>
+          </div>
+        </div>
+        <div class="win-body">
+          <div class="filerow">
+            <span>README.md</span>
+            <span class="counts"><span class="add">+2</span> &nbsp;<span class="del">−1</span></span>
+          </div>
+          <div class="diff">
+            <div class="line del"><span class="mark">−</span>title: "Getting started"</div>
+            <div class="line add"><span class="mark">+</span>title: "Your first 5 minutes with Claude Code"</div>
+            <div class="line add"><span class="mark">+</span>description: "Zero to running, no terminal required."</div>
+          </div>
+          <div class="approve">
+            <span class="q">Allow Claude to edit README.md?</span>
+            <span class="btn deny">Deny</span>
+            <span class="btn allow">Allow once ⌘↵</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>

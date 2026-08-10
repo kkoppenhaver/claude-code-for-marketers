@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-secondary: #F0EFEB;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  #card {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    padding: 60px 70px 64px;
+    overflow: hidden;
+    font-family: var(--mono);
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+  }
+  h1 .accent { color: var(--accent); }
+
+  .subtitle {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 21px;
+    color: var(--text-secondary);
+  }
+
+  .stage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    margin-top: 20px;
+  }
+
+  .videocard {
+    width: 330px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 12px 28px -16px rgba(28,25,23,.3);
+    padding: 26px 26px 22px;
+  }
+  .screen {
+    height: 132px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2A2724, #45403A);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .play {
+    width: 0; height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-left: 30px solid rgba(250,250,248,.92);
+    margin-left: 7px;
+  }
+  .filename {
+    margin-top: 18px;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .filemeta {
+    margin-top: 7px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 178px;
+  }
+  .flow .lbl {
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.6;
+  }
+  .flow .lbl b { color: var(--accent); font-weight: 700; }
+  .arrow {
+    display: flex;
+    align-items: center;
+  }
+  .arrow .line {
+    width: 128px; height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+  .arrow .head {
+    width: 0; height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 13px solid var(--accent);
+  }
+
+  .cues {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .cue {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px -16px rgba(28,25,23,.28);
+    padding: 16px 22px 15px;
+  }
+  .cue .tc {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .cue .tc .n { color: var(--accent); font-weight: 700; margin-right: 10px; }
+  .cue .txt {
+    margin-top: 7px;
+    font-size: 17.5px;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+  .cue .txt del {
+    color: var(--text-secondary);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2.5px;
+  }
+  .cue .txt .fix { color: var(--accent); font-weight: 700; }
+  .cue.fixed { border: 2px solid var(--accent); }
+  .fixtag {
+    float: right;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(218,119,86,.14);
+    color: var(--accent);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+  }
+
+  .footer {
+    position: absolute; bottom: 24px; right: 70px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <h1>Subtitle any video,<br /><span class="accent">right from Claude Code</span></h1>
+
+    <div class="stage">
+      <div class="videocard">
+        <div class="screen"><div class="play"></div></div>
+        <div class="filename">deploy-to-retool.mp4</div>
+        <div class="filemeta">3m 40s &middot; 800 MB &middot; no captions</div>
+      </div>
+
+      <div class="flow">
+        <div class="lbl">whisper.cpp<br /><b>14 seconds</b><br />on-device</div>
+        <div class="arrow"><div class="line"></div><div class="head"></div></div>
+      </div>
+
+      <div class="cues">
+        <div class="cue">
+          <div class="tc"><span class="n">3</span>00:00:06,000 &rarr; 00:00:08,640</div>
+          <div class="txt">You can open Lovable, Replit, V0, Bolt,</div>
+        </div>
+        <div class="cue fixed">
+          <div class="tc"><span class="fixtag">AUTO-FIXED</span><span class="n">19</span>00:00:38,410 &rarr; 00:00:41,180</div>
+          <div class="txt">in <del>Cloud Code</del> <span class="fix">Claude Code</span>, bringing it into Retool,</div>
+        </div>
+        <div class="cue">
+          <div class="tc"><span class="n">150</span>00:03:37,020 &rarr; 00:03:39,610</div>
+          <div class="txt">ready to upload &mdash; 150 cues, $0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>

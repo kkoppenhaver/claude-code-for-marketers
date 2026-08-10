@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --mono: 'JetBrains Mono', monospace;
+    /* code editor palette */
+    --code-bg: #211E1B;
+    --code-dim: #8A8078;
+    --code-tag: #E8A487;
+    --code-kw: #DA7756;
+    --code-val: #C9BEE6;
+    --code-text: #D7D0C8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  #card {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--mono);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stage {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+  }
+
+  /* ---- left: code editor ---- */
+  .editor {
+    width: 548px;
+    background: var(--code-bg);
+    border-radius: 16px;
+    box-shadow: 0 26px 60px -26px rgba(28,25,23,.55);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .editor .bar {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 18px;
+    background: #191613;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+  }
+  .editor .bar .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .editor .bar .dot.r { background: #E06C5E; }
+  .editor .bar .dot.y { background: #E0B44E; }
+  .editor .bar .dot.g { background: #79C079; }
+  .editor .bar .name {
+    margin-left: 12px;
+    font-size: 14px;
+    color: var(--code-dim);
+    font-weight: 500;
+  }
+  .editor pre {
+    padding: 24px 26px 26px;
+    font-family: var(--mono);
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--code-text);
+    white-space: pre;
+  }
+  .editor .t { color: var(--code-tag); }
+  .editor .k { color: var(--code-kw); font-weight: 600; }
+  .editor .v { color: var(--code-val); }
+  .editor .c { color: var(--code-dim); }
+
+  /* ---- middle: render arrow ---- */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    min-width: 150px;
+  }
+  .flow .lbl {
+    font-size: 14.5px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: var(--accent);
+    text-align: center;
+    line-height: 1.5;
+  }
+  .arrow { display: flex; align-items: center; }
+  .arrow .line { width: 112px; height: 3px; background: var(--accent); border-radius: 2px; }
+  .arrow .head {
+    width: 0; height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 15px solid var(--accent);
+  }
+
+  /* ---- right: rendered video ---- */
+  .videocard {
+    width: 420px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 24px 52px -22px rgba(28,25,23,.4);
+    padding: 22px 22px 20px;
+    flex-shrink: 0;
+  }
+  .screen {
+    position: relative;
+    height: 242px;
+    border-radius: 11px;
+    overflow: hidden;
+    background: #EDE8F5;
+  }
+  .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .screen .play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 62px; height: 62px;
+    border-radius: 50%;
+    background: rgba(28,25,23,.55);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .screen .play::after {
+    content: "";
+    width: 0; height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 21px solid #fff;
+    margin-left: 5px;
+  }
+  .filename { margin-top: 18px; font-weight: 600; font-size: 19px; }
+  .filemeta { margin-top: 7px; font-size: 14.5px; color: var(--text-secondary); }
+  .filemeta .p { color: var(--accent); font-weight: 700; }
+
+  .footer {
+    position: absolute; bottom: 30px; right: 40px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <div class="stage">
+      <div class="editor">
+        <div class="bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="name">commute-map.html</span>
+        </div>
+<pre><span class="t">&lt;div</span> <span class="k">class</span>=<span class="v">"stage"</span><span class="t">&gt;</span>
+  <span class="t">&lt;svg</span> <span class="k">viewBox</span>=<span class="v">"0 0 1920 1080"</span><span class="t">&gt;</span>
+    <span class="t">&lt;path</span> <span class="k">id</span>=<span class="v">"route"</span> <span class="k">d</span>=<span class="v">"M1553 937</span>
+      <span class="v">C1420 760 1391 509 …"</span> <span class="t">/&gt;</span>
+  <span class="t">&lt;/svg&gt;</span>
+<span class="t">&lt;/div&gt;</span>
+
+<span class="k">#route</span> {
+  <span class="c">stroke</span>: <span class="v">#6D28D9</span>;
+  <span class="c">animation</span>: <span class="v">draw</span> <span class="v">2.4s</span> <span class="v">ease-in-out</span>;
+}</pre>
+      </div>
+
+      <div class="flow">
+        <div class="arrow"><div class="line"></div><div class="head"></div></div>
+        <div class="lbl">npx hyperframes<br />render</div>
+      </div>
+
+      <div class="videocard">
+        <div class="screen">
+          <img src="../../../../public/images/blog/hyperframes-posters/jetlag-map-jfk.jpg" alt="" />
+          <div class="play"></div>
+        </div>
+        <div class="filename">commute-map.mp4</div>
+        <div class="filemeta">1920&times;1080 &middot; <span class="p">rendered from the chat</span></div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>

@@ -1,6 +1,8 @@
 ---
 title: "How I use Claude Code to research competitors"
 description: "A step-by-step walkthrough of using Claude Code to build a full competitor analysis, from initial web research to a polished report you can share with your team."
+target_keyword: "ai competitor analysis"
+secondary_keywords: []
 pubDate: 2026-01-14
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"
@@ -76,7 +78,7 @@ Now when I ask for a competitor report, Claude already knows who "we" are, which
 
 ## Bonus: getting your report into Google Docs
 
-Markdown is great, but your team probably lives in Google Docs. Here's the good news: copying markdown into Google Docs works surprisingly well.
+Markdown is great, but your team probably lives in Google Docs. Here's the good news: copying markdown into Google Docs works surprisingly well. (If you'd rather skip the copy/paste step entirely, you can [hook Claude Code up to Google Docs directly](/blog/hooking-claude-code-up-to-google-docs/) and have it write the report straight into Drive.)
 
 1. Open your markdown file
 2. Select all and copy

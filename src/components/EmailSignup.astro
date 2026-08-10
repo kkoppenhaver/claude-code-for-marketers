@@ -7,6 +7,7 @@ interface Props {
   description?: string;
   tagId?: string;
   buttonText?: string;
+  formId?: string;
 }
 
 const {
@@ -14,10 +15,36 @@ const {
   description = "Join our free 7-day email course and learn how to use Claude Code for your marketing work. Then, get notified when we publish new use cases and ways to stay ahead of the curve.",
   tagId,
   buttonText = "Send me the free course",
+  formId = "8947118",
 } = Astro.props;
 
-const FORM_ID = "8947118";
-const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
+const formAction = `https://app.kit.com/forms/${formId}/subscriptions`;
+
+// Canonical URL of the page this form is rendered on — populates the
+// SIGNUP_URL custom field in Kit so we can see which page each subscriber
+// came from.
+const signupUrl = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site).toString()
+  : Astro.url.pathname;
+
+// Fetch subscriber count from Kit API at build time
+let subscriberText = "";
+try {
+  const KIT_API_KEY = import.meta.env.KIT_API_KEY;
+  if (KIT_API_KEY) {
+    const res = await fetch("https://api.kit.com/v4/tags/14154457/subscribers?include_total_count=true&per_page=1", {
+      headers: { "X-Kit-Api-Key": KIT_API_KEY },
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const total = data.pagination?.total_count;
+      if (total && total >= 100) {
+        const rounded = Math.floor(total / 100) * 100;
+        subscriberText = `Join ${rounded}+ marketers.`;
+      }
+    }
+  }
+} catch {}
 ---
 
 <div class="signup-box">
@@ -28,6 +55,7 @@ const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
   <p class="signup-description">{description}</p>
   <form action={formAction} method="post" class="signup-form">
     {tagId && <input type="hidden" name="tags[]" value={tagId} />}
+    <input type="hidden" name="fields[signup_url]" value={signupUrl} />
     <div class="input-group">
       <label for="email-input" class="sr-only">Email address</label>
       <input
@@ -41,7 +69,7 @@ const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
       <button type="submit">{buttonText}</button>
     </div>
   </form>
-  <p class="signup-note">No spam. Unsubscribe anytime.</p>
+  <p class="signup-note">{subscriberText && <span class="subscriber-count">{subscriberText}</span>} No spam. Unsubscribe anytime.</p>
   <div class="testimonial">
     <blockquote>
       <p>"I watched Keanan work magic with Claude [Code] in the terminal. My brain: 'It's far too technical!' 'Dark mode? Not for me!' ...I shipped 4 things in my first month."</p>
@@ -55,6 +83,17 @@ const formAction = `https://app.kit.com/forms/${FORM_ID}/subscriptions`;
     </blockquote>
   </div>
 </div>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('.signup-form').forEach((form) => {
+    form.addEventListener('submit', () => {
+      const fathom = (window as any).fathom;
+      if (fathom?.trackEvent) {
+        fathom.trackEvent('Email Signup');
+      }
+    });
+  });
+</script>
 
 <style>
   .signup-box {

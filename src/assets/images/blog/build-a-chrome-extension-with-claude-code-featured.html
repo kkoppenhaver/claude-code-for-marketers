@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-secondary: #F0EFEB;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --green: #5FB67A;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  #card {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    padding: 66px 80px;
+    overflow: hidden;
+    font-family: var(--mono);
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+  }
+  h1 .accent { color: var(--accent); }
+
+  .stage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* faux browser window */
+  .browser {
+    width: 1010px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 28px 70px -20px rgba(28,25,23,.5);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .bbar {
+    display: flex; align-items: center; gap: 16px;
+    padding: 14px 18px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+  .dots { display: flex; gap: 9px; }
+  .dot { width: 13px; height: 13px; border-radius: 50%; }
+  .dot.r { background: #FF5F57; } .dot.y { background: #FFBD2E; } .dot.g { background: #27C93F; }
+  .addr {
+    flex: 1; background: #fff; border: 1px solid var(--border);
+    border-radius: 8px; padding: 9px 16px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .exticon {
+    width: 34px; height: 34px; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 19px; box-shadow: 0 0 0 3px rgba(218,119,86,.22);
+  }
+
+  /* page area with a script + a highlighted selection */
+  .page { position: relative; height: 300px; padding: 30px 34px; }
+  .doc-line { height: 13px; border-radius: 4px; background: #EFEDE9; margin-bottom: 16px; }
+  .doc-line.w1 { width: 78%; } .doc-line.w2 { width: 64%; } .doc-line.w3 { width: 71%; }
+  .sel { background: #FCE3B6; box-shadow: 0 0 0 2px #F2C879; }
+  .sel.s1 { width: 70%; } .sel.s2 { width: 58%; }
+
+  /* the real Script Timer popup, hanging from the toolbar */
+  .popup {
+    position: absolute; top: -8px; right: 26px; width: 320px;
+    background: #fff; border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 44px -10px rgba(28,25,23,.34);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+  .popup .body { padding: 22px 20px 14px; }
+  .popup .time { font-size: 46px; font-weight: 600; letter-spacing: -0.02em; color: #111418; font-variant-numeric: tabular-nums; line-height: 1.05; }
+  .popup .meta { margin-top: 6px; font-size: 14px; color: #5b6470; }
+  .popup .meta .d { color: #c2c8d0; margin: 0 6px; }
+  .popup .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 11px 18px; border-top: 1px solid #eef0f3;
+    background: #f7f8fa; font-size: 13px; color: #5b6470;
+  }
+  .popup .foot .cal { color: #2a6df4; font-weight: 500; }
+
+  .footer {
+    position: absolute; bottom: 52px; right: 80px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <h1>Your first real tool?<br/>Build a <span class="accent">Chrome extension</span>.</h1>
+
+    <div class="stage">
+      <div class="browser">
+        <div class="bbar">
+          <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+          <div class="addr">docs.google.com/document/d/my-video-script</div>
+          <div class="exticon" aria-label="Script Timer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="8.5"/>
+              <path d="M12 7.3 V12 l3.1 2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="page">
+          <div class="doc-line w1"></div>
+          <div class="doc-line w2"></div>
+          <div class="doc-line sel s1"></div>
+          <div class="doc-line sel s2"></div>
+          <div class="doc-line w3"></div>
+          <div class="doc-line w2"></div>
+
+          <div class="popup">
+            <div class="body">
+              <div class="time">1:28</div>
+              <div class="meta">184 words <span class="d">·</span> 150 WPM</div>
+            </div>
+            <div class="foot"><span class="cal">⚙ Calibrate</span><span>150 WPM</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>

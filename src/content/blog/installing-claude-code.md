@@ -1,6 +1,8 @@
 ---
 title: "Your first 5 minutes with Claude Code"
 description: "From zero to running Claude Code in under five minutes. I'll walk through both options, the terminal and the Desktop app, with screenshots along the way."
+target_keyword: "install claude code"
+secondary_keywords: []
 pubDate: 2026-01-12
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"

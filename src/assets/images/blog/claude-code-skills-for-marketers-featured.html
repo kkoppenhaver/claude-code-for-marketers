@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-secondary: #F0EFEB;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --code-bg: #292524;
+    --code-text: #FAFAF9;
+    --code-muted: #A8A29E;
+    --green: #5FB67A;
+    --red: #E0685B;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: var(--bg-secondary); }
+
+  #card {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    padding: 64px 76px;
+    overflow: hidden;
+    font-family: var(--mono);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* corner crop marks */
+  .crop { position: absolute; width: 22px; height: 22px; border-color: var(--text); border-style: solid; opacity: .55; }
+  .crop.tl { top: 30px; left: 30px; border-width: 2px 0 0 2px; }
+  .crop.tr { top: 30px; right: 30px; border-width: 2px 2px 0 0; }
+  .crop.bl { bottom: 30px; left: 30px; border-width: 0 0 2px 2px; }
+  .crop.br { bottom: 30px; right: 30px; border-width: 0 2px 2px 0; }
+
+  h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+    max-width: 1040px;
+  }
+  h1 .accent { color: var(--accent); }
+
+  .sub {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--text-secondary);
+    margin-top: 14px;
+  }
+
+  .stage { flex: 1; display: flex; align-items: center; justify-content: center; }
+
+  /* faux terminal */
+  .window {
+    width: 1000px;
+    background: var(--code-bg);
+    border-radius: 14px;
+    box-shadow: 0 28px 70px -20px rgba(28,25,23,.5);
+    overflow: hidden;
+  }
+  .titlebar {
+    display: flex; align-items: center; gap: 16px;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+  .dots { display: flex; gap: 9px; }
+  .dot { width: 13px; height: 13px; border-radius: 50%; }
+  .dot.r { background: #FF5F57; } .dot.y { background: #FFBD2E; } .dot.g { background: #27C93F; }
+  .tbtitle { color: var(--code-muted); font-size: 14px; font-weight: 500; }
+
+  .term { padding: 24px 28px 28px; font-size: 18px; line-height: 1.7; }
+  .term .row { white-space: nowrap; }
+  .term .path { color: var(--code-muted); }
+  .term .p { color: var(--accent); }
+  .term .cmd { color: var(--code-text); }
+  .term .ok { color: var(--green); }
+  .term .skill { color: var(--code-text); }
+  .term .dim { color: var(--code-muted); }
+  .term .hot { color: var(--accent); }
+  .term .gap { height: 12px; }
+
+  .footer {
+    position: absolute; bottom: 50px; right: 76px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <span class="crop tl"></span><span class="crop tr"></span>
+    <span class="crop bl"></span><span class="crop br"></span>
+
+    <h1>The Claude Code skills every<br/>marketer should <span class="accent">actually install</span></h1>
+    <div class="sub">Curated for marketers, not developers — grouped by workflow.</div>
+
+    <div class="stage">
+      <div class="window">
+        <div class="titlebar">
+          <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+          <span class="tbtitle">~/.claude/skills</span>
+        </div>
+        <div class="term">
+          <div class="row"><span class="path">~/.claude/skills</span> <span class="p">$</span> <span class="cmd">npx skills add coreyhaines31/marketingskills</span></div>
+          <div class="row"><span class="ok">✓ content-strategy</span>&nbsp;&nbsp;<span class="ok">✓ copywriting</span>&nbsp;&nbsp;<span class="ok">✓ ai-seo</span>&nbsp;&nbsp;<span class="ok">✓ cro</span></div>
+          <div class="gap"></div>
+          <div class="row"><span class="path">~/.claude/skills</span> <span class="p">$</span> <span class="cmd">ls</span></div>
+          <div class="row"><span class="skill">featured-image</span>&nbsp;&nbsp;<span class="skill">fact-check</span>&nbsp;&nbsp;<span class="skill">kit-broadcast</span>&nbsp;&nbsp;<span class="skill">tweet</span>&nbsp;&nbsp;<span class="skill">linkedin</span></div>
+          <div class="row"><span class="skill">frontend-design</span>&nbsp;&nbsp;<span class="skill">skill-creator</span>&nbsp;&nbsp;<span class="hot">█</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>

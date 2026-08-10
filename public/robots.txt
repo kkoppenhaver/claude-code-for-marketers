@@ -40,3 +40,7 @@ User-agent: meta-externalagent
 Disallow: /
 
 Sitemap: https://claudecodeformarketers.com/sitemap-index.xml
+
+# LLM-friendly content index (https://llmstxt.org)
+# /llms.txt          curated index of all posts
+# /llms-full.txt     full text of every post in one file

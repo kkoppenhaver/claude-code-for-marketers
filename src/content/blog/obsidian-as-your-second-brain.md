@@ -1,6 +1,8 @@
 ---
 title: "Using Obsidian as Claude Code's second brain"
 description: "Stop scattering files across your computer. Learn how to use Obsidian as a persistent knowledge base that Claude Code can read and write to."
+target_keyword: "obsidian claude code"
+secondary_keywords: []
 pubDate: 2026-01-16
 author: "Keanan Koppenhaver"
 kitTagId: "14154457"

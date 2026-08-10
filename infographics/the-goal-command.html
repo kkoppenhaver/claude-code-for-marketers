@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>The /goal command — hero B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+<style>
+  :root {
+    --color-bg: #FAFAF8;
+    --color-bg-secondary: #F0EFEB;
+    --color-card: #1C1917;
+    --color-card-text: #FAFAF8;
+    --color-card-comment: #9C9C95;
+    --color-text: #1C1917;
+    --color-text-secondary: #57534E;
+    --color-accent: #DA7756;
+    --color-border: #E7E5E0;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #888; color: var(--color-text); font-family: var(--font-body); }
+  body { display: flex; justify-content: center; align-items: flex-start; padding: 40px 20px; min-height: 100vh; }
+  .canvas { width: 1280px; height: 720px; background: var(--color-bg); border: 1px solid var(--color-border); position: relative; overflow: hidden; padding: 64px 88px; }
+  .canvas::before { content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, rgba(28,25,23,0.02) 2px, rgba(28,25,23,0.02) 3px); pointer-events: none; z-index: 1; }
+  .canvas > * { position: relative; z-index: 2; }
+
+  .reg { position: absolute; width: 14px; height: 14px; border: 1px solid var(--color-text); }
+  .reg.tl { top: 28px; left: 28px; border-right: 0; border-bottom: 0; }
+  .reg.tr { top: 28px; right: 28px; border-left: 0; border-bottom: 0; }
+  .reg.bl { bottom: 28px; left: 28px; border-right: 0; border-top: 0; }
+  .reg.br { bottom: 28px; right: 28px; border-left: 0; border-top: 0; }
+
+  .eyebrow { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.14em; display: flex; align-items: center; gap: 10px; margin-bottom: 32px; }
+  .eyebrow .chev { color: var(--color-accent); font-weight: 700; }
+  .eyebrow .dot { color: var(--color-border); }
+
+  h1.title { font-family: var(--font-mono); font-size: 38px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 28px 0; max-width: 760px; }
+  h1.title .accent { color: var(--color-accent); }
+
+  .stage { display: grid; grid-template-columns: 1fr 280px; gap: 56px; align-items: start; }
+
+  .codecard { background: var(--color-card); color: var(--color-card-text); font-family: var(--font-mono); font-size: 16px; line-height: 1.55; padding: 28px 32px; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); position: relative; }
+  .codecard::before { content: ""; position: absolute; top: 14px; left: 14px; width: 10px; height: 10px; border-radius: 50%; background: #FF5F57; box-shadow: 18px 0 0 #FEBC2E, 36px 0 0 #28C840; }
+  .codecard .body { margin-top: 22px; }
+  .codecard .prompt { color: var(--color-accent); margin-right: 8px; }
+  .codecard .part { padding: 4px 0; border-left: 3px solid transparent; padding-left: 12px; margin-left: -12px; }
+  .codecard .part.p1 { border-left-color: var(--color-accent); }
+  .codecard .part.p2 { border-left-color: #D4A95B; }
+  .codecard .part.p3 { border-left-color: #8FA567; }
+  .codecard .part.p4 { border-left-color: #6F8E89; }
+  .codecard .part .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 3px; margin-right: 10px; vertical-align: middle; color: var(--color-card); }
+  .codecard .p1 .tag { background: var(--color-accent); }
+  .codecard .p2 .tag { background: #D4A95B; }
+  .codecard .p3 .tag { background: #8FA567; color: #FAFAF8; }
+  .codecard .p4 .tag { background: #6F8E89; color: #FAFAF8; }
+
+  .legend { font-family: var(--font-mono); font-size: 13px; line-height: 1.5; }
+  .legend .item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 18px; }
+  .legend .swatch { flex: 0 0 14px; width: 14px; height: 14px; margin-top: 2px; border-radius: 2px; }
+  .legend .swatch.s1 { background: var(--color-accent); }
+  .legend .swatch.s2 { background: #D4A95B; }
+  .legend .swatch.s3 { background: #8FA567; }
+  .legend .swatch.s4 { background: #6F8E89; }
+  .legend .label { font-weight: 700; letter-spacing: 0.06em; color: var(--color-text); display: block; margin-bottom: 2px; text-transform: uppercase; font-size: 11px; }
+  .legend .desc { color: var(--color-text-secondary); font-family: var(--font-body); font-size: 13px; line-height: 1.4; }
+
+  .footer-mark { position: absolute; bottom: 36px; right: 64px; font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.04em; }
+  .footer-mark .accent { color: var(--color-accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="reg tl"></div><div class="reg tr"></div><div class="reg bl"></div><div class="reg br"></div>
+
+  <div class="eyebrow"><span class="chev">&gt;</span><span>Anatomy</span><span class="dot">·</span><span>/goal condition</span></div>
+
+  <h1 class="title">Four parts of a <span class="accent">/goal</span> condition that holds up.</h1>
+
+  <div class="stage">
+    <div class="codecard">
+      <div class="body">
+        <div class="part p1"><span class="tag">END STATE</span><span class="prompt">$</span><span style="color: var(--color-accent);">/goal</span> Every post in <span style="color:#9CDCFE;">src/content/blog/</span> has at least 2 internal links to other published posts.</div>
+        <div class="part p2"><span class="tag">CHECK</span>Verify the count for each file.</div>
+        <div class="part p3"><span class="tag">CONSTRAINT</span>Don't modify any content beyond inserting links.</div>
+        <div class="part p4"><span class="tag">SAFETY</span>Stop after 30 turns.</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="item"><span class="swatch s1"></span><span><span class="label">End state</span><span class="desc">A measurable result the evaluator can read.</span></span></div>
+      <div class="item"><span class="swatch s2"></span><span><span class="label">Check</span><span class="desc">How Claude has to prove it. Show your work.</span></span></div>
+      <div class="item"><span class="swatch s3"></span><span><span class="label">Constraint</span><span class="desc">What must not change on the way there.</span></span></div>
+      <div class="item"><span class="swatch s4"></span><span><span class="label">Safety</span><span class="desc">Turn or time cap. Runaway goals burn tokens.</span></span></div>
+    </div>
+  </div>
+
+  <div class="footer-mark"><span class="accent">&gt;</span> claudecodeformarketers.com</div>
+</div>
+</body>
+</html>

@@ -1,6 +1,8 @@
 ---
 title: "The CLAUDE.md masterclass"
 description: "A complete guide to CLAUDE.md: teach Claude Code your brand voice, writing style, and project context once so every conversation starts with your rules."
+target_keyword: "claude md file"
+secondary_keywords: []
 pubDate: 2026-03-10
 author: "Keanan Koppenhaver"
 draft: false

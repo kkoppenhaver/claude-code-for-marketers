@@ -1,6 +1,8 @@
 ---
 title: "What are skills and how do they work?"
 description: "Skills let you teach Claude Code your specific workflows and preferences, turning it from a general-purpose assistant into one that knows exactly how you work."
+target_keyword: "claude code skills"
+secondary_keywords: []
 pubDate: 2026-01-22
 author: "Keanan Koppenhaver"
 draft: false
@@ -35,7 +37,7 @@ The simplest way to think about it is that pure prompting is like giving someone
 
 Let me show you what skills can do with a straightforward before and after example.
 
-Claude Code ships with a built-in skill called `frontend-design`. It's designed to help create more polished, distinctive web interfaces as opposed to the the generic-looking, "purple gradient designs" that LLMs tend to produce.
+Claude Code ships with a built-in skill called `frontend-design`. It's designed to help create more polished, distinctive web interfaces as opposed to the the generic-looking, "purple gradient designs" that LLMs tend to produce. (I've used it to [build a real landing page from scratch](/blog/build-a-landing-page-with-claude-code/).)
 
 I gave Claude this prompt:
 
@@ -71,7 +73,7 @@ Every time I publish a blog post (on this very site!), I need to send an email t
 
 It's not complicated, but it's just enough friction that I'd sometimes skip it. I'd publish a post and then...forget to email anyone about it. Or I'd tell myself I'd do it later and never get around to it.
 
-So I built a skill to handle it.
+So I [built a skill to handle it](/blog/automate-kit-broadcasts-with-skills/).
 
 Now my workflow looks like this:
 

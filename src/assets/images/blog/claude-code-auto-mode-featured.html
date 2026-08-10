@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-secondary: #F0EFEB;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --term-bg: #2A2724;
+    --term-bg2: #35312C;
+    --term-text: #E9E6E0;
+    --term-dim: #A8A29A;
+    --ok: #7FA872;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  #card {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--mono);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .terminal {
+    width: 980px;
+    background: var(--term-bg);
+    border-radius: 18px;
+    box-shadow: 0 30px 70px -30px rgba(28,25,23,.55);
+    overflow: hidden;
+  }
+
+  .titlebar {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 16px 22px;
+    background: var(--term-bg2);
+  }
+  .dot { width: 13px; height: 13px; border-radius: 50%; opacity: .85; }
+  .dot.r { background: #E0655A; }
+  .dot.y { background: #E0B048; }
+  .dot.g { background: #6FBF73; }
+  .tbtitle {
+    margin-left: 12px;
+    color: var(--term-dim);
+    font-size: 15px;
+  }
+  .modepill {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(218,119,86,.18);
+    border: 1px solid rgba(218,119,86,.55);
+    color: var(--accent);
+    font-size: 14.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+  }
+
+  .session {
+    padding: 30px 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    font-size: 18.5px;
+    line-height: 1.4;
+    color: var(--term-text);
+  }
+  .line { display: flex; gap: 14px; align-items: baseline; }
+  .line .b { color: var(--ok); font-weight: 700; }
+  .line .cmd { color: var(--term-text); }
+  .line .note { color: var(--term-dim); font-size: 15.5px; }
+  .line.dim .cmd { color: var(--term-dim); }
+
+  .blocked {
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    background: rgba(218,119,86,.10);
+    padding: 16px 20px 15px;
+    margin: 2px 0;
+  }
+  .blocked .head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .blocked .x { font-size: 20px; }
+  .blocked .why {
+    margin-top: 7px;
+    color: var(--term-dim);
+    font-size: 15.5px;
+    padding-left: 32px;
+  }
+  .blocked .why b { color: var(--term-text); font-weight: 600; }
+
+  .footer {
+    position: absolute; bottom: 24px; right: 70px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <div class="terminal">
+      <div class="titlebar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        <div class="tbtitle">claude</div>
+        <div class="modepill">&#9205;&#9205; auto mode</div>
+      </div>
+      <div class="session">
+        <div class="line dim"><span class="b">&#10003;</span><span class="cmd">Read(functions.php)</span></div>
+        <div class="line dim"><span class="b">&#10003;</span><span class="cmd">Edit(page-template.php)</span></div>
+        <div class="blocked">
+          <div class="head"><span class="x">&#10007;</span><span>Bash(git checkout origin/main -- page-template.php ...)</span></div>
+          <div class="why">Blocked by the auto mode classifier &mdash; <b>would overwrite your local edits</b></div>
+        </div>
+        <div class="line"><span class="b">&#8226;</span><span class="cmd">Taking a safer approach that keeps your changes&hellip;</span></div>
+        <div class="line"><span class="b">&#10003;</span><span class="cmd">Theme fixed.</span><span class="note">Your work: untouched.</span></div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>

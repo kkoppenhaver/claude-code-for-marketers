@@ -1,6 +1,8 @@
 ---
 title: "Vibe coding for marketers: what it actually means (and what it doesn't)"
 description: "Vibe coding is everywhere right now, but every explanation targets developers. Here's what it actually means for marketers and what it looks like in practice."
+target_keyword: "vibe coding for marketers"
+secondary_keywords: []
 pubDate: 2026-02-25
 author: "Keanan Koppenhaver"
 draft: false

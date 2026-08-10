@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="color-scheme" content="light" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-secondary: #F0EFEB;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --code-bg: #292524;
+    --code-text: #FAFAF9;
+    --code-muted: #A8A29E;
+    --green: #5FB67A;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  #card {
+    width: 1280px; height: 720px;
+    background: var(--bg); color: var(--text);
+    position: relative; padding: 70px 80px; overflow: hidden;
+    font-family: var(--mono); display: flex; flex-direction: column;
+  }
+
+  h1 { font-weight: 700; font-size: 56px; line-height: 1.16; letter-spacing: -0.02em; }
+  h1 .accent { color: var(--accent); }
+
+  .stage { flex: 1; display: flex; align-items: center; justify-content: center; gap: 44px; }
+
+  /* left: the HTML/CSS source */
+  .code {
+    width: 470px; background: var(--code-bg); color: var(--code-text);
+    border-radius: 14px; box-shadow: 0 28px 70px -20px rgba(28,25,23,.5);
+    overflow: hidden;
+  }
+  .code .bar { display: flex; gap: 8px; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .code .bar i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+  .code .bar .r { background: #FF5F57; } .code .bar .y { background: #FFBD2E; } .code .bar .g { background: #27C93F; }
+  .code pre { padding: 22px 24px; font-size: 18px; line-height: 1.7; font-family: var(--mono); }
+  .code .k { color: var(--code-muted); }
+  .code .p { color: #9DB8E8; }
+  .code .v { color: var(--accent); }
+  .code .n { color: var(--green); }
+
+  /* arrow */
+  .arrow { display: flex; flex-direction: column; align-items: center; gap: 10px; flex-shrink: 0; }
+  .arrow .circle { width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 14px 30px -12px rgba(218,119,86,.7); }
+  .arrow .lbl { font-size: 14px; color: var(--text-secondary); }
+
+  /* right: the rendered featured image (a mini branded card) */
+  .out { position: relative; }
+  .render {
+    width: 384px; height: 216px; background: #fffff4; color: #283950;
+    border-radius: 12px; border: 1px solid var(--border);
+    box-shadow: 0 28px 70px -20px rgba(28,25,23,.45);
+    padding: 30px 32px; display: flex; flex-direction: column; justify-content: center;
+    overflow: hidden;
+  }
+  .render::after { content: ""; position: absolute; top: -70px; right: -70px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(194,169,144,.28), rgba(194,169,144,0) 70%); }
+  .render h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1.15; letter-spacing: -0.01em; }
+  .render h2 .a { color: #a8876d; }
+  .render .sub { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 16px; color: #3a5170; margin-top: 12px; }
+  .badge {
+    position: absolute; bottom: -13px; right: -10px;
+    background: var(--text); color: var(--bg);
+    font-size: 13px; font-weight: 600; padding: 7px 13px; border-radius: 7px;
+    box-shadow: 0 8px 20px -6px rgba(28,25,23,.5);
+  }
+
+  .footer { position: absolute; bottom: 52px; left: 80px; font-size: 15px; color: var(--text-secondary); }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <h1>Featured images,<br/>rendered from <span class="accent">code</span>.</h1>
+
+    <div class="stage">
+      <div class="code">
+        <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i></div>
+<pre><span class="k">:root</span> {
+  <span class="p">--navy</span>:   <span class="v">#283950</span>;
+  <span class="p">--accent</span>: <span class="v">#c2a990</span>;
+}
+<span class="k">#card</span> {
+  <span class="p">width</span>:  <span class="n">1280px</span>;
+  <span class="p">height</span>: <span class="n">720px</span>;
+}</pre>
+      </div>
+
+      <div class="arrow">
+        <div class="circle">&rarr;</div>
+        <div class="lbl">render</div>
+      </div>
+
+      <div class="out">
+        <div class="render">
+          <h2>Turn client calls into<br/><span class="a">requirements docs</span></h2>
+          <div class="sub">&mdash; without taking a note</div>
+        </div>
+        <div class="badge">PNG · 2×</div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>
