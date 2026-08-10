@@ -27,19 +27,21 @@ const signupUrl = Astro.site
   ? new URL(Astro.url.pathname, Astro.site).toString()
   : Astro.url.pathname;
 
-// Fetch subscriber count from Kit API at build time
+// Fetch subscriber count from Kit API at build time. Counts the whole
+// active list (not a tag) and rounds down to the nearest 10 so the copy
+// stays true between builds.
 let subscriberText = "";
 try {
   const KIT_API_KEY = import.meta.env.KIT_API_KEY;
   if (KIT_API_KEY) {
-    const res = await fetch("https://api.kit.com/v4/tags/14154457/subscribers?include_total_count=true&per_page=1", {
+    const res = await fetch("https://api.kit.com/v4/subscribers?include_total_count=true&per_page=1", {
       headers: { "X-Kit-Api-Key": KIT_API_KEY },
     });
     if (res.ok) {
       const data = await res.json();
       const total = data.pagination?.total_count;
       if (total && total >= 100) {
-        const rounded = Math.floor(total / 100) * 100;
+        const rounded = Math.floor(total / 10) * 10;
         subscriberText = `Join ${rounded}+ marketers.`;
       }
     }
