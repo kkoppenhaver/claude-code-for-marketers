@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### Auto mode: why Claude Code is about to stop asking your permission
+- **Published:** 2026-08-10
+- **Category:** Tips and Techniques
+- **File:** `claude-code-auto-mode.md`
+- **Target keyword:** `claude code auto mode`
+- **Why:** News-hook piece published four days before auto mode becomes the Claude Code default (2026-08-14, Pro/Max/Team) — owning the marketer-friendly explanation while coverage was still dev-only (Register, New Stack, Willison). Built via the one-question-at-a-time Q&A: Keanan's months of auto-mode-as-default use (long-running workflows: ~30-min YouTube clip pulls, plan-then-prototype builds), real classifier blocks mined from his session transcripts (lead story: the Allstar theme `git checkout` that would have wiped local edits; supporting: root SSH, prod deploy, cron disable), and his flip-it advice with the "one shot" low-risk on-ramp. Anthropic stats: 89% vs 13.6% caught, zero prompt-injection successes, 2.6x. Cross-links dangerously-skip-permissions (flagged for refresh — now half-obsolete), /goal, Desktop walkthrough. Featured image: terminal card with the classifier block moment (HTML→PNG). Promoted same day: tweet + LinkedIn (Typefully) + Kit broadcast, all at 2 PM CT. Draft process produced 5 new style-guide rules (atmospheric adverbs, invented specifics, clipped openers, "Label: point" patterns, ordinal dates).
+
 ### How I make motion graphics with HyperFrames and Claude Code
 - **Published:** 2026-07-23
 - **Category:** Use Cases

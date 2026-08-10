@@ -20,24 +20,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 
 ## Backlog
 
-### Claude Code is about to stop asking your permission (auto mode, explained for marketers)
-- **channel:** ccfm
-- **status:**  ready
-- **next:**    commit + push to publish, then Kit broadcast + social promotion
-- **est:**     2h
-- **due:**     2026-08-11
-- **Priority:** High (news hook with a hard deadline)
-- **Category:** Tips and Techniques
-- **Target keyword:** *claude code auto mode*
-- **Secondary keywords:** *claude code permissions, claude code auto mode default*
-- **Angle:** On August 14, new Claude Code sessions on Pro, Max, and Team plans start running in auto mode by default: instead of asking you to approve each command, every action routes through a safety classifier that blocks anything irreversible, destructive, or aimed outside your environment. For marketers, this removes the single most annoying beginner speed bump (constant permission prompts) — but it deserves a plain-English explanation of what the classifier actually checks, when Claude will still ask, and how to switch modes (Shift+Tab) if you want the old behavior. Cover the safety numbers: 89% of dangerous commands caught vs. 13.6% by human review; zero successful prompt-injection attacks in testing; harmful unintended actions were 2.6x more common in manually-approved sessions.
-- **Keanan's POV (from Q&A, 2026-08-10):**
-  - Auto mode has been his default for months. The payoff is long-running workflows that were impractical when every command needed approval: pulling batches of related clips from YouTube, building large features/prototypes after thorough planning.
-  - **Lead story:** the Allstar WordPress theme session (Aug 6) — the classifier blocked `git checkout origin/main -- page-pay-calculator.php functions.php`, which would have silently overwritten local edits with older remote versions. Relatable even to readers who've never touched git.
-  - **Supporting evidence:** the WP Pusher agent sessions (Jul 31–Aug 1) — classifier blocked SSHing into a droplet as root, a production `wrangler deploy`, a `git push` that would trigger a live workflow run, and disabling a GitHub Actions cron. Claude noted the block, kept working, and left the call to the owner (documented in the project's own decision log).
-  - **Takeaway/advice:** flip it (or let the default kick in). Still nervous? Try a "one shot" brand-new project (low risk) with auto mode on and watch it closely to see what it trusts and where it flips to asking.
-- **Why now:** Auto mode becomes the default 2026-08-14. Almost all current coverage is dev-focused (Register, New Stack, Simon Willison). Same playbook as the /goal and Desktop posts — own the marketer-friendly explanation before the topic saturates.
-- **Cross-link targets:** [[what-is-dangerously-skip-permissions]] (now half-obsolete — link both ways and flag for a refresh), [[installing-claude-code]], [[claude-code-desktop-walkthrough]].
 
 ### I built a client-ready lead magnet calculator in 30 minutes. Here's how.
 - **channel:** ccfm
