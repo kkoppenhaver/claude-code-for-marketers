@@ -12,11 +12,13 @@ interface Props {
 
 const {
   headline = "Master Claude Code in 15 minutes a day",
-  description = "Join our free 7-day email course and learn how to use Claude Code for your marketing work. Then, get notified when we publish new use cases and ways to stay ahead of the curve.",
+  description,
   tagId,
   buttonText = "Send me the free course",
   formId = "8947118",
 } = Astro.props;
+
+const fallbackDescription = "Join our free 7-day email course and learn how to use Claude Code for your marketing work. Then, get notified when we publish new use cases and ways to stay ahead of the curve.";
 
 const formAction = `https://app.kit.com/forms/${formId}/subscriptions`;
 
@@ -30,7 +32,10 @@ const signupUrl = Astro.site
 // Fetch subscriber count from Kit API at build time. Counts the CC4M tag
 // (not the whole list — the Kit account is shared with other projects) and
 // rounds down to the nearest 10 so the copy stays true between builds.
-let subscriberText = "";
+// When available, the count leads the default description; pages that pass
+// their own description keep it, and if the count is missing (<100, no API
+// key, or a failed fetch) we fall back to the count-free copy.
+let subscriberCount: number | null = null;
 try {
   const KIT_API_KEY = import.meta.env.KIT_API_KEY;
   if (KIT_API_KEY) {
@@ -41,8 +46,7 @@ try {
       const data = await res.json();
       const total = data.pagination?.total_count;
       if (total && total >= 100) {
-        const rounded = Math.floor(total / 10) * 10;
-        subscriberText = `Join ${rounded}+ marketers.`;
+        subscriberCount = Math.floor(total / 10) * 10;
       }
     }
   }
@@ -54,7 +58,13 @@ try {
     <span class="prompt">&gt;</span>
     <span class="headline">{headline}</span>
   </div>
-  <p class="signup-description">{description}</p>
+  {description ? (
+    <p class="signup-description">{description}</p>
+  ) : subscriberCount ? (
+    <p class="signup-description">Join <strong>{subscriberCount}+</strong> marketers who have gone through the free 7-day email course and learn how to use Claude Code for your marketing work and get notified when we publish new use cases and ways to stay ahead of the curve.</p>
+  ) : (
+    <p class="signup-description">{fallbackDescription}</p>
+  )}
   <form action={formAction} method="post" class="signup-form">
     {tagId && <input type="hidden" name="tags[]" value={tagId} />}
     <input type="hidden" name="fields[signup_url]" value={signupUrl} />
@@ -71,7 +81,7 @@ try {
       <button type="submit">{buttonText}</button>
     </div>
   </form>
-  <p class="signup-note">{subscriberText && <span class="subscriber-count">{subscriberText}</span>} No spam. Unsubscribe anytime.</p>
+  <p class="signup-note">No spam. Unsubscribe anytime.</p>
   <div class="testimonial">
     <blockquote>
       <p>"I watched Keanan work magic with Claude [Code] in the terminal. My brain: 'It's far too technical!' 'Dark mode? Not for me!' ...I shipped 4 things in my first month."</p>
