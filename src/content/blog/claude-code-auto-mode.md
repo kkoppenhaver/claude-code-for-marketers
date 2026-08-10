@@ -3,7 +3,7 @@ title: "Auto mode: why Claude Code is about to stop asking your permission"
 description: "Auto mode becomes the default in Claude Code on August 14th. Here's what months of daily use taught me, what the safety net actually blocks, and how to ease in."
 target_keyword: "claude code auto mode"
 secondary_keywords: ["claude code auto mode default", "claude code permissions"]
-pubDate: 2026-08-11
+pubDate: 2026-08-10
 author: "Keanan Koppenhaver"
 draft: false
 image: "/images/blog/claude-code-auto-mode.png"
