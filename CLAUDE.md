@@ -335,6 +335,8 @@ Prefer vivid, specific, concrete language over generic or abstract phrasing:
 
 * **"quietly" and other atmospheric adverbs** — AI-voice smell. "Restoring them would have quietly wiped that work" → "restoring them would have wiped out my work." If the adverb adds mood instead of meaning, cut it.
 
+* **"earns its keep" and similar AI pet idioms** — same smell as "quietly," in idiom form. "The kind of session where auto mode earns its keep" → "the kind of session where auto mode comes in handy." Also covers anthropomorphizing quips and mini-metaphors: "The API essentially shrugged" → "which makes it hard to evaluate for now"; "the data keeps pointing at the same door" → "should be a top priority for me." When a phrase feels like a writerly flourish rather than something Keanan would say out loud, swap it for the plain version.
+
 * **Invented cinematic specifics** — specific details are good only when they're real. Don't add texture that didn't happen ("Thursday *night*," "maybe ten seconds," "until my coffee went cold"). When in doubt, state the plain first-person fact instead: "I had already changed these files."
 
 * **Clipped openers where a full sentence belongs** — "Reasonable idea, except those files had local edits" reads as AI terseness. Give the sentence its subject and let it relate to *me*: "It was a reasonable idea, except that I had already changed these files." Related to the stacked-fragments rule above: describe events through my relationship to them, not as abstract states of the system.

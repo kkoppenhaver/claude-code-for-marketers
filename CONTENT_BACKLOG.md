@@ -57,18 +57,6 @@ Other fields (priority, target keyword, GSC signal, brief link, angle, etc.) are
 - **Angle:** Adapt/reference the Austin Lau (Anthropic) case study where ad creation went from 30 minutes to 30 seconds. Add beginner-friendly framing and step-by-step recreation instructions.
 - **Why now:** Stormy AI has the only existing content on this, and it's extremely technical. A marketer-friendly version would own this space.
 
-### SEO on autopilot: using Claude Code to audit, optimize, and monitor your content
-- **channel:** ccfm
-- **status:**  briefed
-- **next:**    outline the three SEO workflows, then draft
-- **est:**     2h
-- **due:**     2026-08-13
-- **Priority:** Medium-High (SEO — validated by GSC)
-- **Category:** Use Cases
-- **Target keyword:** *Claude Code SEO automation, AI SEO audit*
-- **GSC signal:** Multiple "animalz content decay" queries ranking positions 2-4 show our audience is already searching for SEO-adjacent content. Building a full SEO automation guide creates a content cluster around this existing strength.
-- **Angle:** Walk through three SEO workflows: (1) content audit of existing pages, (2) keyword gap analysis vs. competitors, (3) automated monitoring for ranking changes. Reference Firecrawl's approach but make it accessible for someone who's never used Ahrefs.
-- **Why now:** SEO automation is a hot topic but existing content assumes technical SEO knowledge. Our content decay piece is already pulling in SEO-minded readers — give them somewhere to go next.
 
 ### Generate blog images, thumbnails, and icons without leaving Claude Code (the nano-banana skill)
 - **channel:** ccfm

@@ -4,6 +4,13 @@ Shipped posts, newest first. `/plan-week` reads this for cadence counting.
 
 ## 2026
 
+### SEO on autopilot: using Claude Code to audit, optimize, and monitor your content
+- **Published:** 2026-08-12 (pushed live 2026-08-10; pubDate shows the 12th, promotion 10 AM CT on the 12th)
+- **Category:** Use Cases
+- **File:** `seo-on-autopilot-with-claude-code.md`
+- **Target keyword:** `claude code seo automation`
+- **Why:** Second post of the 3-post week; GSC-validated cluster play off the content-decay strength. Built via Q&A: beginner-focused, four single-input/single-output workflows (GSC CSV → untargeted keywords; DataForSEO volume/difficulty enrichment at $0.09 for six lookups; GSC → striking-distance refresh queue; /goal internal-linking sweep), full weekly-report system only previewed at the end. All outputs are real, from a fresh W32 GSC fetch (90 days through Aug 8): location pages (225 imp/pos 21, no volume data — the gut-check beat), Google Sheets cluster (302 imp — new post candidate fed to backlog), "lovable vs claude code" (503 imp — variant/refresh lesson, 390/mo vol), "claude code install" (22,200/mo), Docs striking-distance cluster + "claude 20 vs 100" (validates planned refreshes). Opening: Keanan staring at GSC unable to connect dots to action. Draft cycle added the "earns its keep"/anthropomorphizing-quip rule to the style guide. Featured image: CSV card → ask → three tagged findings (HTML→PNG).
+
 ### Auto mode: why Claude Code is about to stop asking your permission
 - **Published:** 2026-08-10
 - **Category:** Tips and Techniques

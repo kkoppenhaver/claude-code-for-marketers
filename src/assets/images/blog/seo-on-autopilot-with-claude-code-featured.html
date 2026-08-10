@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --bg-secondary: #F0EFEB;
+    --text: #1C1917;
+    --text-secondary: #57534E;
+    --accent: #DA7756;
+    --border: #E7E5E0;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  #card {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    padding: 0 70px;
+    overflow: hidden;
+    font-family: var(--mono);
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .filecard {
+    width: 316px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 12px 28px -16px rgba(28,25,23,.3);
+    padding: 26px;
+    flex-shrink: 0;
+  }
+  .fileicon {
+    height: 118px;
+    border-radius: 10px;
+    background: var(--bg-secondary);
+    border: 1px dashed var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .fileicon .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 46px);
+    gap: 4px;
+  }
+  .fileicon .cell {
+    height: 12px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+  }
+  .fileicon .cell.h { background: rgba(218,119,86,.22); border-color: rgba(218,119,86,.5); }
+  .filename {
+    margin-top: 18px;
+    font-weight: 600;
+    font-size: 16.5px;
+  }
+  .filemeta {
+    margin-top: 7px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 190px;
+    flex-shrink: 0;
+  }
+  .flow .ask {
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    text-align: center;
+  }
+  .flow .ask b { color: var(--accent); font-weight: 700; }
+  .arrow { display: flex; align-items: center; }
+  .arrow .line { width: 140px; height: 3px; background: var(--accent); border-radius: 2px; }
+  .arrow .head {
+    width: 0; height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 13px solid var(--accent);
+  }
+
+  .results {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hit {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px -16px rgba(28,25,23,.28);
+    padding: 17px 22px 16px;
+  }
+  .hit .kw {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .hit .stats {
+    margin-top: 8px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+  }
+  .hit .stats b { color: var(--text); font-weight: 600; }
+  .tag {
+    float: right;
+    margin-left: 14px;
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+  }
+  .tag.new { background: rgba(218,119,86,.14); color: var(--accent); }
+  .tag.refresh { background: var(--bg-secondary); color: var(--text-secondary); }
+  .hit.top { border: 2px solid var(--accent); }
+
+  .footer {
+    position: absolute; bottom: 24px; right: 70px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .footer .p { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="card">
+    <div class="filecard">
+      <div class="fileicon">
+        <div class="grid">
+          <div class="cell h"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell h"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell h"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+      </div>
+      <div class="filename">search-console-export.csv</div>
+      <div class="filemeta">1,850 queries &middot; 90 days<br />one click to download</div>
+    </div>
+
+    <div class="flow">
+      <div class="ask">&gt; find keywords I rank for<br />but <b>never targeted</b></div>
+      <div class="arrow"><div class="line"></div><div class="head"></div></div>
+    </div>
+
+    <div class="results">
+      <div class="hit top">
+        <span class="tag new">NEW POST</span>
+        <div class="kw">how to use claude to write location pages</div>
+        <div class="stats">225 impressions &middot; position <b>21</b> &middot; zero posts about it</div>
+      </div>
+      <div class="hit">
+        <span class="tag new">NEW POST</span>
+        <div class="kw">can claude edit google sheets</div>
+        <div class="stats">302 impressions &middot; position <b>8.9</b> &middot; Docs post exists, Sheets doesn't</div>
+      </div>
+      <div class="hit">
+        <span class="tag refresh">REFRESH</span>
+        <div class="kw">lovable vs claude code</div>
+        <div class="stats">503 impressions &middot; position <b>17</b> &middot; existing post, missed phrasing</div>
+      </div>
+    </div>
+
+    <div class="footer"><span class="p">&gt;</span> claudecodeformarketers.com</div>
+  </div>
+</body>
+</html>
