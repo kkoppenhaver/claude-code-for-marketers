@@ -333,6 +333,14 @@ Prefer vivid, specific, concrete language over generic or abstract phrasing:
 
 * **Stacked noun-phrase fragments** — A single fragment lands a beat ("Locked it in. Threw away the rest."). Three or four stacked subject-less fragments in a row sound confident but read as AI cosplaying terseness. Wrong: "30-minute slot. Audience was our PMM team. No designer available. Half a day to ship it." Right: "My job was to take a 30-minute slot and help the PMM team uplevel. I didn't have a designer available and I was under a bit of time pressure." Reserve the fragment for landing a single line, not building a paragraph.
 
+* **"quietly" and other atmospheric adverbs** — AI-voice smell. "Restoring them would have quietly wiped that work" → "restoring them would have wiped out my work." If the adverb adds mood instead of meaning, cut it.
+
+* **Invented cinematic specifics** — specific details are good only when they're real. Don't add texture that didn't happen ("Thursday *night*," "maybe ten seconds," "until my coffee went cold"). When in doubt, state the plain first-person fact instead: "I had already changed these files."
+
+* **Clipped openers where a full sentence belongs** — "Reasonable idea, except those files had local edits" reads as AI terseness. Give the sentence its subject and let it relate to *me*: "It was a reasonable idea, except that I had already changed these files." Related to the stacked-fragments rule above: describe events through my relationship to them, not as abstract states of the system.
+
+* **"Label: point" sentence patterns** — same disease as clipped openers, wearing a colon. "The short version: it unlocked..." → "The short version is that it unlocked..." "My advice: flip it" → "My advice for when the big day comes is to lean into the flip." Also applies to reader-directed imperatives: "Notice the pattern." → "The pattern here is that..." (Colons *inside* a flowing sentence are still fine per the transitions rule above.)
+
 ## Writing for non-technical audiences
 
 * **Introduce concepts before naming them**: "this version control system (called git)" — explain what it does first, then name it
@@ -380,6 +388,8 @@ Prefer vivid, specific, concrete language over generic or abstract phrasing:
 * Blockquotes (>) for prompts and AI responses — clearly distinguish AI text from narrative
 
 * **Placeholder notes**: \[screenshot TKTK] for visuals, \[TKTK: note] for fact-checking reminders
+
+* **Dates in prose**: ordinal style — "August 14th," not "August 14"
 
 * **No horizontal rules before headings**: The h2 styling already includes a top border, so `---` creates a double line
 
